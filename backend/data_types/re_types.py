@@ -1,0 +1,1 @@
+DINING_CHAIR_RE: str = ""

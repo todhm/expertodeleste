@@ -1,0 +1,33 @@
+
+{% comment %} PLEASE DON'T MAKE CHANGES IN THIS FILE IT'S AFFECT THE CODE IF YOU NEED ANY HELP PLEASE CONTACT TO FLITS TEAM support@getflits.com {% endcomment %}
+<div class="flits-code-snippet">
+    {% comment %} Cart object start{% endcomment %}
+		<script>
+			window.cartOrder = {}
+		</script>
+		{% for item in cart.items %}
+			<script>
+				window.cartOrder[{{item.variant_id}}] = {
+					cart_quantity: '{{ item.quantity }}'
+				};
+			</script>
+		{% endfor %}
+	{% comment %} Cart object end{% endcomment %}
+    <style id="flits-skeleton-style">
+    	.flits-skeleton-container{max-width:100%;width:1170px;margin:30px auto;padding:0 15px;font-size:15px;font-family:inherit;line-height:1.5;margin-bottom:60px;position:relative;min-height:510px}.flits-skeleton-container .flits-skeleton-account-section{height:100%}.flits-skeleton-container .flits-skeleton-box{position:relative;height:100%}.flits-skeleton-container .flits-skeleton-box *{visibility:hidden!important}.flits-skeleton-container .flits-skeleton-box:after{content:" "!important;height:100%;width:100%;display:block;background-color:#dfe3e8;-webkit-animation:SkeletonShimmerAnimation .8s linear infinite alternate;animation:SkeletonShimmerAnimation .8s linear infinite alternate;border-radius:4px;position:absolute;top:0;left:0;right:0;bottom:0}.flits-skeleton-container .flits-skeleton-header{display:block;width:calc(100% - 250px);margin-top:15px;margin-bottom:30px;background:#fff;padding:10px;margin-left:auto}.flits-skeleton-container .flits-tab-box-header{display:none}.flits-skeleton-container .flits-skeleton-box-header{margin:0 auto;width:100%;position:relative;height:20px}.flits-skeleton-container .flits-skeleton-box-header *{font-size:0!important}.flits-skeleton-container .flits-skeleton-nav{width:242px;height:auto;background:rgb(255 255 255);float:left;position:relative;border-radius:5px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item{display:block;padding:10px 15px;position:relative;height:40px;width:100%;overflow:hidden}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-2{width:160px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-1{width:100px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-3{width:120px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-4{width:120px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-5{width:105px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-6{width:130px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-7{width:120px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-8{width:190px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-9{width:105px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-10{width:160px}.flits-skeleton-container .flits-skeleton-nav-tabs .flits-skeleton-menu-item .flits-skeleton-box-11{width:100px}.flits-skeleton-container .flits-skeleton-account-page-tab{width:calc(100% - 252px);height:440px;background:#fff;float:left;margin-left:10px;display:flex;align-items:center;justify-content:center;border-radius:5px}@keyframes SkeletonShimmerAnimation{0%{opacity:.45}to{opacity:.9}}@keyframes FlitsSpinnerAnimation{0%{transform:rotate(0)}100%{transform:rotate(360deg)}}@media only screen and (min-width:768px){.flits-skeleton-container{width:750px}}@media only screen and (min-width:992px){.flits-skeleton-container{width:970px}}@media only screen and (min-width:1224px){.flits-skeleton-container{width:1170px}}@media only screen and (max-width:992px){.flits-skeleton-container{position:relative}.flits-skeleton-container .flits-skeleton-header,.flits-skeleton-container .flits-skeleton-nav{width:100%}.flits-skeleton-container .flits-skeleton-account-page-tab{display:none}}
+    </style>
+    <div class="flits-account-page-content">
+        <div class="flits-account-page-container flits-skeleton-container">
+            <div class="flits-account-section flits-skeleton-account-section">
+                <div class="flits-account-page-header flits-skeleton-header">
+                    <div class="flits-header-title flits-skeleton-box flits-skeleton-box-header">
+                        {% render 'flits_capture_code' with 'component',template:'comp_header_title' %}
+                    </div>
+                </div>
+                {% render 'flits_capture_code' with 'component',template:'comp_menuNav' %}
+                {% render 'flits_capture_code' with 'component',template:'comp_accountBody' %}
+                <div class="flits-clearfix"></div>
+            </div>
+        </div>
+    </div>
+</div>

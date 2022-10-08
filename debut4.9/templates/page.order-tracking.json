@@ -1,0 +1,12 @@
+{
+  "sections": {
+    "main": {
+      "type": "page-order-tracking-content",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

@@ -1,0 +1,395 @@
+<meta name="viewport" content="width=device-width,initial-scale=1">
+
+
+<style type="text/css">.featured__product {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 60px;
+  background: #80808017; 
+}
+@media (max-width: 416px) {
+  .featured__product {
+    margin-bottom: 30px; 
+  }
+}
+.featured__product .product-single {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 100px; 
+}
+.featured__product .product-single li,
+.featured__product .product-single p {
+  font-size: 1.125rem; 
+}
+@media (max-width: 416px) {
+  .featured__product .product-single li,
+  .featured__product .product-single p {
+    font-size: 1rem; 
+  } 
+}
+.featured__product .product__single--price-info {
+  display: flex;
+  flex-direction: column; 
+}
+@media (max-width: 560px) {
+  .featured__product .product__single--price-info {
+    flex-direction: column-reverse; 
+  } 
+}
+@media (max-width: 560px) {
+  .featured__product .product__single--price-info .price-container {
+    margin-bottom: 30px; 
+  } 
+}
+.featured__product .product__single--inner {
+  max-width: 480px;
+  padding-right: 20px; 
+}
+@media (max-width: 896px) {
+  .featured__product .product__single--inner {
+    max-width: 100%;
+    padding-right: 0px; 
+  } 
+}
+.featured__product .product__single--inner h2 {
+  margin-bottom: 15px; 
+}
+.featured__product .classic--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; 
+}
+.featured__product .classic--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white; 
+}
+.featured__product .oprah {
+  display: flex;
+  position: relative;
+  z-index: 2; 
+}
+@media (max-width: 768px) {
+  .featured__product .oprah {
+    flex-direction: column; 
+  } 
+}
+.featured__product .oprah .col-1 {
+  width: 55%; 
+}
+@media (max-width: 768px) {
+  .featured__product .oprah .col-1 {
+    width: 100%; 
+  } 
+}
+.featured__product .oprah .col-2 {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+@media (max-width: 768px) {
+  .featured__product .oprah .col-2 {
+    width: 100%; 
+  } 
+}
+.featured__product .blob-bg {
+  position: absolute;
+  bottom: -80px;
+  right: -150px;
+  /* border: 1px solid red; */
+  width: 70%; 
+}
+@media (max-width: 416px) {
+  .featured__product .blob-bg {
+    bottom: 0; 
+  } 
+}
+
+.featured__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px; 
+}
+@media (max-width: 896px) {
+  .featured__quote {
+    padding: 25px; 
+  } 
+}
+.featured__quote span {
+  font-size: 1.25rem; 
+}
+@media (max-width: 416px) {
+  .featured__quote span {
+    font-size: 1rem; 
+  } 
+}
+.featured__quote .quote-marks {
+  max-width: 38px;
+  margin: 15px 0; 
+}
+.featured__quote p {
+  font-size: 1.875rem;
+  margin-bottom: 15px; 
+}
+@media (max-width: 1024px) {
+  .featured__quote p {
+    font-size: 1.25rem; 
+  } 
+}
+.featured__quote .featured__quote--photo {
+  width: 150px;
+  height: 150pxpx;
+  width: 150pxpx;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  overflow: hidden; 
+}
+@media (max-width: 768px) {
+  .featured__quote .featured__quote--photo {
+    height: 100pxpx;
+    width: 100pxpx;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden; 
+  } 
+}
+
+.featured_product-description {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 25px;
+  margin-top: 20px; 
+  font: inherit;
+  vertical-align: baseline
+}
+.featured_product-description p {
+  margin-bottom: 25px; 
+}
+@media (max-width: 560px) {
+  .featured_product-description {
+    margin-top: 0px; 
+  } 
+}
+
+.featured_product-description {
+  margin-bottom: 25px;
+  margin-top: 20px; 
+}
+.featured_product-description p {
+  margin-bottom: 25px; 
+}
+@media (max-width: 560px) {
+  .featured_product-description {
+    margin-top: 0px; 
+  } 
+}
+.product-description-title{
+  font-weight: bold;
+}
+.product__features-section {
+  position: relative;
+  overflow-x: hidden; 
+}
+.product__features-section .cs-container {
+  position: relative;
+  z-index: 2; 
+}
+.product__features-section .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 60px;
+  margin-bottom: 30px;
+  margin-top: 30px; 
+}
+@media (max-width: 768px) {
+    .product__features-section .feature-grid--item {
+      display: flex; 
+    } 
+}
+@media (max-width: 1024px) {
+  .product__features-section .feature-grid {
+    max-width: 100%; 
+  }
+}
+@media (max-width: 768px) {
+  .product__features-section .feature-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px; 
+  }
+}
+@media (max-width: 768px) {
+  .product__features-section .feature-grid--item {
+    display: flex; 
+  } 
+}
+.product__features-section .feature-grid--item img {
+  width: 61px;
+  height: 61px;
+  margin-bottom: 10px; 
+}
+.product__features-section .feature-grid--item svg {
+  width: 61px;
+  height: 61px;
+  margin-bottom: 10px; 
+}
+@media (max-width: 768px) {
+  .product__features-section .feature-grid--item img {
+      margin-right: 20px;
+      margin-bottom: 0px; 
+  }
+  .product__features-section .feature-grid--item svg {
+    margin-right: 20px;
+    margin-bottom: 0px; 
+  } 
+}
+.txtArea li{
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-align: -webkit-match-parent
+}
+.txtArea ul li {
+  padding-bottom: 15px;
+  background: url("https://s3.ap-northeast-2.amazonaws.com/sellertrans/shopifyimages/AY176.jpg") no-repeat left 5px;
+  background-size: 18px;
+  padding-left: 30px;
+  display: block; 
+}
+.txtArea ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+.bagsFeaturesGrid{
+margin:0 auto;
+padding:30px 5%;
+background:#07090D
+}
+.bagsFeaturesGrid__gridWrapper{
+max-width:1150px;margin:0 auto
+}
+.bagsFeaturesGrid__title{
+font-family:'Lato', sans-serif;-webkit-font-smoothing:antialiased;text-align:center;font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:16px;padding:0 0 25px;margin:0 auto;color:#fff
+}
+.bagsFeaturesGrid__feature{
+background:inherit;display:grid;grid-template-rows:auto;align-items:center;
+padding:5px 0
+}
+.bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:center;padding:15px 0 20px;grid-row:2}
+.bagsFeaturesGrid__feature--text a{color:inherit}
+.bagsFeaturesGrid__feature--text h1{font-family:'Lato', sans-serif;font-size:16px;font-weight:bold;letter-spacing:2px;line-height:28px;text-transform:uppercase;color:#fff}
+.bagsFeaturesGrid__feature--text p{font-family:"lato", sans-serif;font-size:15px;line-height:27px;letter-spacing:1.8px;color:#eee}
+.bagsFeaturesGrid__feature--image{position:relative;width:100%;min-height:62vw}
+@media (min-width: 811px){.bagsFeaturesGrid__feature--image{min-height:28vw}}
+@media (min-width: 1460px){
+.bagsFeaturesGrid__feature--image{min-height:409px}
+}
+.bagsFeaturesGrid__feature--image img{width:100%;display:block}
+.bagsFeaturesGrid__feature--image--logo{position:absolute;bottom:3.5%;right:8%;width:15vw}
+.bagsFeaturesGrid__feature--image--logo img{width:100%}.bagsFeaturesGrid__feature--text--logo{width:100px;padding-top:30px}
+.bagsFeaturesGrid__feature--text--logo img{width:100%}
+@media (min-width: 811px){
+.bagsFeaturesGrid{padding:75px 10%}
+.bagsFeaturesGrid__title{font-size:20px;padding:0 0 60px}
+.bagsFeaturesGrid__feature{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;padding:30px 0}
+.bagsFeaturesGrid__feature--image--logo{width:7vw}
+.bagsFeaturesGrid__feature .left{padding-right:15%}
+.bagsFeaturesGrid__feature .right{padding-left:15%}
+.bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:left;padding:0;grid-row:auto}
+.bagsFeaturesGrid__feature--text h1{font-size:18px}
+.bagsFeaturesGrid__feature--text p{font-size:20px;line-height:34px}
+}
+</style>
+<div class="featured__product">
+<div class="featured_product-description txtArea">
+<div class="module">
+<div class="product-details clearer">
+<h3>Understated elegance; that&#39;s our Cambridge Dining Room Collection by Aspen Home in a nutshell. This fresh spin on the traditional look is an ideal fit for any home. This collection was inspired with your comfort and features several upgrades including beautiful pewter hardware, and the meticulously crafted brown cherry finish.</h3>
+
+<p><strong>Please Note:</strong> Sizes and weights are approximate and may vary slightly from the ones given above. Due to differences in monitors, we cannot be responsible for variations in color between the actual item and your screen. Please be advised that we display the standard shape and(or) size in some cases; the shapes, sizes, patterns and colors may vary.</p>
+
+<h3>&nbsp;</h3>
+</div>
+</div>
+
+<ul class="description-feature-wrapper">
+<li class="description-feature-list">If you want to decorate your dining space with classic mood this is best fit for you</li>
+<li class="description-feature-list">You can enjoy broad dining sets which support up to 4 ~ 8 people</li>
+<li class="description-feature-list">Butterfly leaf</li>
+<li class="description-feature-list">Self storing leaves</li>
+<li class="description-feature-list">Double x-backs</li>
+<li class="description-feature-list">Wood seats</li>
+<li class="description-feature-list">Some Assembly May be Required</li>
+<li class="description-feature-list">Default Set Includes 1 x Cambridge Rectangular Dining Table 2 x Cambridge Double X Side Chair (Set of 2)</li>
+</ul>
+</div>
+</div>
+
+<div class="bagsFeaturesGrid">
+<div class="bagsFeaturesGrid__gridWrapper">
+<div class="bagsFeaturesGrid__feature">
+<div class="bagsFeaturesGrid__feature--text left">
+<h1>Enjoy classic dining sets</h1>
+
+<p>Brown Cherry finish add nice classic look to your dining space</p>
+</div>
+
+<div class="bagsFeaturesGrid__feature--image"><img loading="lazy" sizes="(min-width:1457px) 575px, (min-width:811px) 40vw, 100vw" src="https://smhttp-ssl-18667.nexcesscdn.net/8090D3/magento/media/catalog/product/I/C/ICB-6050-BCH-ICB-6670S-BCH-dr-set-1.jpg" />
+<div class="bagsFeaturesGrid__feature--image--logo">&nbsp;</div>
+</div>
+</div>
+
+<div class="bagsFeaturesGrid__feature">
+<div class="bagsFeaturesGrid__feature--image"><img loading="lazy" sizes="(min-width:1457px) 575px, (min-width:811px) 40vw, 100vw" src="https://smhttp-ssl-18667.nexcesscdn.net/8090D3/magento/media/catalog/product/I/C/ICB-6050-BCH-dining-table-1.jpg" />
+<div class="bagsFeaturesGrid__feature--image--logo">&nbsp;</div>
+</div>
+
+<div class="bagsFeaturesGrid__feature--text right">
+<h1>Nice endurability</h1>
+
+<p>Hardwood solids and Birch veneers you can enjoy this dining sets for a long time</p>
+</div>
+</div>
+
+<div class="bagsFeaturesGrid__feature">
+<div class="bagsFeaturesGrid__feature--text left">
+<h1>Enjoy comfortable space</h1>
+
+<p>Double x-backs chairs give you comfortable time with maintain classic design</p>
+</div>
+
+<div class="bagsFeaturesGrid__feature--image"><img loading="lazy" sizes="(min-width:1457px) 575px, (min-width:811px) 40vw, 100vw" src="https://smhttp-ssl-18667.nexcesscdn.net/8090D3/magento/media/catalog/product/I/C/ICB-6670S-BCH-side-chair-1.jpg" />
+<div class="bagsFeaturesGrid__feature--image--logo">&nbsp;</div>
+</div>
+</div>
+
+<div class="bagsFeaturesGrid__feature">
+<div class="bagsFeaturesGrid__feature--image"><img loading="lazy" sizes="(min-width:1457px) 575px, (min-width:811px) 40vw, 100vw" src="https://s3.ap-northeast-2.amazonaws.com/sellertrans/shopifyimages/EC09G.png" />
+<div class="bagsFeaturesGrid__feature--image--logo">&nbsp;</div>
+</div>
+
+<div class="bagsFeaturesGrid__feature--text right">
+<h1>Nice fresh dining</h1>
+
+<p>Classic designed table fit very well with fruit dining</p>
+</div>
+</div>
+</div>
+</div>

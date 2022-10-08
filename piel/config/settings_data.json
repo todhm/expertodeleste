@@ -1,0 +1,663 @@
+{
+  "current": {
+    "hide_collection_title": false,
+    "collection_grid_card": true,
+    "collection_grid_products_count": false,
+    "collection_grid_animation": true,
+    "show_collection_grid_button": false,
+    "collection_grid_button_style": "btn-outline-primary",
+    "newsletter_name": true,
+    "newsletter_optin": true,
+    "show_hero": false,
+    "dbtfy_product_tabs_position": "under_description",
+    "enable_payment_button": true,
+    "enable_more_payment_options_button": false,
+    "color_announcement_bg": "#212529",
+    "color_default": "#FFFFFF",
+    "color_primary": "#212529",
+    "color_button_text": "#FFFFFF",
+    "color_secondary": "#000000",
+    "color_input": "#FFFFFF",
+    "color_sales_price": "#1E0840",
+    "color_drawer_bg": "#000000",
+    "color_drawer_default": "#E5E5E5",
+    "color_drawer_border": "#d4cde1",
+    "color_drawer_text": "#FFFFFF",
+    "color_drawer_primary": "#2da1ff",
+    "color_drawer_button_text": "#000000",
+    "color_drawer_secondary": "#000000",
+    "color_drawer_input": "#212529",
+    "color_footer_bg": "#f5f5f5",
+    "color_footer_default": "#f5f5f5",
+    "color_footer_border": "#f5f5f5",
+    "color_footer_text": "#303030",
+    "color_overlay": "#444444",
+    "newsletter_app": "klaviyo",
+    "review_app": "",
+    "dbtfy_cart_goal": false,
+    "dbtfy_quantity_breaks": false,
+    "dbtfy_upsell_bundles": false,
+    "dbtfy_upsell_popup": false,
+    "dbtfy_cart_favicon": false,
+    "dbtfy_delivery_time": true,
+    "dbtfy_discount_saved": false,
+    "dbtfy_inactive_tab_message": true,
+    "dbtfy_product_bullet_points": false,
+    "dbtfy_sales_countdown": false,
+    "dbtfy_skip_cart": false,
+    "dbtfy_sticky_addtocart": false,
+    "dbtfy_trust_badge": true,
+    "dbtfy_instagram_feed": false,
+    "dbtfy_newsletter_popup": false,
+    "dbtfy_order_feedback": false,
+    "dbtfy_social_discount": false,
+    "dbtfy_automatic_geolocation": true,
+    "dbtfy_color_swatches": false,
+    "dbtfy_delivery_date": false,
+    "dbtfy_infinite_scroll": false,
+    "dbtfy_mega_menu": false,
+    "dbtfy_order_tracking": true,
+    "dbtfy_pricing_table": false,
+    "dbtfy_product_swatches": false,
+    "dbtfy_product_tabs": true,
+    "dbtfy_quick_compare": false,
+    "dbtfy_quick_view": true,
+    "dbtfy_recently_viewed": false,
+    "dbtfy_size_chart": false,
+    "dbtfy_cookie_box": false,
+    "dbtfy_shop_protect": false,
+    "dbtfy_newsletter_floating_bar": false,
+    "dbtfy_floating_bar_mobile": true,
+    "dbtfy_newsletter_popup_timeout": 60,
+    "dbtfy_newsletter_popup_customer_tag": "",
+    "dbtfy_quick_compare_product_field_collections": false,
+    "dbtfy_quick_compare_product_field_tags": false,
+    "dbtfy_trust_badge_cart": false,
+    "dbtfy_trust_badge_position_in_cart_drawer": "separate_section",
+    "dbtfy_wish_list_count": false,
+    "dbtfy_wish_list_page": "wishlist-page",
+    "sections": {
+      "dbtfy-bullet-points": {
+        "type": "dbtfy-bullet-points",
+        "settings": {
+          "dbtfy_bullet_points_position": "under-product-price",
+          "dbtfy_bullet_points_alignment": "left",
+          "dbtfy_bullet_points_display_type": "inline"
+        }
+      },
+      "dbtfy-cart-goal": {
+        "type": "dbtfy-cart-goal",
+        "settings": {
+          "dbtfy_cart_goal_before_text": "You're",
+          "dbtfy_cart_goal_amount": "70",
+          "dbtfy_cart_goal_after_text": "away from FREE shipping!",
+          "dbtfy_cart_goal_reached_text": "You are eligible for FREE shipping!",
+          "dbtfy_cart_goal_icons": "local_shipping"
+        }
+      },
+      "dbtfy-cart-upsell": {
+        "type": "dbtfy-cart-upsell",
+        "settings": {
+          "dbtfy_cart_upsell_button_style": "btn--primary"
+        }
+      },
+      "dbtfy-color-swatches": {
+        "type": "dbtfy-color-swatches",
+        "settings": {
+        }
+      },
+      "dbtfy-customizable-products": {
+        "type": "dbtfy-customizable-products",
+        "settings": {
+        }
+      },
+      "dbtfy-delivery-time": {
+        "type": "dbtfy-delivery-time",
+        "blocks": {
+          "6fb98171-1496-48a6-9a42-96edeef4244d": {
+            "type": "delivery_time",
+            "settings": {
+              "title": "Delivery TIme",
+              "dbtfy_delivery_time_icon_1": "local_shipping",
+              "dbtfy_delivery_time_prefix_1": "",
+              "dbtfy_delivery_time_separator_1": "-",
+              "dbtfy_delivery_time_suffix_1": "",
+              "dbtfy_delivery_time_date_1": true,
+              "dbtfy_delivery_time_format_1": "%y %b %d",
+              "dbtfy_delivery_time_from_1": 7,
+              "dbtfy_delivery_time_to_1": 11,
+              "dbtfy_delivery_time_exclude_days_1": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_1": false,
+              "dbtfy_delivery_time_cut_off_time_1": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_1": "Order within",
+              "visibility_1": "all",
+              "collection_1": "",
+              "type_1": "",
+              "tag_1": "",
+              "product_1": "",
+              "dbtfy_delivery_time_icon_2": "local_shipping",
+              "dbtfy_delivery_time_prefix_2": "",
+              "dbtfy_delivery_time_separator_2": "-",
+              "dbtfy_delivery_time_suffix_2": "days",
+              "dbtfy_delivery_time_date_2": true,
+              "dbtfy_delivery_time_format_2": "%b %d",
+              "dbtfy_delivery_time_from_2": 7,
+              "dbtfy_delivery_time_to_2": 14,
+              "dbtfy_delivery_time_exclude_days_2": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_2": false,
+              "dbtfy_delivery_time_cut_off_time_2": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_2": "Order within",
+              "visibility_2": "all",
+              "collection_2": "",
+              "type_2": "",
+              "tag_2": "",
+              "product_2": "",
+              "dbtfy_delivery_time_icon_3": "local_shipping",
+              "dbtfy_delivery_time_prefix_3": "",
+              "dbtfy_delivery_time_separator_3": "-",
+              "dbtfy_delivery_time_suffix_3": "days",
+              "dbtfy_delivery_time_date_3": true,
+              "dbtfy_delivery_time_format_3": "%b %d",
+              "dbtfy_delivery_time_from_3": 7,
+              "dbtfy_delivery_time_to_3": 14,
+              "dbtfy_delivery_time_exclude_days_3": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_3": false,
+              "dbtfy_delivery_time_cut_off_time_3": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_3": "Order within",
+              "visibility_3": "all",
+              "collection_3": "",
+              "type_3": "",
+              "tag_3": "",
+              "product_3": "",
+              "dbtfy_delivery_time_icon_4": "local_shipping",
+              "dbtfy_delivery_time_prefix_4": "",
+              "dbtfy_delivery_time_separator_4": "-",
+              "dbtfy_delivery_time_suffix_4": "days",
+              "dbtfy_delivery_time_date_4": true,
+              "dbtfy_delivery_time_format_4": "%b %d",
+              "dbtfy_delivery_time_from_4": 7,
+              "dbtfy_delivery_time_to_4": 14,
+              "dbtfy_delivery_time_exclude_days_4": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_4": false,
+              "dbtfy_delivery_time_cut_off_time_4": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_4": "Order within",
+              "visibility_4": "all",
+              "collection_4": "",
+              "type_4": "",
+              "tag_4": "",
+              "product_4": "",
+              "dbtfy_delivery_time_icon_5": "local_shipping",
+              "dbtfy_delivery_time_prefix_5": "",
+              "dbtfy_delivery_time_separator_5": "-",
+              "dbtfy_delivery_time_suffix_5": "days",
+              "dbtfy_delivery_time_date_5": false,
+              "dbtfy_delivery_time_format_5": "%b %d",
+              "dbtfy_delivery_time_from_5": 7,
+              "dbtfy_delivery_time_to_5": 14,
+              "dbtfy_delivery_time_exclude_days_5": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_5": false,
+              "dbtfy_delivery_time_cut_off_time_5": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_5": "Order within",
+              "visibility_5": "all",
+              "collection_5": "",
+              "type_5": "",
+              "tag_5": "",
+              "product_5": "",
+              "dbtfy_delivery_time_icon_6": "local_shipping",
+              "dbtfy_delivery_time_prefix_6": "",
+              "dbtfy_delivery_time_separator_6": "-",
+              "dbtfy_delivery_time_suffix_6": "days",
+              "dbtfy_delivery_time_date_6": true,
+              "dbtfy_delivery_time_format_6": "%b %d",
+              "dbtfy_delivery_time_from_6": 7,
+              "dbtfy_delivery_time_to_6": 14,
+              "dbtfy_delivery_time_exclude_days_6": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_6": false,
+              "dbtfy_delivery_time_cut_off_time_6": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_6": "Order within",
+              "visibility_6": "all",
+              "collection_6": "",
+              "type_6": "",
+              "tag_6": "",
+              "product_6": "",
+              "dbtfy_delivery_time_icon_7": "local_shipping",
+              "dbtfy_delivery_time_prefix_7": "",
+              "dbtfy_delivery_time_separator_7": "-",
+              "dbtfy_delivery_time_suffix_7": "days",
+              "dbtfy_delivery_time_date_7": false,
+              "dbtfy_delivery_time_format_7": "%b %d",
+              "dbtfy_delivery_time_from_7": 7,
+              "dbtfy_delivery_time_to_7": 14,
+              "dbtfy_delivery_time_exclude_days_7": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_7": false,
+              "dbtfy_delivery_time_cut_off_time_7": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_7": "Order within",
+              "visibility_7": "all",
+              "collection_7": "",
+              "type_7": "",
+              "tag_7": "",
+              "product_7": "",
+              "dbtfy_delivery_time_icon_8": "local_shipping",
+              "dbtfy_delivery_time_prefix_8": "",
+              "dbtfy_delivery_time_separator_8": "-",
+              "dbtfy_delivery_time_suffix_8": "days",
+              "dbtfy_delivery_time_date_8": false,
+              "dbtfy_delivery_time_format_8": "%b %d",
+              "dbtfy_delivery_time_from_8": 7,
+              "dbtfy_delivery_time_to_8": 14,
+              "dbtfy_delivery_time_exclude_days_8": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_8": false,
+              "dbtfy_delivery_time_cut_off_time_8": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_8": "Order within",
+              "visibility_8": "all",
+              "collection_8": "",
+              "type_8": "",
+              "tag_8": "",
+              "product_8": "",
+              "dbtfy_delivery_time_icon_9": "local_shipping",
+              "dbtfy_delivery_time_prefix_9": "",
+              "dbtfy_delivery_time_separator_9": "-",
+              "dbtfy_delivery_time_suffix_9": "days",
+              "dbtfy_delivery_time_date_9": false,
+              "dbtfy_delivery_time_format_9": "%b %d",
+              "dbtfy_delivery_time_from_9": 7,
+              "dbtfy_delivery_time_to_9": 14,
+              "dbtfy_delivery_time_exclude_days_9": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_9": false,
+              "dbtfy_delivery_time_cut_off_time_9": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_9": "Order within",
+              "visibility_9": "all",
+              "collection_9": "",
+              "type_9": "",
+              "tag_9": "",
+              "product_9": "",
+              "dbtfy_delivery_time_icon_10": "local_shipping",
+              "dbtfy_delivery_time_prefix_10": "La fecha de entrega estimada",
+              "dbtfy_delivery_time_separator_10": "-",
+              "dbtfy_delivery_time_suffix_10": "",
+              "dbtfy_delivery_time_date_10": true,
+              "dbtfy_delivery_time_format_10": "%b %d",
+              "dbtfy_delivery_time_from_10": 7,
+              "dbtfy_delivery_time_to_10": 14,
+              "dbtfy_delivery_time_exclude_days_10": "SAT, SUN",
+              "dbtfy_delivery_time_cut_off_10": false,
+              "dbtfy_delivery_time_cut_off_time_10": "16:00:00",
+              "dbtfy_delivery_time_cut_off_message_10": "Order within",
+              "visibility_10": "all",
+              "collection_10": "",
+              "type_10": "",
+              "tag_10": "",
+              "product_10": ""
+            }
+          }
+        },
+        "block_order": [
+          "6fb98171-1496-48a6-9a42-96edeef4244d"
+        ],
+        "settings": {
+          "dbtfy_delivery_time_position": "under-addtocart-button"
+        }
+      },
+      "dbtfy-product-tabs": {
+        "type": "dbtfy-product-tabs",
+        "blocks": {
+          "be355f46-1a19-4c95-b844-04a36b1f2aae": {
+            "type": "detailedDescription",
+            "settings": {
+              "title": "",
+              "dbtfy_product_tabs_open": true,
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Por qué lo amamos",
+              "text_alignment": "text-justify",
+              "visibility": "all",
+              "dbtfy_product_tabs_collection": "",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": ""
+            }
+          },
+          "c96a59d6-5d35-402b-aa07-8eaf0f9e999f": {
+            "type": "text",
+            "settings": {
+              "title": "Price",
+              "dbtfy_product_tabs_open": false,
+              "text_alignment": "text-center",
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Coste de envío",
+              "dbtfy_product_tabs_text": "<p>10 USD por México<\/p>",
+              "dbtfy_product_tabs_image_link": "",
+              "dbtfy_product_tabs_html": "",
+              "visibility": "all",
+              "dbtfy_product_tabs_collection": "",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": ""
+            }
+          },
+          "f719a897-7258-4bcf-9b4d-9b5bd7cc8297": {
+            "type": "manual",
+            "settings": {
+              "title": "",
+              "dbtfy_product_tabs_open": false,
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Cómo se usa",
+              "text_alignment": "text-justify",
+              "visibility": "all",
+              "dbtfy_product_tabs_collection": "",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": ""
+            }
+          },
+          "69c0dfd0-324b-4d80-b8b1-6b665e872662": {
+            "type": "ingredient",
+            "settings": {
+              "title": "",
+              "dbtfy_product_tabs_open": false,
+              "dbtfy_product_tabs_icons": "",
+              "dbtfy_product_tabs_title": "Ingredientes que amamos",
+              "text_alignment": "text-justify",
+              "visibility": "all",
+              "dbtfy_product_tabs_collection": "",
+              "dbtfy_product_tabs_type": "",
+              "dbtfy_product_tabs_tag": "",
+              "dbtfy_product_tabs_product": ""
+            }
+          }
+        },
+        "block_order": [
+          "be355f46-1a19-4c95-b844-04a36b1f2aae",
+          "c96a59d6-5d35-402b-aa07-8eaf0f9e999f",
+          "f719a897-7258-4bcf-9b4d-9b5bd7cc8297",
+          "69c0dfd0-324b-4d80-b8b1-6b665e872662"
+        ],
+        "settings": {
+          "dbtfy_product_tabs_display_type": "vertical",
+          "dbtfy_product_tab_heading_color": "headings",
+          "dbtfy_product_tab_text_color": "text",
+          "dbtfy_product_tab_background_color": "accent_background"
+        }
+      },
+      "dbtfy-product-swatches": {
+        "type": "dbtfy-product-swatches",
+        "settings": {
+          "dbtfy_product_swatches_show_in_grid": true
+        }
+      },
+      "dbtfy-quantity-breaks": {
+        "type": "dbtfy-quantity-breaks",
+        "blocks": {
+          "081f8a71-4210-4287-999e-c1d3ce3d710c": {
+            "type": "product-break",
+            "settings": {
+              "title": "",
+              "product_break_show_on_product_page": true,
+              "product_break_visibility": "all",
+              "product_break_collection": "",
+              "product_break_types": "",
+              "product_break_tags": "",
+              "product_break_product": "kahi-wrinkle-bounce-multi-balm-9gr-balsamo-antiarrugas",
+              "product_break_range_1": 2,
+              "product_break_discount_code_1": "Buy 2",
+              "product_break_discount_amount_1": "",
+              "product_break_discount_type_1": "$",
+              "product_break_range_2": 5,
+              "product_break_discount_code_2": "Buy 5",
+              "product_break_discount_amount_2": "",
+              "product_break_discount_type_2": "$",
+              "product_break_range_3": 10,
+              "product_break_discount_code_3": "Buy 5",
+              "product_break_discount_amount_3": "442",
+              "product_break_discount_type_3": "$",
+              "product_break_range_4": 2,
+              "product_break_discount_code_4": "",
+              "product_break_discount_amount_4": "",
+              "product_break_discount_type_4": "%",
+              "product_break_range_5": 2,
+              "product_break_discount_code_5": "",
+              "product_break_discount_amount_5": "",
+              "product_break_discount_type_5": "%"
+            }
+          }
+        },
+        "block_order": [
+          "081f8a71-4210-4287-999e-c1d3ce3d710c"
+        ],
+        "settings": {
+          "dbtfy_quantity_breaks_single_text": "Buy _COUNT_: _PRICE_ _SAVED_AMOUNT_",
+          "dbtfy_quantity_breaks_price_type": "total_price",
+          "dbtfy_quantity_breaks_more_discount_text_before": "Add",
+          "dbtfy_quantity_breaks_more_discount_text_after": "more item to unlock",
+          "dbtfy_quantity_breaks_more_discount_text_after_percentage": "off",
+          "dbtfy_quantity_breaks_highest_discount_text": "Highest discount applied!"
+        }
+      },
+      "dbtfy-sales-countdown": {
+        "type": "dbtfy-sales-countdown",
+        "settings": {
+          "dbtfy_sales_countdown_icons": "local_fire_department",
+          "dbtfy_sales_countdown_prefix": "Sale ends in",
+          "dbtfy_sales_countdown_suffix": "",
+          "dbtfy_sales_countdown_d": "d",
+          "dbtfy_sales_countdown_h": "h",
+          "dbtfy_sales_countdown_m": "m",
+          "dbtfy_sales_countdown_s": "s"
+        }
+      },
+      "dbtfy-size-chart": {
+        "type": "dbtfy-size-chart",
+        "settings": {
+          "dbtfy_size_chart_icon": "straighten",
+          "dbtfy_size_chart_title": "Size chart",
+          "dbtfy_size_chart_width": "large"
+        }
+      },
+      "dbtfy-upsell-popup": {
+        "type": "dbtfy-upsell-popup",
+        "settings": {
+          "dbtfy_upsell_popup_width": "",
+          "dbtfy_upsell_popup_description": "See product details",
+          "dbtfy_upsell_popup_cart": "No thanks",
+          "dbtfy_upsell_popup_checkout": "Go to checkout →",
+          "text_alignment": "text-center",
+          "dbtfy_upsell_popup_range": 75
+        }
+      },
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "settings": {
+          "drawer_link_toggle": true,
+          "email": true,
+          "phone": true,
+          "show_social_medias": true,
+          "hide_menu_icon": true,
+          "title": "Menu",
+          "drawer_top_link_list": "main-menu",
+          "drawer_bottom_link_list": "footer"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "announcement-0": {
+            "type": "message",
+            "settings": {
+              "title": "",
+              "announcement_text": "<p>Free shipping worldwide | 30-Day free returns<\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-0"
+        ],
+        "settings": {
+          "show_announcement": false,
+          "small_announcement_text": false,
+          "show_social": true,
+          "email": true,
+          "phone": true,
+          "left_message": "<p>Follow us!<\/p>",
+          "right_message": "<p>Get in touch with us<\/p>",
+          "announcement_autoplayspeed": 5
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_menu_link_list": "main-menu",
+          "navigation_type": "center",
+          "logo_link": true,
+          "default_logo": "shopify:\/\/shop_images\/Logo_de_piel_1.jpg",
+          "mobile_logo": "shopify:\/\/shop_images\/Logo_de_piel_1.jpg",
+          "default_logo_svg": "",
+          "inverted_logo_svg": "",
+          "mobile_logo_svg": "",
+          "logo_width": 200,
+          "logo_mobile_width": 100
+        }
+      },
+      "dbtfy-instagram-feed": {
+        "type": "dbtfy-instagram-feed",
+        "settings": {
+          "dbtfy_instagram_feed_icon": true,
+          "dbtfy_instagram_feed_access_token": "",
+          "dbtfy_instagram_feed_full_width": false,
+          "title": "From our Instagram",
+          "subtitle": "",
+          "dbtfy_instagram_feed_section_style": "section-border",
+          "dbtfy_instagram_feed_rows": "1",
+          "dbtfy_instagram_feed_desktop_grid": "6",
+          "dbtfy_instagram_feed_mobile_grid": "3"
+        }
+      },
+      "guarantee": {
+        "type": "guarantee",
+        "blocks": {
+          "guarantee-0": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/12.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "Recommendación del Experto",
+              "text": "<p><em>Recomendamos productos revisados ​​por expertos en el sector de la belleza de Corea.<\/em><\/p>",
+              "text_alignment": "text-center",
+              "text_alignment_mobile": "text-center",
+              "button_style": "btn-outline-primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "guarantee-1": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/13.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "La Marca Auténtica",
+              "text": "<p>Solo tratamos producto de marca real garantizado por clientes coreanos.<\/p>",
+              "text_alignment": "text-center",
+              "text_alignment_mobile": "text-center",
+              "button_style": "btn-outline-primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          },
+          "guarantee-2": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/14.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "El Mejor Producto",
+              "text": "<p>Sólo tratamos productos que tengan mejores críticas de clientes coreanos.<\/p>",
+              "text_alignment": "text-center",
+              "text_alignment_mobile": "text-center",
+              "button_style": "btn-outline-primary",
+              "button_label": "",
+              "button_link": ""
+            }
+          }
+        },
+        "block_order": [
+          "guarantee-0",
+          "guarantee-1",
+          "guarantee-2"
+        ],
+        "settings": {
+          "show_guarantee": true,
+          "guarantee_size": "xl",
+          "section_style": "section-border"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "column_width": 2,
+              "svg": "",
+              "img_url": "",
+              "logo_width": 150,
+              "heading_text": "About Us",
+              "subtitle": "",
+              "text": "<p>Share store details, promotions, or brand content with your customers.<\/p>",
+              "email": true,
+              "phone": true,
+              "show_social_media": false
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "column_width": 1,
+              "heading_text": "Quick Links",
+              "subtitle": "",
+              "footer_link_list": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "newsletter",
+            "disabled": true,
+            "settings": {
+              "title": "",
+              "column_width": 2,
+              "heading_text": "Subscribe to our newsletter",
+              "subtitle": "A short sentence describing what someone will receive by subscribing",
+              "customer_tag": "newsletter"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
+        "settings": {
+          "show_social_media": true,
+          "social_media_position_desktop": "right",
+          "social_title": "",
+          "show_payment_icons": true,
+          "show_shopify_footer": false,
+          "show_debutify_footer": false,
+          "custom_credential": ""
+        }
+      },
+      "dbtfy-collection-filters": {
+        "type": "dbtfy-collection-filters",
+        "settings": {
+          "clear_label": "Clear",
+          "clear_all_label": "Clear All",
+          "hide_unavailable_options": false,
+          "visibility_tags_count": "none"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}

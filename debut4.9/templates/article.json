@@ -1,0 +1,18 @@
+{
+  "sections": {
+    "main": {
+      "type": "article-template",
+      "settings": {
+      }
+    },
+    "back-to-blog": {
+      "type": "article-back-to-blog",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "back-to-blog"
+  ]
+}

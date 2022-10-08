@@ -1,0 +1,102 @@
+
+{% comment %} PLEASE DON'T MAKE CHANGES IN THIS FILE IT'S AFFECT THE CODE IF YOU NEED ANY HELP PLEASE CONTACT TO FLITS TEAM support@getflits.com {% endcomment %}
+
+{% if shop.metafields.Flits.ORDER_STATUS_PAGE %}
+{% render 'flits_capture_code' with 'component', template:'comp_storeCreditOrderStatusPage' %}
+
+{% assign flitsSecretKey = shop.metafields.Flits.SHOP_ID | append: shop.metafields.Flits.SHOP_TOKEN | append: shop.metafields.Flits.APP_PROXY %}
+{% assign flitsSecureCustomerHash = shop.metafields.Flits.SHOP_ID | hmac_sha256: flitsSecretKey %}
+
+<script class="flits-order-status-scripts" data-reference="innerHTML">
+  window.flitsObjects&&void 0!==window.flitsObjects||(window.flitsObjects={});
+  window.flitsObjects.global = {
+    partialCustomerHash: '{{ flitsSecureCustomerHash }}',
+    customerHash: '{{ flitsSecureCustomerHash }}',
+    shop_name: '{{ shop.name }}',
+    token: '{{ shop.metafields.Flits.SHOP_TOKEN }}',
+    base_url: '/apps/{{ shop.metafields.Flits.APP_PROXY }}/api/{{ shop.metafields.Flits.APP_ID }}/{{ shop.metafields.Flits.SHOP_ID }}',
+    proxy_name: '{{ shop.metafields.Flits.APP_PROXY }}',
+    app_id: {{ shop.metafields.Flits.APP_ID }},
+    shop_id: {{ shop.metafields.Flits.SHOP_ID }},
+    shop_token: '{{ shop.metafields.Flits.SHOP_TOKEN }}',
+    chandle: 'flits_products_handle',
+    recent_handle: "flits_recently_products",
+    cemail: "flits_customer_email",
+    customJsURL:"{{ 'flits_custom.js' | asset_url }}",
+    shop_currency: '{{ shop.currency }}',
+    shopCountryName: '{{ shop.address.country }}',
+    defualtCountry: 'US',
+    money_format: '{{ shop.money_format | escape }}',
+    money_format_replace: { moneyReplaceRegex:/((\,00)|(\.00))$/g, replaceTo: ''},
+    Metafields: {{ shop.metafields.Flits | json }},
+    locals: {},
+    romCache: true,
+    cacheTime: 5
+  };
+  {%- assign flits_multilanguage = 'flits' | t | replace:'&quot;','"' | replace:'=&gt;',':' | json -%}
+  {%- unless flits_multilanguage contains 'translation missing:' -%}
+  window.flitsObjects.global.locals = JSON.parse({{ flits_multilanguage }});
+  {%- endunless -%}
+  window.flitsObjects.accountPage = {};
+  window.flitsObjects.allCssJs = {
+    flitsCss:{
+      name:"flitsCss",
+      url:"{{- 'flits.css' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"GENERAL",
+      loadBasedOnMetafields:[],
+    },
+    orderStatusPageJs:{
+      name:"orderStatusPageJs",
+      url:"{{- 'flits_order_status_page.js' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"ORDER_STATUS_PAGE",
+      loadBasedOnMetafields:[],
+    },
+    customCss:{
+      name:"customCss",
+      url:"{{- 'flits_custom.css' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"CUSTOM",
+      loadBasedOnMetafields:[],
+    },
+    customJs:{
+      name:"customJs",
+      url:"{{- 'flits_custom.js' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"CUSTOM",
+      loadBasedOnMetafields:[],
+    }
+  };
+  window.flitsObjects.storeData = {
+    request:{
+      host:"{{- request.host -}}",
+      page_type: "{{- request.page_type -}}",
+      path:"{{- request.path -}}",
+    },
+    template:{
+      directory: "{{- template.directory -}}",
+      name: "{{- template.name -}}",
+      suffix: "{{- template.suffix -}}",
+    },
+    theme:{
+      id:"{{- theme.id -}}",
+      name:"{{- theme.name -}}",
+    },
+    jsonSettingsPath:"{{ 'flits_template_settings.json' | asset_url }}",
+    product:{{ product | json }},
+    cart: {{ cart | json }},
+    shop_currency: '{{ shop.currency }}',
+    money_format: '{{ shop.money_format | escape }}',
+    customer_id: '{{ customer.id }}',
+    customer_email: '{{ customer.email }}',
+    customer_accepts_marketing: '{{ customer.accepts_marketing }}',
+    customer_orders_count: '{{ customer.orders_count }}',
+    customer_last_order_name: '{{ customer.last_order.name }}',
+    customer_last_order_id: '{{ customer.last_order.id }}',
+  };
+  window.flitsObjects.global.Metafields.customer_id = {% if customer %} "{{- customer.id -}}" {% else %} -1 {% endif %};
+  window.flitsObjects.storeData.customer_id = {% if customer %} "{{- customer.id -}}" {% else %} -1 {% endif %};
+</script>
+<script class="flits-order-status-scripts" data-reference="src" src="{{ 'flits.js' | asset_url }}"></script>
+{% endif %}

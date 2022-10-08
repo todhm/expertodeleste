@@ -1,0 +1,106 @@
+<div class="wrapper">
+    <div class="additional-recommendation-area" id="additional-recommendation-area">
+      <div ref="footer">
+        <template v-for="(sliderData, i) in dataMap" :key="i">
+          <div class="slider-wrapper">
+              {% render 'product-slider'%}
+          </div>
+        </template>       
+    </div>
+    </div>
+  </div>
+  <script defer="defer">
+    const currentTagList = {{product.tags| json}};
+    const currentProductHandle = '{{product.handle}}';
+    if (document.querySelector('#additional-recommendation-area')) {  
+      let intersectionObserver = null
+      const recommendationArea = Vue.createApp({
+        delimiters: ['${', '}'],
+        data() {
+          return {
+            dataMap: [],
+            productData: [],
+            filterMap: {},
+            carouselBtnTop: 150,
+            options:{
+              type: Object,
+              default: () => ({
+                root: null,
+                threshold: "0",
+              })
+            }
+          }
+        },
+        methods: {
+          handleCarouselBtnTop(event){
+            if(this.$refs&&this.$refs.imgBox){
+              this.carouselBtnTop = this.$refs.imgBox.clientHeight / 2 - 20;
+            }
+          },
+          createApp(entries){
+            if (entries[0].intersectionRatio <= 0) return;
+            this.observer.unobserve(entries[0].target);
+            this.filterMap[currentProductHandle] = true;
+            this.dataMap = returnAvailableTags(currentTagList);
+          },
+          slideImage(event, direction){
+            if(direction==='right'){
+              event.target.parentNode.parentNode.scrollLeft += 1000;
+            }else{
+              event.target.parentNode.parentNode.scrollLeft -= 1000;
+            }
+          
+          }
+        },
+        mounted(){
+          window.addEventListener('resize', this.handleCarouselBtnTop);
+        },
+        beforeDestroy(){
+          window.removeEventListener('resize', this.handleCarouselBtnTop);
+        },
+        created() {
+          this.filterMap = {};
+          this.filterMap[currentProductHandle] = true;
+          this.dataMap = returnAvailableTags(currentTagList);
+        },
+        watch: {
+          dataMap: function (newValue) {
+            this.productData = [];
+            this.dataMap.forEach((data, i) => {
+              const url = `https://${shopId}.myshopify.com/api/2022-01/graphql.json`;
+              axios.post(url, JSON.stringify(data.query), {
+                headers: headers
+              })
+              .then((rst) => {
+                const response_data = rst.data;
+                if(response_data.data && response_data.data.products){
+                  this.productData[i] = response_data.data.products.edges.filter((x)=>{
+                    return !this.filterMap[x.node.handle]
+                  }).map((x, idx)=>{
+                    if(x.node.reviewValue && x.node.reviewValue.value){
+                      x.node.reviewValue.value = JSON.parse(x.node.reviewValue.value)
+                      x.reviewPoint = parseFloat(x.node.reviewValue.value.value);
+                    }else{
+                      x.reviewPoint = 0;
+                    }
+                    const percent = Math.max(Math.round(((x.node.compareAtPriceRange.minVariantPrice.amount - x.node.priceRange.minVariantPrice.amount) * 100) / x.node.compareAtPriceRange.minVariantPrice.amount), 0);
+                    x.node["salesPercentage"] = percent;
+                    if(idx < 4){
+                      this.filterMap[x.node.handle] = true;
+                    }
+                    return x; 
+                  }).sort((a,b)=>{return b.reviewPoint-a.reviewPoint});
+                  if(this.$refs&&this.$refs.imgBox){
+                    this.carouselBtnTop = this.$refs.imgBox.clientHeight / 2 - 25;
+                  }
+                }
+              }).catch((err)=>{
+                console.log(err);
+                this.productData[i] = [];
+            });
+          });
+        }
+      }}).mount('#additional-recommendation-area')
+    }
+  </script>
+  

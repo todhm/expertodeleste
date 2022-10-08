@@ -1,0 +1,14 @@
+
+<div class="rte product-tabs-{{product.id}}">
+    <div class="product-metafields-tab">
+        <div class="product-brand-wrapper">            
+            {% assign brand_data = product.metafields.my_fields.branddata.value %} 
+            <div class="brand-row">
+                <img class="logo" src="{{brand_data.brandLogo}}">
+            </div>
+            <div class="brand-row">
+                <iframe id="brandDescriptionIframe" srcdoc="{{brand_data.brandDescription}}" ></iframe>
+            </div>
+        </div>
+    </div>
+</div>

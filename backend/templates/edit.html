@@ -1,0 +1,14 @@
+{% extends 'admin/model/edit.html' %}
+
+{% block tail %}
+    {{ super() }}
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='description') }}
+    {{ ckeditor.config(name='manual') }}
+    {{ ckeditor.config(name='ingredient') }}
+    {{ ckeditor.config(name='brandData-brandDescription') }}
+    <script>
+        CKEDITOR.config.allowedContent = true;
+    </script>
+{% endblock %}
+

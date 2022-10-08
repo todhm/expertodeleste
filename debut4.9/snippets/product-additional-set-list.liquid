@@ -1,0 +1,97 @@
+{% assign additionalsetlist = product.metafields.my_fields.additionalproductlist.value %} 
+{%- if additionalsetlist.size > 0 -%}
+<div id="additional-set-area" class="wrapper">
+    <h4>Additional Set</h4>
+    <div class="additional-row-wrapper">
+        <template v-for="item in additionalSetList">
+            <div class="additional-product-wrapper" >
+                <div class="additional-image">
+                    <a :href="`/products/${item.productId}`">
+                        <img :src="item.thumbnailImage" class="lazyloaded" width="100" height="100"/>          
+                    </a>
+                </div>
+                <div class="addditional-set-row">
+                    <div class="additionaal-set-row-title">
+                        <a :href="`/products/${item.productId}`">
+                        ${item.productName}
+                        </a>
+                    </div>
+                    <div class="additionaal-set-row-price">
+                    $ ${item.price}
+                    </div>
+                    <div class="additionaal-qty-holder">
+                        <template v-if="item.isSoldOut">
+                            Sold Out
+                        </template>
+                        <template v-else>
+                            <template v-if="item.currentCount">
+                                <div class="selection-qty-button decrease" @click="changeCount(item.shopifyVariantId, item.currentCount, -1)"></div> 
+                                <div class="selection-qty-button number"><span>${item.currentCount}</span></div> 
+                                <div class="selection-qty-button increase" @click="changeCount(item.shopifyVariantId, item.currentCount, 1)"></div> 
+                            </template>
+                            <template v-else>
+                                <div class="selection-qty-button addBtn" @click="changeCount(item.shopifyVariantId, item.currentCount, 1)"><span>Add</span></div> 
+                            </template>
+                        </template>
+                    </div>
+                    <template v-if="item.beforeSalePrice > item.price">
+                        <div class="additionaal-set-row-price save-price">
+                            Save $${item.beforeSalePrice - item.price}
+                        </div>
+                    </template>
+                </div>
+            </div> 
+        </template>   
+    </div>
+</div>
+<script defer="defer">
+    const additionalProductList = {{product.metafields.my_fields.additionalproductlist.value|json}};  
+    if (document.querySelector('#additional-set-area')) {  
+        const additionalSetArea = Vue.createApp({
+            delimiters: ['${', '}'],
+            data() {
+                return {
+                    additionalProductList: store.state.additionalProductList,
+                }
+            },
+            methods: {
+                changeCount(variantId, currentCount, count) {
+                    let data = {
+                        id: variantId,
+                        quantity: currentCount + count
+                    }
+                    if(currentCount === 0){
+                        axios.post('/cart/add.js', data)
+                        .then((response) => {
+                            store.matchAdditionalData(additionalProductList);
+                        })
+                        .catch(error => {
+                            console.log(error)
+                        })
+                    }
+                    else{
+                        axios.post('/cart/change.js', data)
+                        .then((response) => {
+                            store.matchAdditionalData(additionalProductList);
+                        })
+                        .catch(error => {
+                            console.log(error)
+                        })
+                    }
+                },
+                decrease(variantId){
+                }
+            },
+            created(){
+                store.matchAdditionalData(additionalProductList);
+            },
+            computed:{
+                additionalSetList(){
+                    return this.additionalProductList
+                }
+            }
+        }).mount('#additional-set-area');
+    }
+
+</script>
+{% endif %}

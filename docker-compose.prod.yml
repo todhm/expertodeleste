@@ -1,0 +1,39 @@
+version: '3.8'
+services:
+  apihelper:
+    image: apihelper
+    build:
+      context: ./apihelper/
+    working_dir: /usr/src/app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apihelper:/usr/src/app
+    command: gunicorn -b 0.0.0.0:8000 -t 200000 -w 2 wsgi:app
+    env_file:
+      - ./envfiles/.fedex.prod.env
+      - ./envfiles/.mongo.prod.env
+    networks:
+        backend:
+  mongo:
+    image: mongo:4-xenial
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-volume-prod:/data/db
+    env_file:
+      - ./envfiles/.mongo.prod.env
+  caddy:
+    build:
+      context: ./caddy/
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./caddy_data:/data
+    networks:
+      backend:
+
+networks:
+  backend:

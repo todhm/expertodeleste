@@ -1,0 +1,11 @@
+{% extends 'admin/model/edit.html' %}
+
+{% block tail %}
+    {{ super() }}
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='collectionDescription') }}
+    <script>
+        CKEDITOR.config.allowedContent = true;
+    </script>
+{% endblock %}
+

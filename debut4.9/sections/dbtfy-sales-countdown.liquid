@@ -1,0 +1,1354 @@
+{%- if content_for_header contains 'debutify' and settings.dbtfy_sales_countdown -%}
+  {%- if section.blocks.size >= 1 -%}
+    <div class="dbtfy-sales-countdown-templates" hidden
+         data-text-days="{{ section.settings.dbtfy_sales_countdown_d }}"
+         data-text-hours="{{ section.settings.dbtfy_sales_countdown_h }}"
+         data-text-minutes="{{ section.settings.dbtfy_sales_countdown_m }}"
+         data-text-seconds="{{ section.settings.dbtfy_sales_countdown_s }}">
+
+      {%- for block in section.blocks -%}
+        {%- for i in (1..10) -%}
+          {%- capture index -%}{{ forloop.index }}{%- endcapture -%}
+          {%- capture when_timer_id_over_action -%}when_timer_id_over_action_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_date -%}dbtfy_sales_countdown_date_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_time_hours -%}dbtfy_sales_countdown_time_hours_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_time_mins -%}dbtfy_sales_countdown_time_mins_{{index}}{%- endcapture -%}
+          {%- capture visibility -%}visibility_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_product_grid -%}dbtfy_sales_countdown_product_grid_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_tag -%}dbtfy_sales_countdown_tag_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_type -%}dbtfy_sales_countdown_type_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_product -%}dbtfy_sales_countdown_product_{{index}}{%- endcapture -%}
+          {%- capture dbtfy_sales_countdown_collection -%}dbtfy_sales_countdown_collection_{{index}}{%- endcapture -%}
+          {%- capture timer_message -%}timer_message_{{index}}{%- endcapture -%}
+
+          {%- assign current_timer_over_action = block.settings[when_timer_id_over_action] -%}
+          {%- assign current_sales_countdown_date = block.settings[dbtfy_sales_countdown_date] -%}
+          {%- assign current_sales_countdown_time_hours = block.settings[dbtfy_sales_countdown_time_hours] -%}
+          {%- assign current_sales_countdown_time_mins = block.settings[dbtfy_sales_countdown_time_mins] -%}
+          {%- assign current_visibility = block.settings[visibility] -%}
+          {%- assign current_sales_countdown_product_grid = block.settings[dbtfy_sales_countdown_product_grid] -%}
+          {%- assign current_sales_countdown_tag = block.settings[dbtfy_sales_countdown_tag] -%}
+          {%- assign current_sales_countdown_type = block.settings[dbtfy_sales_countdown_type] -%}
+          {%- assign current_sales_countdown_product = block.settings[dbtfy_sales_countdown_product] -%}
+          {%- assign current_sales_countdown_collection = block.settings[dbtfy_sales_countdown_collection] -%}
+          {%- assign current_timer_message = block.settings[timer_message] -%}
+
+          {%- if current_sales_countdown_time_hours == 0 and current_sales_countdown_time_mins == 0 and current_sales_countdown_date == blank -%}
+            {%- continue -%}
+          {%- endif -%}
+
+          <div class="dbtfy dbtfy-sales_countdown dbtfy-countdown-{{ block.id }}-{{ index }}"
+              data-countdown-id="dbtfy-countdown-{{ block.id }}-{{ index }}"
+              data-action="{{ current_timer_over_action }}"
+              data-date="{{ current_sales_countdown_date }}"
+              data-hours="{{ current_sales_countdown_time_hours }}"
+              data-minutes="{{ current_sales_countdown_time_mins }}"
+              data-visibility="{{ current_visibility }}"
+              data-show-in-product-grid="{{ current_sales_countdown_product_grid }}"
+              data-tag="{{ current_sales_countdown_tag }}"
+              data-type="{{ current_sales_countdown_type }}"
+              data-product="{{ all_products[current_sales_countdown_product].id }}"
+              data-collection="{{ collections[current_sales_countdown_collection].handle }}">
+
+            <div id="SalesCountdown-{{ block.id }}-{{ index }}" class="SalesCountdown">
+              {%- unless section.settings.dbtfy_sales_countdown_icons == blank -%}
+              <span class="{{ settings.icon }} icon-width">{{ section.settings.dbtfy_sales_countdown_icons }}</span>
+              {%- endunless -%}
+
+              {%- unless section.settings.dbtfy_sales_countdown_prefix == blank -%}
+              <span class="prefix-sales_countdown spacer-left-xs">{{ section.settings.dbtfy_sales_countdown_prefix }}</span>
+              {%- endunless -%}
+
+              <strong class="timer-sales_countdown text-secondary">
+                <span class="days-sales_countdown"></span>
+                <span class="hours-sales_countdown"></span>
+                <span class="minutes-sales_countdown"></span>
+                <span class="seconds-sales_countdown"></span>
+              </strong>
+
+              {%- unless section.settings.dbtfy_sales_countdown_suffix == blank -%}
+              <span class="suffix-sales_countdown">{{ section.settings.dbtfy_sales_countdown_suffix }}</span>
+              {%- endunless -%}
+            </div>
+            {%- if current_timer_message != blank and current_timer_over_action == "message" -%}
+            <div class="dbtfy-sales_countdown_message" hidden>
+              {%- unless section.settings.dbtfy_sales_countdown_icons == blank -%}
+              <span class="{{ settings.icon }} icon-width">{{ section.settings.dbtfy_sales_countdown_icons }}</span>
+              {%- endunless -%}
+
+              <span>{{ current_timer_message }}</span>
+            </div>
+            {%- endif -%}
+          </div>
+        {%- endfor -%}
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
+{%- endif -%}
+
+{% schema %}
+  {
+    "name": "⚡ Sales Countdown",
+    "class": "sales-countdown-section",
+    "settings": [
+      {
+        "type": "header",
+        "content": "Help Center"
+      },
+      {
+        "type": "paragraph",
+        "content": "[Follow our step-by-step tutorial](https://help.debutify.com/en/articles/5054213-how-to-display-a-sales-countdown-on-your-product-page-in-3-0)"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_icons",
+        "label": "Icon",
+        "info": "Enter the name of any free solid icons on [Material Design](https:\/\/material.io\/resources\/icons\/?style=baseline)",
+        "default": "local_fire_department"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_prefix",
+        "label": "Prefix",
+        "default": "Sale ends in"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_suffix",
+        "label": "Suffix"
+      },
+      {
+        "type": "header",
+        "content": "Translation settings"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_d",
+        "label": "Days",
+        "default": "d"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_h",
+        "label": "Hours",
+        "default": "h"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_m",
+        "label": "Minutes",
+        "default": "m"
+      },
+      {
+        "type": "text",
+        "id": "dbtfy_sales_countdown_s",
+        "label": "Seconds",
+        "default": "s"
+      }
+    ],
+    "blocks": [
+      {
+        "type": "countdown",
+        "name": "Sales Countdown",
+        "settings": [
+          {
+            "type": "text",
+            "id": "title",
+            "label": "Block name",
+            "info": "Used for internal identification"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 1"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_1",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_1",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_1",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_1",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_1",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_1",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_1",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_1",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_1",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_1",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_1",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 2"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_2",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_2",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_2",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_2",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_2",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_2",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_2",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_2",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_2",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_2",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_2",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 3"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_3",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_3",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_3",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_3",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_3",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_3",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_3",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_3",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_3",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_3",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_3",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 4"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_4",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_4",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_4",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_4",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_4",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_4",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_4",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_4",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_4",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_4",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_4",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 5"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_5",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_5",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_5",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_5",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_5",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_5",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_5",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_5",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_5",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_5",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_5",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 6"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_6",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_6",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_6",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_6",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_6",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_6",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_6",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_6",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_6",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_6",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_6",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 7"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_7",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_7",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_7",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_7",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_7",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_7",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_7",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_7",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_7",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_7",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_7",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 8"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_8",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_8",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_8",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_8",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_8",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_8",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_8",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_8",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_8",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_8",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_8",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 9"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_9",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_9",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_9",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_9",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_9",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_9",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_9",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_9",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_9",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_9",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_9",
+            "label": "Product"
+          },
+          {
+            "type": "header",
+            "content": "Sales Countdown 10"
+          },
+          {
+            "type": "header",
+            "content": "Timer settings"
+          },
+          {
+            "type": "text",
+            "id": "dbtfy_sales_countdown_date_10",
+            "label": "Sales end date",
+            "info": "MM\/DD\/YYYY"
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_hours_10",
+            "label": "Hours",
+            "min": 0,
+            "max": 23,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "range",
+            "id": "dbtfy_sales_countdown_time_mins_10",
+            "label": "Minutes",
+            "min": 0,
+            "max": 59,
+            "step": 1,
+            "default": 0
+          },
+          {
+            "type": "header",
+            "content": "When timer is over",
+            "info": "The 'Reload timer' action does not work with the Date field. If this action is selected it will take the value of 'hours' and 'minutes' for the timer."
+          },
+          {
+            "type": "select",
+            "id": "when_timer_id_over_action_10",
+            "options": [
+              {
+                "value": "hide",
+                "label": "Hide timer"
+              },
+              {
+                "value": "message",
+                "label": "Show message"
+              }
+            ],
+            "label": "Action after finish",
+            "default": "hide"
+          },
+          {
+            "type": "textarea",
+            "id": "timer_message_10",
+            "label": "Message"
+          },
+          {
+            "type": "header",
+            "content": "Visibility settings"
+          },
+          {
+            "type": "checkbox",
+            "id": "dbtfy_sales_countdown_product_grid_10",
+            "label": "Show in product grid",
+            "default": true
+          },
+          {
+            "type": "radio",
+            "id": "visibility_10",
+            "label": "Visibility",
+            "options": [
+              {
+                "value": "all",
+                "label": "All"
+              },
+              {
+                "value": "collection",
+                "label": "Collection based"
+              },
+              {
+                "value": "type",
+                "label": "Type based"
+              },
+              {
+                "value": "tag",
+                "label": "Tag based"
+              },
+              {
+                "value": "product",
+                "label": "Product based"
+              }
+            ],
+            "info": "From lowest to higher priority.",
+            "default": "all"
+          },
+          {
+            "type": "collection",
+            "id": "dbtfy_sales_countdown_collection_10",
+            "label": "Collection"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_type_10",
+            "label": "Product types",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "textarea",
+            "id": "dbtfy_sales_countdown_tag_10",
+            "label": "Product tags",
+            "info": "Comma-separated"
+          },
+          {
+            "type": "product",
+            "id": "dbtfy_sales_countdown_product_10",
+            "label": "Product"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

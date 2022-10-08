@@ -1,0 +1,15 @@
+
+{% comment %} PLEASE DON'T MAKE CHANGES IN THIS FILE IT'S AFFECT THE CODE IF YOU NEED ANY HELP PLEASE CONTACT TO FLITS TEAM support@getflits.com {% endcomment %}
+{% layout none %}
+<div class="flits-product-data-div" style="display:block;">
+    <div class="flits-product-variant-data">
+        {
+        "product_id": {{ product.id }},
+        "variant_id" : {{ product.selected_or_first_available_variant.id  }}, 
+        "variant_available" : {{ product.selected_or_first_available_variant.available }}, 
+        "inventory_quantity" : {{ product.selected_or_first_available_variant.inventory_quantity }},
+        "inventory_management" : "{{ product.selected_or_first_available_variant.inventory_management }}",
+        "inventory_policy" : "{{ product.selected_or_first_available_variant.inventory_policy }}"
+        }
+    </div>
+</div>

@@ -1,0 +1,21 @@
+
+<div class="rte product-tabs-{{product.id}}">
+    <div class="product-metafields-tab">
+        <div class="product-brand-wrapper">            
+            <p><strong>How long does it take to receive my order?<br></strong>
+            You can expect your order to be delivered within {{product.metafields.my_fields.min_delivery_days}}-{{product.metafields.my_fields.max_delivery_days}} days.</p>
+        </div>
+        <div class="product-brand-wrapper">            
+            <p><strong>How much it costs to deliver my products?<br></strong>
+            {%- if product.metafields.my_fields.shipping_type == "FREE" or  product.metafields.my_fields.shipping_type == "FIXED" and product.metafields.my_fields.shipping_price == 0-%}
+                Free Shipping
+            {%- else if product.metafields.my_fields.shipping_type == "FIXED" -%}
+                <span class="money">{{ product.metafields.my_fields.shipping_price | money }}</span>
+            {%- else -%}
+                <span class="money">
+                    Your Shipping Price will be calculated at Checkout
+                </span>
+            {%- endif -%}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+<div class="product-slider" v-if="productData[i] && productData[i].length > 0">
+  <h2 class="slider-header">${ sliderData.tagName }</h2>
+  <div class="product-slider-window">
+    <span class="slider-left-button slider-btn"  v-on:click="slideImage($event, 'left')" tabindex="0" role="button" aria-label="이전 콘텐츠 보기"><b class="indicator-icon icon-leftCaret" :style="{paddingTop: `${carouselBtnTop}px`, bottom:0, height:`100%`}"></b></span>
+    <template v-for="(rowData, j) in productData[i]" :key="j">
+      <div class="product-slider-row">
+        <article>
+          <a class="innerlink" :href="`/products/${rowData.node.handle}`" data-tip mb-checked="1"></a>
+          <div class="product-slider-img-wrapper" ref="imgBox">
+            <img 
+              class="product-slider-img" 
+              :src="rowData.node.featuredImage.url" 
+              alt="mainImage" loading="lazy"
+            >  
+          </div>
+          <div class="product-slider-info-wrapper">
+            <div class="product-slider-title h4">
+              ${rowData.node.title}
+            </div>
+            <div class="product-slider-price-wrapper">
+              <span class="percent" v-if="rowData.node.salesPercentage > 0">
+                ${rowData.node.salesPercentage}%
+              </span>
+              <span class="price-slider">
+                ${rowData.node.priceRange.minVariantPrice.currencyCode}
+                ${rowData.node.priceRange.minVariantPrice.amount}
+              </span>
+              
+            </div>
+            <div class="product-slider-review">
+              <template v-if="rowData.node.reviewCount && rowData.node.reviewCount.value && rowData.node.reviewValue">
+                <div style="" class="new-star-badge-wrapper" data-id="6883984441549" data-template="" data-auto-install="false">
+                  <div class="new-jdgm-prev-badge" :data-average-rating="rowData.node.reviewValue.value.value" :data-number-of-reviews="rowData.node.reviewCount.value" data-number-of-questions="0"> 
+                    <span class="star-button-wrapper" :data-score="rowData.node.reviewValue.value.value" tabindex="0" :aria-label="`${rowData.node.reviewValue.value.value} stars`" role="button">
+                      <span class="new-jdgm-star new-star--on"></span>
+                    </span> 
+                    <span class="new-review-score-text">
+                      ${rowData.node.reviewValue.value.value}
+                    </span>
+                    <span class="new-review-count-text">${rowData.node.reviewCount.value} reviews </span> 
+                  </div>
+                </div>
+              </template>
+            </div>
+          </div>
+        </article>
+      </div>
+    </template>
+    <span class="slider-right-button slider-btn"  v-on:click="slideImage($event, 'right')" tabindex="0" role="button" aria-label="이후 콘텐츠 보기"><b class="indicator-icon icon-rightCaret" :style="{paddingTop: `${carouselBtnTop}px`, bottom:0, height:`100%`}"></b></span>
+  </div>
+</div>

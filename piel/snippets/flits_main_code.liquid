@@ -1,0 +1,1311 @@
+
+{% comment %} PLEASE DON'T MAKE CHANGES IN THIS FILE IT'S AFFECT THE CODE IF YOU NEED ANY HELP PLEASE CONTACT TO FLITS TEAM support@getflits.com {% endcomment %}
+{% liquid
+	capture navigation_profileText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.profile',default_template:'My Profile'
+	endcapture
+	capture navigation_myOrdersText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.my_orders',default_template:'My Orders'
+	endcapture
+	capture navigation_topOrdersText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.top_ordered_products',default_template:'Top Ordered Products'
+	endcapture
+	capture navigation_deliveryAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.delivery_address',default_template:'Delivery Address'
+	endcapture
+  	capture navigation_changePasswordText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.change_password',default_template:'Change Password'
+	endcapture
+	capture navigation_wishlistText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.wishlist',default_template:'My Wishlist'
+	endcapture
+	capture navigation_recentlyViewText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.recently_viewed_products',default_template:'Recently Viewed'
+	endcapture
+	capture navigation_storeCreditText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.store_credit',default_template:'My Credits'
+	endcapture
+	capture navigation_howToManageCreditText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.how_to_manage_credit',default_template:'How To Manage Credits'
+	endcapture
+	capture navigation_referFriendText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.refer_friend',default_template:'Refer Friend'
+	endcapture
+	capture profile_firstNameText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.first_name',default_template:'First Name'
+	endcapture
+	capture profile_lastNameText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.last_name',default_template:'Last Name'
+	endcapture
+	capture profile_emailText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.email',default_template:'Email'
+	endcapture
+	capture profile_contactNoText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.contact_number',default_template:'Contact Number'
+	endcapture
+	capture profile_birthdateText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.birthdate',default_template:'Birthdate'
+	endcapture
+	capture profile_genderText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.gender',default_template:'Gender'
+	endcapture
+	capture profile_maleText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.male',default_template:'Male'
+	endcapture
+	capture profile_femaleText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.female',default_template:'Female'
+	endcapture
+	capture profile_otherText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.other',default_template:'Other'
+	endcapture
+	capture profile_buttonEditText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.edit_button',default_template:'Edit'
+	endcapture
+	capture profile_buttonCancelText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.cancel_button',default_template:'Cancel'
+	endcapture
+	capture profile_buttonSaveText
+		render 'flits_capture_code' with 'translation',template:'flits.profile_page.save_button',default_template:'Save'
+	endcapture
+	
+	capture order_reorderText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.reorder',default_template:'Re-order'
+	endcapture
+	capture updatePassword_updatePasswordButtonText
+		render 'flits_capture_code' with 'translation',template:'flits.update_password_page.update_password_button',default_template:'Update Password'
+	endcapture
+	capture updatePassword_newPasswordText
+		render 'flits_capture_code' with 'translation',template:'flits.update_password_page.new_password',default_template:'New Password'
+	endcapture
+	capture updatePassword_newPasswordPlaceholderText
+		render 'flits_capture_code' with 'translation',template:'flits.update_password_page.new_password_placeholder',default_template:'Enter New Password'
+	endcapture
+	capture updatePassword_confirmNewPasswordText
+		render 'flits_capture_code' with 'translation',template:'flits.update_password_page.confirm_new_password',default_template:'Confirm New Password'
+	endcapture
+	capture updatePassword_confirmPasswordPlaceholderText
+		render 'flits_capture_code' with 'translation',template:'flits.update_password_page.confirm_password_placeholder',default_template:'Confirm New Password'
+	endcapture
+	capture updatePassword_passwordHintMessageText
+		render 'flits_capture_code' with 'translation',template:'flits.update_password_page.password_hint_message',default_template:'Password must between 6 to 40 characters'
+	endcapture
+	capture refer_youAreReferredByText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.you_are_referred_by',default_template:'Referred by'
+	endcapture
+	capture refer_referProgramHowItWorkTitleText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.refer_program_how_it_work_title',default_template:'How it works'
+	endcapture
+	capture refer_referProgramHowItWorkStep1Text
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.refer_program_how_it_work_step_1',default_template:'Share your referral link'
+	endcapture
+	capture refer_referProgramHowItWorkStep2Text
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.refer_program_how_it_work_step_2',default_template:'When your friend signup'
+	endcapture
+	capture refer_referProgramHowItWorkStep3Text
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.refer_program_how_it_work_step_3',default_template:'You get rewarded'
+	endcapture
+	capture refer_creditsActivityText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.credit_activity',default_template:'Referral History'
+	endcapture
+	capture refer_earnedCreditsText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.earned_credit',default_template:'Earned Credit'
+	endcapture
+	capture refer_referralCustomerNameText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.referral_customer_name',default_template:'Referred To'
+	endcapture
+	capture refer_referralCustomerEmailText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.referral_customer_email',default_template:"Referral's Email"
+	endcapture
+	capture refer_creditsText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.credit',default_template:'Credit'
+	endcapture
+	capture refer_timeText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.time',default_template:'Referred Since'
+	endcapture
+	capture refer_noHistoryYetText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.blank_screen_line_1_html',default_template:"You have no referrals so far.<br>You can earn rewards by referring our store to your friends.<br>Copy the above link and share it with your friends or"
+	endcapture
+	capture refer_marketingLineText
+		render 'flits_capture_code' with 'translation',template:'flits.refer_friend_page.blank_screen_line_2_html',default_template:"Share the link directly via WhatsApp and Facebook."
+	endcapture
+	capture wishlist_noWishlistViewText
+		render 'flits_capture_code' with 'translation',template:'flits.wishlisted_product_page.blank_screen_line_1_html',default_template:"Your wish is our command but<br>you haven’t wishlisted any products."
+	endcapture
+	capture wishlist_marketingLineText
+		render 'flits_capture_code' with 'translation',template:'flits.wishlisted_product_page.blank_screen_line_2_html',default_template:"You can wishlist products<br>and buy them later"
+	endcapture
+	capture recentlyViewed_noProductsViewText
+		render 'flits_capture_code' with 'translation',template:'flits.recently_viewed_product_page.blank_screen_line_1_html',default_template:"Looks like you haven’t checked out<br>any of our products recently.<br>We have a vast collection of quality products."
+	endcapture
+	capture recentlyViewed_marketingLineText
+		render 'flits_capture_code' with 'translation',template:'flits.recently_viewed_product_page.blank_screen_line_2_html',default_template:"So why wait? Check out our products."
+	endcapture
+	capture howToEarn_noRulesFoundText
+		render 'flits_capture_code' with 'translation',template:'flits.how_to_earn_credit_page.no_rule_found',default_template:'The store has not set up any rules yet'
+	endcapture
+	capture howToEarn_fromAdminText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.from_admin',default_template:'From Store Owner'
+	endcapture
+	capture howToEarn_earningText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.how_to_earn_credit',default_template:'How To Earn'
+	endcapture
+	capture howToEarn_spentText
+		render 'flits_capture_code' with 'translation',template:'flits.navigation.how_to_spend_credit',default_template:'How To Spend'
+	endcapture
+	capture credit_earnedCreditsText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.earned_credit',default_template:"Earned Credit"
+	endcapture
+	capture credit_spentCreditsText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.spent_credit',default_template:"Spent Credit"
+	endcapture
+	capture credit_currentCreditsText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.current_credit',default_template:"Current Credit"
+	endcapture
+	capture credits_activity_text
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.credit_activity',default_template:'Recent Transactions'
+	endcapture
+	capture credits_creditsText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.credit',default_template:'CR/DR'
+	endcapture
+	capture credits_reasonForCreditsText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.reason_for_credit',default_template:'Credit Reason'
+	endcapture
+	capture credits_timeText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.time',default_template:'Date'
+	endcapture
+	capture credit_noHistoryYetText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.blank_screen_line_1_html',default_template:"You are missing out on taking advantage of<br>our Reward Program."
+	endcapture
+	capture credit_marketingLineText
+		render 'flits_capture_code' with 'translation',template:'flits.credit_page.blank_screen_line_2_html',default_template:"So why wait? Start shopping our products to start earning rewards."
+	endcapture
+	capture topOrder_searchPlaceholderText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.search_placeholder',default_template:'Search product here'
+	endcapture
+	capture topOrder_searchProductNotFoundText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.search_product_not_found',default_template:"No product/s found"
+	endcapture
+	capture topOrder_filterText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.filter',default_template:'Filter'
+	endcapture
+	capture topOrder_noneText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.none',default_template:'None'
+	endcapture
+	capture topOrder_numberOfOrderLowToHighText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.number_of_order_low_to_high',default_template:'Number of order (Low to High)'
+	endcapture
+	capture topOrder_numberOfOrderHighToLowText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.number_of_order_high_to_low',default_template:'Number of order (High to Low)'
+	endcapture
+	capture topOrder_sortByPriceLowToHighText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.sort_by_price_low_to_high',default_template:'Sort by price (Low to High)'
+	endcapture
+	capture topOrder_sortByPriceHighToLowText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.sort_by_price_high_to_low',default_template:'Sort by price (High to Low)'
+	endcapture
+	capture topOrder_last30DaysText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.last_30_days',default_template:'Last 30 days'
+	endcapture
+	capture topOrder_last60DaysText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.last_60_days',default_template:'Last 60 days'
+	endcapture
+	capture topOrder_noProductsViewText
+		render 'flits_capture_code' with 'translation',template:'flits.top_ordered_products_page.blank_screen_line_1_html',default_template:"There are no top ordered products to display.<br>We are pretty sure that a few products<br>from our fantastic collection<br>will make it to your top products."
+	endcapture
+	capture order_orderDateFormatText
+		render 'flits_capture_code' with 'translation',template: 'flits.order_page.order_date_format' ,default_template:'%B %d, %Y'
+	endcapture
+	capture order_orderNumberText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.order_number',default_template:'Order'
+	endcapture
+	capture order_grandTotalText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.grand_total',default_template:'Grand Total'
+	endcapture
+	capture order_orderDateText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.order_date',default_template:'Date'
+	endcapture
+	capture order_cancelAtText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.cancel_at',default_template:'Cancelled at'
+	endcapture
+	capture order_fulfillmentStatusText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.fulfillment_status',default_template:'Fulfillment Status'
+	endcapture
+	capture order_totalItemText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.total_items',default_template:'Total Items'
+	endcapture
+	capture order_paymentStatusText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.payment_status',default_template:'Payment'
+	endcapture
+	capture order_shippingAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.shipping_address',default_template:'Shipping Address'
+	endcapture
+	capture order_billingAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.billing_address',default_template:'Billing Address'
+	endcapture
+	capture order_costBreakupText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.cost_breakup',default_template:'Cost Breakup'
+	endcapture
+	capture order_subtotalText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.subtotal',default_template:'Sub Total'
+	endcapture
+	capture order_discountCodeText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.discount_code',default_template:'Discount'
+	endcapture
+	capture order_shippingAndHandlingText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.shipping_and_handling',default_template:'Shipping Cost'
+	endcapture
+	capture order_paymentTypeText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.payment_type',default_template:'Payment Type'
+	endcapture
+	capture order_productNotExistText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.product_unavailable',default_template:'Unavailable'
+	endcapture
+	capture order_soldOutText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.sold_out',default_template:'Sold Out'
+	endcapture
+	capture order_showOrderDetailsText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.show_order_details',default_template:'View Order'
+	endcapture
+	capture order_hideOrderDetailsText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.hide_order_details',default_template:'Hide Order'
+	endcapture
+	capture order_noOrdersViewText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.blank_screen_line_1_html',default_template:"You haven't placed any orders yet.<br>We can't wait to have you as a customer."
+	endcapture
+	capture order_marketingLineText
+		render 'flits_capture_code' with 'translation',template:'flits.order_page.blank_screen_line_2_html',default_template:"Take a look at our products here"
+	endcapture
+	capture address_defaultAddressLabelText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.default_address_label',default_template:'Default'
+	endcapture
+	capture address_editButtonText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.edit_button',default_template:'Edit'
+	endcapture
+	capture address_setDefaultButtonText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.mark_as_default_button',default_template:'Mark as Default'
+	endcapture
+	capture address_deleteButtonText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.delete_button',default_template:'Delete'
+	endcapture
+	capture address_deleteConfirmationMessageText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.delete_confirmation_message',default_template:'Are you sure you want to delete this address?'
+	endcapture
+	capture address_addANewAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.add_new_address',default_template:'Add New Address'
+	endcapture
+	capture address_firstNameText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.first_name',default_template:'First Name'
+	endcapture
+	capture address_lastNameText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.last_name',default_template:'Last Name:'
+	endcapture
+	capture address_address1Text
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.address1',default_template:'Address Line 1'
+	endcapture
+	capture address_address2Text
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.address2',default_template:'Address Line 2'
+	endcapture
+	capture address_companyText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.company',default_template:'Company'
+	endcapture
+	capture address_zipText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.zip',default_template:'Postal/Zip Code'
+	endcapture
+	capture address_phoneText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.contact_number',default_template:'Contact Number'
+	endcapture
+	capture address_cityText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.city',default_template:'City'
+	endcapture
+	capture address_countryText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.country',default_template:'Country'
+	endcapture
+	capture address_provinceText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.province',default_template:'Province'
+	endcapture
+	capture address_setAsDefaultAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.mark_as_default_checkbox',default_template:'Mark as Default Address'
+	endcapture
+	capture address_cancelAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.cancel_button',default_template:'Cancel'
+	endcapture
+	capture address_saveAddressText
+		render 'flits_capture_code' with 'translation',template:'flits.address_page.save_button',default_template:'Save'
+	endcapture
+%}
+
+{%- case flits_main_code -%}
+
+{%- when 'module_profile' -%}
+	<div class="flits-tab-box flits-profile-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_profileText %} 
+	</div>
+{%- when 'module_profile_content' -%}
+	<div class="flits-tab-box-body">
+		<form action="/profile_save" id="flits-form-profile" method="post" class="flits-read-input">
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'text', 
+						label:profile_firstNameText, 
+						value:customer.first_name,
+						name: 'first_name',
+						attr:'readonly'
+					%} 
+				</div>
+			</div>
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'text', 
+						label:profile_lastNameText, 
+						value:customer.last_name,
+						name: 'last_name',
+						attr:'readonly'
+					%} 
+				</div>
+			</div>
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'email', 
+						label:profile_emailText, 
+						value:customer.email,
+						name: 'email',
+						attr:'readonly'
+					%}
+				</div>
+			</div>
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15">
+					<div class="flits-phone-with-country-div flits-profile-phone-with-country-div flits-readonly-mode">
+						<div class="flits-input-wrap">
+							<label class="flits-input-label">{{ profile_contactNoText | strip }} : </label>
+							<input type="tel" class="flits-input" name="phone" value="{{ customer.phone }}" readonly>
+							<input type="text" class="flits-input flits-country-code-textbox" value="" disabled>
+							<div class="flits-country-drpdown">
+								<span class="flits-country-flag"></span>
+								<div class="flits-select-row">
+									<select class="flits-input"></select>
+									<div class="flits-select-arrow">
+										<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision">
+											<path d="M6 9l6 6 6-6"></path>
+										</svg> 
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15" data-flits-birthdate="{{ customer.metafields.Flits.birthdate }}">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'text', 
+						label:profile_birthdateText, 
+						value:customer.metafields.Flits.birthdate,
+						name: 'birthdate',
+						attr:'min="1920-01-01" readonly data-clear-btn=true'
+					%}
+				</div>
+			</div>
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15">
+					<div class="flits-input-wrap">
+						<label class="flits-input-label">{{ profile_genderText | strip }} : </label>
+						<div class="flits-select-row">
+							<select class="flits-input" name="gender" id="flits-profile-gender" disabled data-flits-gender="{{ customer.metafields.Flits.gender }}">
+								<option value="none" class="flits-d-none"></option>
+								<option value="male" {% if customer.metafields.Flits.gender == 'male' %}selected{% endif %}>{{ profile_maleText }}</option>
+								<option value="female" {% if customer.metafields.Flits.gender == 'female' %}selected{% endif %}>{{ profile_femaleText }}</option>
+								<option value="other" {% if customer.metafields.Flits.gender == 'other' %}selected{% endif %}>{{ profile_otherText }}</option>
+							</select>
+							<div class="flits-select-arrow">
+								<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision">
+									<path d="M6 9l6 6 6-6"></path>
+								</svg> 
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="flits-row flits-d-none" id="flits-referby-row">
+				<div class="flits-col-md-6 flits-mb-15 flits-read-input">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'text', 
+						name: 'referby',
+						label:refer_youAreReferredByText,
+						attr:'readonly id="flits-referred-by"'
+					%}
+				</div>
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_button',
+				type:'button',
+				text:profile_buttonEditText,
+				class:'flits-primary-btn flits-profile-edit-button flits-ml-0'
+			%}
+			<div class="flits-edit-form-btn-grp flits-d-none">
+				<div class="flits-row flits-text-left">
+					<div class="flits-col-md-12">
+						{% render 'flits_capture_code' with 'component',template:'comp_button',
+							type:'button',
+							text:profile_buttonCancelText,
+							class:'flits-secondary-btn flits-mt-10 flits-profile-cancel-button flits-ml-0'
+						%} 
+						{% render 'flits_capture_code' with 'component',template:'comp_button',
+							type:'button',
+							text:profile_buttonSaveText,
+							class:'flits-primary-btn flits-mt-10 flits-profile-save-button'
+						%} 
+					</div>
+				</div> 
+			</div>
+		</form>
+	</div>
+
+{%- when 'module_address' -%}
+	<div class="flits-tab-box flits-address-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_deliveryAddressText %} 
+	</div>
+
+{%- when 'module_address_content' -%}
+	<div class="flits-tab-box-body">
+		<div class='flits-d-none flits-address-form'>
+			{% form 'customer_address', customer.new_address %}
+				{% render 'flits_capture_code' with 'component',template:'comp_flitsInput',
+					type:'hidden', 
+					value:'new',
+					name: 'form_type',
+					attr:'id="form_type"',
+				%}
+				<p class="flits-h2 flits-address-form-title" data-original-text="{{ address_addANewAddressText | strip }}">{{ address_addANewAddressText | strip }}</p>
+				<div class='flits-row'>
+					<div class='flits-col-md-6 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_firstNameText, 
+							value:form.first_name,
+							name: 'address[first_name]',
+							attr:'id="AddressFirstNameNew" maxlength="255"',
+						%} 
+					</div>
+					<div class='flits-col-md-6 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_lastNameText, 
+							value:form.last_name,
+							name: 'address[last_name]',
+							attr:'id="AddressLastNameNew" maxlength="255"',
+						%} 
+					</div>
+				</div>
+				<div class='flits-row '>
+					<div class='flits-col-md-12 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_address1Text, 
+							value:form.address1,
+							name: 'address[address1]',
+							attr:'id="AddressAddress1New" maxlength="255"',
+						%} 
+					</div>
+				</div>
+				<div class='flits-row'>
+					<div class='flits-col-md-12 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_address2Text, 
+							value:form.address2,
+							name: 'address[address2]',
+							attr:'id="AddressAddress2New" maxlength="255"',
+						%}
+					</div>
+				</div>
+				<div class='flits-row'>
+					<div class='flits-col-md-4 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_companyText, 
+							value:form.company,
+							name: 'address[company]',
+							attr:'id="AddressCompanyNew" maxlength="255"',
+						%}
+					</div>
+					<div class='flits-col-md-4 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_zipText, 
+							value:form.zip,
+							name: 'address[zip]',
+							attr:'id="AddressZipNew" autocapitalize="characters" maxlength="255"',
+						%}
+					</div>
+					<div class='flits-col-md-4 flits-mb-15'>
+						<div class="flits-phone-with-country-div flits-address-phone-with-country-div">
+							<div class="flits-input-wrap">
+								<label class="flits-input-label">{{ address_phoneText | strip }} : </label>
+								<input type="tel" class="flits-input" name="address[phone]" value="{{ form.phone }}" id="AddressPhoneNew">
+								<input type="text" class="flits-input flits-country-code-textbox" disabled>
+								<div class="flits-country-drpdown">
+									<span class="flits-country-flag"></span>
+									<div class="flits-select-row">
+										<select class="flits-input"></select>
+										<div class="flits-select-arrow">
+											<svg viewBox="0 0 24 24" width="14" height="14" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" fill="none" shape-rendering="geometricPrecision">
+												<path d="M6 9l6 6 6-6"></path>
+											</svg> 
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class='flits-row'>
+					<div class='flits-col-md-4 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+							type:'text', 
+							label:address_cityText, 
+							value:form.city,
+							name: 'address[city]',
+							attr:'id="AddressCityNew" maxlength="255"',
+						%}
+					</div>
+					<div class='flits-col-md-4 flits-mb-15'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelSelect',
+							label:address_countryText, 
+							name: 'address[country]',
+							attr:'id="AddressCountryNew" data-default="{{ form.country }}"',
+							options: country_option_tags
+						%}
+					</div>
+					<div class='flits-col-md-4 flits-mb-15' id="AddressProvinceContainerNew" style="display:none">
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelSelect',
+							label:address_provinceText, 
+							name: 'address[province]',
+							attr:'id="AddressProvinceNew" data-default="{{ form.province }}"',
+						%}
+					</div>
+				</div>
+				<div class='flits-row'>
+					<div class='flits-col-md-12'>
+						{% render 'flits_capture_code' with 'component',template:'comp_flitsCheckbox',
+							label:address_setAsDefaultAddressText, 
+							name: 'address[default]',
+							attr:'id="address_default_address_new"',
+							value: "1"
+							for:"address_default_address_new"
+						%}
+					</div>
+				</div>
+				<div class='flits-row'>
+					<div class='flits-col-md-12 flits-text-right'>
+						{% render 'flits_capture_code' with 'component',template:'comp_button',
+							type:'button',
+							text:address_cancelAddressText,
+							class:'flits-secondary-btn flits-mt-15 flits-address-cancel-btn'
+						%} 
+						{% render 'flits_capture_code' with 'component',template:'comp_button',
+							type:'button',
+							text:address_saveAddressText,
+							class:'flits-primary-btn flits-mt-15 flits-address-add-save-button'
+						%} 
+					</div>
+				</div>
+			{% endform %}
+		</div>
+		<div class="flits-address-display-container flits-d-none" data-address-count="{{ customer.addresses_count }}" id="flits-address-list">
+			<div class="flits-address-list flits-address-list-static-row">
+				{% render 'flits_capture_code' with 'component',template:'comp_addAddressCard' text: address_addANewAddressText %}
+				{% if customer.addresses.size != 0 %}
+					<div class="flits-address-card flits-address-default"
+						data-phone="{{ customer.default_address.phone }}"
+						data-phone="{{ customer.default_address.phone }}" 
+						data-first-name="{{ customer.default_address.first_name }}" 
+						data-last-name="{{ customer.default_address.last_name }}"
+						data-company="{{ customer.default_address.company }}"
+						data-address1="{{ customer.default_address.address1 }}"
+						data-address2="{{ customer.default_address.address2 }}"
+						data-zip="{{ customer.default_address.zip }}" 
+						data-city="{{ customer.default_address.city }}" 
+						data-province="{{ customer.default_address.province }}"
+						data-country="{{ customer.default_address.country }}"
+						data-id="{{ customer.default_address.id }}"
+						data-default="true">
+						<div class="flits-default-section">
+							<span>{{ address_defaultAddressLabelText | strip  }}</span>
+						</div>
+						<div class="flits-address-card-action">
+							<ul>
+								<li class="flits-action-item flits-address-edit-btn" data-tippy-content="{{ address_editButtonText | strip }}" data-tippy-placement="left"  data-form-id="{{ customer.default_address.id }}">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+								</li>
+								<li class="flits-action-item flits-address-remove-btn" data-tippy-content="{{ address_deleteButtonText | strip }}" data-tippy-placement="left" data-form-id="{{ customer.default_address.id }}" data-confirm-message="{{ address_deleteConfirmationMessageText | strip }}">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+								</li>
+								<li class="flits-action-item flits-address-default-btn" data-tippy-content="{{ address_setDefaultButtonText | strip }}" data-tippy-placement="left" data-form-id="{{ customer.default_address.id }}">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+								</li>
+							</ul>
+						</div>
+						<div class="flits-address-section">
+							<ul class="flits-address-deatils-list">
+								<li>
+									<p class="flits-address-name flits-address-list-item">{{ customer.default_address.first_name }} {{ customer.default_address.last_name }}</p>
+								</li>
+								<li>
+									<p class="flits-company-name flits-address-list-item">{{ customer.default_address.company }}</p>
+								</li>
+								<li>
+									<p class="flits-address1-name flits-address-list-item"> {{ customer.default_address.address1 }}</p>
+								</li>
+								<li>
+									<p class="flits-address2-name flits-address-list-item"> {{ customer.default_address.address2 }}</p>
+								</li>
+								<li>
+									<p class="flits-city-name flits-address-list-item">{{ customer.default_address.zip }} {{ customer.default_address.city }} {{ customer.default_address.province_code }}</p>
+								</li>
+								<li>
+									<p class="flits-country-name flits-address-list-item">{{ customer.default_address.country }}</p>
+								</li>
+								<li>
+									<p class="flits-phone-number flits-address-list-item"> {{ customer.default_address.phone }}</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				{% endif %}
+			</div>
+			<div class="flits-address-list flits-address-list-pagination-row list flits-d-none">
+				{% if customer.addresses.size != 0 %}
+					{% paginate customer.addresses by 6 %}
+						{% for address in customer.addresses %}
+							{% if address == customer.default_address %}
+								<div class="flits-address-card flits-default-hidden-card"></div>
+							{% else %}
+								<div class="flits-address-card"
+									data-phone="{{ address.phone }}"
+									data-phone="{{ address.phone }}" 
+									data-first-name="{{ address.first_name }}" 
+									data-last-name="{{ address.last_name }}"
+									data-company="{{ address.company }}"
+									data-address1="{{ address.address1 }}"
+									data-address2="{{ address.address2 }}"
+									data-zip="{{ address.zip }}" 
+									data-city="{{ address.city }}" 
+									data-province="{{ address.province }}"
+									data-country="{{ address.country }}"
+									data-id="{{ address.id }}"
+									data-default="false">
+									<div class="flits-default-section">
+										<span>{{ address_defaultAddressLabelText | strip  }}</span>
+									</div>
+									<div class="flits-address-card-action">
+										<ul>
+											<li class="flits-action-item flits-address-edit-btn" data-tippy-content="{{ address_editButtonText | strip }}" data-tippy-placement="left" data-form-id="{{ address.id }}">
+												<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+											</li>
+											<li class="flits-action-item flits-address-remove-btn" data-tippy-content="{{ address_deleteButtonText | strip }}" data-tippy-placement="left" data-form-id="{{ address.id }}" data-confirm-message="{{ address_deleteConfirmationMessageText | strip }}">
+												<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+											</li>
+											<li class="flits-action-item flits-address-default-btn" data-tippy-content="{{ address_setDefaultButtonText | strip }}" data-tippy-placement="left" data-form-id="{{ address.id }}">
+												<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+											</li>
+										</ul>
+									</div>
+									<div class="flits-address-section">
+										<ul class="flits-address-deatils-list">
+											<li>
+												<p class="flits-address-name flits-address-list-item">{{ address.first_name }} {{ address.last_name }}</p>
+											</li>
+											<li>
+												<p class="flits-company-name flits-address-list-item">{{ address.company }}</p>
+											</li>
+											<li>
+												<p class="flits-address1-name flits-address-list-item">{{ address.address1 }}</p>
+											</li>
+											<li>
+												<p class="flits-address2-name flits-address-list-item">{{ address.address2 }}</p>
+											</li>
+											<li>
+												<p class="flits-city-name flits-address-list-item">{{ address.zip }} {{ address.city }} {{ address.province_code }}</p>
+											</li>
+											<li>
+												<p class="flits-country-name flits-address-list-item">{{ address.country }}</p>
+											</li>
+											<li>
+												<p class="flits-phone-number flits-address-list-item"> {{ address.phone }}</p>
+											</li>
+										</ul>
+									</div>
+								</div>
+							{% endif %}
+						{% endfor %}
+					{% endpaginate %}
+				{% endif %}
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_pagination', class:'flits-address-pagination', attr:'data-flits-pagination="flits-delivery-address"' %}
+			{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-address-pagination-loader' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-address-loader' %}
+		
+		{% comment %} ADDRESS CLONE CARD HTML {% endcomment %}
+		<div class="flits-address-card flits-address-card-template flits-d-none">
+			<div class="flits-default-section">
+				<span>{{ address_defaultAddressLabelText | strip  }}</span>
+			</div>
+			<div class="flits-address-card-action">
+				<ul>
+					<li class="flits-action-item flits-address-edit-btn" data-tippy-content="{{ address_editButtonText | strip }}" data-tippy-placement="left" >
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M17 3a2.828 2.828 0 1 1 4 4L7.5 20.5 2 22l1.5-5.5L17 3z"></path></svg>
+					</li>
+					<li class="flits-action-item flits-address-remove-btn" data-tippy-content="{{ address_deleteButtonText | strip }}" data-tippy-placement="left" >
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path></svg>
+					</li>
+					<li class="flits-action-item flits-address-default-btn" data-tippy-content="{{ address_setDefaultButtonText | strip }}" data-tippy-placement="left">
+						<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path></svg>
+					</li>
+				</ul>
+			</div>
+			<div class="flits-address-section">
+				<ul class="flits-address-deatils-list">
+					<li>
+						<p class="flits-address-name flits-address-list-item"></p>
+					</li>
+					<li>
+						<p class="flits-company-name flits-address-list-item"></p>
+					</li>
+					<li>
+						<p class="flits-address1-name flits-address-list-item"></p>
+					</li>
+					<li>
+						<p class="flits-address2-name flits-address-list-item"></p>
+					</li>
+					<li>
+						<p class="flits-city-name flits-address-list-item"></p>
+					</li>
+					<li>
+						<p class="flits-country-name  flits-address-list-item">‬</p>
+					</li>
+					<li>
+						<p class="flits-phone-number flits-address-list-item"></p>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</div>
+
+{%- when 'module_order' -%}
+	<div class="flits-tab-box flits-order-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_myOrdersText %} 
+		{% render 'flits_capture_code' with 'component',template:'comp_order_card_skeleton_loader', class:"flits-order-module-loader" %}
+	</div>
+{%- when 'module_order_content' -%}
+	<script>
+		if (typeof window.flits_orders == "undefined"){
+			window.flitsOrder= [];
+		}
+	</script>
+    <div class="flits-tab-box-body">
+		<div class="flits-order-list-container flits-d-none" id="flits-order-list">
+			<div class="flits-order-list list" data-order-count="{{ customer.orders_count }}" data-order-size="{{ customer.orders.size }}">
+				{% if customer.orders.size != 0 %}
+					{% paginate customer.orders by 3 %}
+						{% for order in customer.orders %}
+							{% assign order_date_month_original = order.created_at | date: '%B' %}
+							{% assign order_date_month_downcase = order.created_at | date: '%B' | downcase %}
+							{% assign order_date_month_text = 'flits.months.' | append:order_date_month_downcase  %}
+							{% liquid
+								capture order_date_month_text
+									render 'flits_capture_code' with 'translation',template: order_date_month_text ,default_template: order_date_month_downcase 
+								endcapture
+							%}
+							{% assign order_date = order.created_at | date:order_orderDateFormatText | replace:order_date_month_original,order_date_month_text | strip %}
+							{% assign order_cancelled_month_original = order.cancelled_at | date: '%B' %}
+							{% assign order_cancelled_month_downcase = order.cancelled_at | date: '%B' | downcase  %}
+							{% assign order_cancelled_month_text = 'flits.months.' | append:order_cancelled_month_downcase  %}
+							{% liquid
+								capture order_cancelled_month_text
+									render 'flits_capture_code' with 'translation',template: order_cancelled_month_text ,default_template:order_cancelled_month_downcase
+								endcapture
+							%}
+							{% assign order_cancelled_date = order.cancelled_at | date:order_orderDateFormatText | replace:order_cancelled_month_original,order_cancelled_month_text %}
+							{% assign soldCount = 0 %}
+							{% assign notExistCount = 0 %}
+							{% assign countTotal = 0 %}
+							{% assign totalItemQuantity = 0 %}
+							{% assign isDisable = 'disabled' %}
+							{% for item in order.line_items %}
+							{% assign totalItemQuantity = totalItemQuantity | plus: item.quantity %}
+							{% if item.variant.available == false %}
+							{% assign soldCount = soldCount | plus: 1 %}
+							{% endif %}
+							{% unless item.variant.id %}
+							{% assign notExistCount = notExistCount | plus: 1 %}
+							{% endunless %}
+							{% endfor %}
+							{% assign countTotal = soldCount | plus: notExistCount %}
+							<div class="flits-order-card">
+								<div class="flits-order-row flits-order-status-row">	
+									<div class="flits-order-row">
+										<span class="flits-label">{{ order_orderNumberText | strip }}:</span>
+										<span class="flits-value">{{ order.name | strip }}</span>
+									</div>
+									<div class="flits-order-row">
+										<span class="flits-label">{{ order_grandTotalText | strip }}:</span>
+										<span class="flits-value" data-value='{{ order.total_price }}'>{{ order.total_price | money_without_trailing_zeros }}</span>
+									</div>
+								</div>
+								<div class="flits-order-row flits-order-detail-row">
+									<div>
+										<div class="flits-order-row">
+											<span class="flits-label">{{ order_orderDateText | strip }}:</span>
+											<span class="flits-value">{{ order_date }}</span>
+										</div>
+										<div class="flits-order-row">
+											{% if order.cancelled %}
+											<span class="flits-label" data-value='{{ order.cancelled_at }}'>{{ order_cancelAtText | strip}}:</span>
+											<span class='flits-value'>{{ order_cancelled_date }}</span>
+											{% else %}                    
+											<span class="flits-label">{{ order_fulfillmentStatusText | strip }}:</span>
+											<span class="flits-value">{{ order.fulfillment_status_label }}</span>
+											{% endif %}
+										</div>
+									</div>
+									<div class="flits-text-right">
+										<div class="flits-order-row">
+											<span class="flits-label">{{ order_totalItemText | strip }}:</span>
+											<span class="flits-value">{{ totalItemQuantity }}</span>
+										</div>
+										<div class="flits-order-row">
+											<span class="flits-label">{{ order_paymentStatusText | strip }}:</span>
+											<span class="flits-value">{{ order.financial_status_label }}</span>
+										</div>
+									</div>
+								</div>
+								<div class="flits-order-row flits-line-items-row">
+									<div class="flits-order-item-row">
+										{% assign order_line_item_price = 0 %}
+										<script>
+											window.flitsOrder[{{order.id}}] = []
+										</script>
+										{% for item in order.line_items %}
+	                                      {% assign isProductAvailable = 'true' %}
+	                                      {% if item.variant.available == false or item.product.published_at == blank %}
+	                                      	{% assign isProductAvailable = 'false' %}
+	                                      {% endif %}
+										<script>
+											window.flitsOrder[{{order.id}}].push({
+											variant_id:'{{ item.variant_id }}',
+											quantity:'{{ item.quantity }}',
+											available: '{{ isProductAvailable }}',
+											inventory_quantity: '{{ item.variant.inventory_quantity }}',
+											item_title: '{{ item.title }}',
+											item_variant_id: '{{ item.variant.id }}'
+										});
+										</script>
+											<div class="flits-order-item" data-variant-id="{{ item.variant.id }}" data-variant-available="{{ item.variant.available }}">
+												<div class="flits-item-img">
+													<a href="javascript:void(0);">
+														<img src="{{item.image | img_url: 'small'}}" alt="" />
+													</a>
+													<span class="flits-badge flits-badge-primary">{{ item.quantity }}</span>
+												{% if item.variant.available == false %}
+													<div class="flits-ribbion-overlay">
+														<span class="flits-bottom-full flits-ribbion flits-red">{{ order_soldOutText }}</span>
+													</div>
+												{% endif %}
+												{% unless item.product.published_at %}
+                                                  <div class="flits-ribbion-overlay">
+														<span class="flits-bottom-full flits-ribbion flits-red">{{ order_productNotExistText | strip }}</span>
+													</div>
+                                                {% endunless %}
+												</div>
+
+												<div class="flits-item-deatils flits-left">
+													{% if item.url and item.product.published_at %}
+														<a href="{{ item.url }}" class="flits-link flits-item-title" data-tippy-content="{{ item.title | strip }}">
+															{{ item.title | strip }}
+														</a>
+													{% else %}
+														<a href="javascript:void(0);" class="flits-link flits-item-title" data-tippy-content="{{ order_productNotExistText | strip }}">
+															{{ item.title | strip }}
+														</a>
+													{% endif %}
+													<p class="flits-item-price">{{ item.price | money_without_trailing_zeros }}</p>
+													{% unless item.variant.id %}
+														<p>{{ order_productNotExistText | strip }}</p>
+													{% endunless %}
+												</div>
+											</div>
+											{% assign order_line_item_price = order_line_item_price | plus: item.line_price %}
+										{% endfor %}
+									</div>
+								</div>
+								<div class="flits-order-row flits-order-action-row flits-text-right">
+									{% if shop.metafields.Flits.IS_ORDER_CONTACT_US_ENABLE and shop.metafields.Flits.IS_ORDER_CONTACT_US_ENABLE == 1 %}
+										{% render 'flits_capture_code' with 'component', template:'contact_us_button', customer:customer, order:order class:'flits-secondary-btn'%}
+									{% endif %}
+									{% render 'flits_capture_code' with 'component',template:'comp_button',
+										type:'button',
+										text:order_showOrderDetailsText,
+										class:'flits-secondary-btn flits-mt-10 flits-order-details-btn'
+									%}
+									{% if shop.metafields.Flits.IS_REORDER_ENABLE and shop.metafields.Flits.IS_REORDER_ENABLE == 1 %}
+										
+										{% if order.line_items.size !=  countTotal  %}
+										{% assign isDisable = '' %}
+										{% endif %}
+										{% assign dataTarget = order.id | prepend: 'data-target=' | append: " " | append: isDisable %}
+										{% render 'flits_capture_code' with 'component',template:'comp_button',
+											type:'button',
+											text:order_reorderText,
+											attr: dataTarget,
+											class:'flits-primary-btn flits-mt-10 flits-reorder-btn'
+										%} 
+									{% endif %}   
+								</div>
+								<div class="flits-order-details-summary">
+									<div class="flits-order-row flits-address-row">
+										<div class="flits-address-section">
+											<div class="flits-shipping-address flits-address-box">
+												<p class="flits-address-label flits-title">{{ order_shippingAddressText | strip }}</p>
+												{{ order.shipping_address | format_address }}
+											</div>
+											<div class="flits-shipping-address flits-address-box">
+												<p class="flits-address-label flits-title">{{ order_billingAddressText | strip }}</p>
+												{{ order.billing_address | format_address }}
+											</div>
+										</div>
+									</div>
+									<div class="flits-order-row flits-cost-breakup-row">
+										<div class="flits-order-cost-breakup">
+											<p class="flits-title">{{ order_costBreakupText | strip }}</p>
+											<div class="flits-order-row flits-order-subtotal">
+												<span class="flits-label">{{ order_subtotalText | strip }}</span>
+												<span class="flits-value">{{ order_line_item_price | money_without_trailing_zeros }}</span>
+											</div>
+											{% for discount in order.discounts %}
+												<div class="flits-order-row flits-order-discount">
+													<span class="flits-label">{{ order_discountCodeText | strip }}: <p class="flits-discount-truncate">{{ discount.code }}</P></span>
+													<span class="flits-value">{{ discount.savings | money_without_trailing_zeros }}</span>
+												</div>
+											{% endfor %}
+											{% for tax_line in order.tax_lines %}
+												<div class="flits-order-row flits-order-tax">
+													<span class="flits-label">{{ tax_line.title }} {{ tax_line.rate | times: 100 }}%</span>
+													<span class="flits-value">{{ tax_line.price | money_without_trailing_zeros }}</span>
+												</div>
+											{% endfor %}
+											<div class="flits-order-row flits-order-shipping-price">
+												<span class="flits-label">{{ order_shippingAndHandlingText | strip }}</span>
+												<span class="flits-value">{{ order.shipping_price | money_without_trailing_zeros }}</span>
+											</div>
+											<div class="flits-order-row flits-order-grand-total">
+												<span class="flits-label">{{ order_grandTotalText | strip }}</span>
+												<span class="flits-value">{{ order.total_price | money_without_trailing_zeros }}</span>
+											</div>
+											<div class="flits-order-row flits-order-payment-type">
+												<span class="flits-label">{{ order_paymentTypeText | strip }}</span>
+												<span class="flits-value">{{ order.transactions[0].gateway | replace: '_',' ' | capitalize }}</span>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div> 
+						{% endfor %}
+					{% endpaginate %}
+				{% endif %}
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_pagination', attr:'data-flits-pagination="flits-order"' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_order_card_skeleton_loader', class:'flits-order-loader' %}
+        {% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:order_noOrdersViewText,text_2:order_marketingLineText class:'flits-d-none flits-order-empty' %}
+	</div>
+	
+{%- when 'module_topOrder' -%}
+	<div class="flits-tab-box flits-top-order-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_topOrdersText %}
+	</div>
+{%- when 'module_topOrder_content' -%}
+	<div class="flits-tab-box-body">
+		<div class="flits-top-order-list-div flits-d-none" id="flits-top-order-list">
+			<div class="flits-filter-header">
+				<div class="flits-search-fillter">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsInput',class:'flits-search', type:'text', placeholder:topOrder_searchPlaceholderText %} 
+					<span class="flits-search-icon-group flits-search-icon-group-left">
+						<svg viewBox="0 0 24 24" class="flits-search-icon" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line></svg>
+					</span>
+					<span class="flits-search-icon-group flits-search-icon-group-right flits-clear-icon flits-d-none">
+						<svg viewBox="0 0 24 24" width="20" height="20" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg>
+					</span>
+				</div>
+				<div class="flits-dropdown filter-right">
+					<a class="flits-filter-dropbtn flits-primary-btn">
+						<span class="flits-filter-text">{{ topOrder_filterText | strip }}</span>
+							<div class="flits-drop-down-icon">
+								<svg viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1" style=" display: inline; "><polyline points="6 9 12 15 18 9"></polyline></svg>
+							</div>
+						</a>
+					<div class="flits-dropdown-content">
+					<span data-type="none" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_filterText | strip }}" data-sort="flits-product-count">{{ topOrder_noneText | strip }}</span>
+					<span data-type="sort" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_numberOfOrderLowToHighText | strip }}" data-sort-type="asc" data-sort="flits-product-count">{{ topOrder_numberOfOrderLowToHighText | strip }}</span>
+					<span data-type="sort" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_numberOfOrderHighToLowText | strip }}" data-sort-type="desc" data-sort="flits-product-count">{{ topOrder_numberOfOrderHighToLowText | strip }}</span>
+					<span data-type="sort" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_sortByPriceLowToHighText | strip }}" data-sort-type="asc" data-sort="flits-product-price">{{ topOrder_sortByPriceLowToHighText | strip }}</span>
+					<span data-type="sort" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_sortByPriceHighToLowText | strip }}" data-sort-type="desc" data-sort="flits-product-price">{{ topOrder_sortByPriceHighToLowText | strip }}</span>
+					<span data-type="days" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_last30DaysText | strip }}" data-sort="flits-product-days-filter" data-days='30'>{{ topOrder_last30DaysText | strip }}</span>
+					<span data-type="days" class="flits-drop-down-item flits-products-filter" data-text="{{ topOrder_last60DaysText | strip }}" data-sort="flits-product-days-filter" data-days='60'>{{ topOrder_last60DaysText | strip }}</span>
+					</div>
+				</div>
+			</div>
+			<div class="flits-top-order-list list">
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_notFound', class:'flits-top-order-loader', text:topOrder_searchProductNotFoundText %}
+			{% render 'flits_capture_code' with 'component',template:'comp_pagination', attr:'data-flits-pagination="flits-top-order"' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-top-order-loader' %}
+		{% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:topOrder_noProductsViewText, class:'flits-top-order-empty flits-d-none' %}
+	</div>
+
+{%- when 'module_wishlist' -%}
+	<div class="flits-tab-box flits-wishlist-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_wishlistText %}
+	</div>
+{%- when 'module_wishlist_content' -%}
+	<div class="flits-tab-box-body">
+		<div class="flits-wishlist-list-div flits-d-none" id="flits-wishlist-product-list">
+			<ul class="flits-wishlist-product-list list">
+			</ul>
+			{% render 'flits_capture_code' with 'component',template:'comp_pagination', attr:'data-flits-pagination="flits-wishlist"' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-wishlist-loader' %}
+		{% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:wishlist_noWishlistViewText,text_2:wishlist_marketingLineText, class:'flits-d-none flits-wishlist-empty' %}
+	</div>
+
+{%- when 'module_recentlyView' -%}
+	<div class="flits-tab-box flits-recently-view-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_recentlyViewText %}
+	</div>	 
+{%- when 'module_recentlyView_content' -%}
+	<div class="flits-tab-box-body">
+		<div class="flits-recently-view-product-list-div flits-d-none" id="flits-recently-view-product-list">
+			<ul class="flits-recently-view-product-list list">
+			</ul>
+			{% render 'flits_capture_code' with 'component',template:'comp_pagination', attr:'data-flits-pagination="flits-recently-view"' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-recently-view-loader' %}
+		{% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:recentlyViewed_noProductsViewText,text_2:recentlyViewed_marketingLineText, class:'flits-d-none flits-recently-view-empty' %}
+	</div>
+
+{%- when 'module_storeCredit' -%}
+	<div class="flits-tab-box flits-store-credit-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_storeCreditText %}
+	</div>
+{%- when 'module_storeCredit_content' -%}
+	<div class="flits-tab-box-body">
+		<div class="flits-store-credit-balance flits-d-none">
+			<div class="flits-row">
+				<div class="flits-col-xs-12 flits-col-sm-4 flits-col-md-4 flits-col-lg-4 flits-mb-10 flits-text-center">
+					<div class="flits-credit-box flits-earn-credit-box">
+						<p class="flits-credit-title">{{ credit_earnedCreditsText | strip }}</p>
+						<p class="flits-credit-value flits-earn-credit-value">{{ value }}</p>
+					</div>		
+				</div>
+				<div class="flits-col-xs-12 flits-col-sm-4 flits-col-md-4 flits-col-lg-4 flits-mb-10 flits-text-center">
+					<div class="flits-credit-box flits-earn-credit-box">
+						<p class="flits-credit-title">{{ credit_spentCreditsText | strip }}</p>
+						<p class="flits-credit-value flits-spent-credit-value">{{ value }}</p>
+					</div>			
+				</div>
+				<div class="flits-col-xs-12 flits-col-sm-4 flits-col-md-4 flits-col-lg-4 flits-mb-10 flits-text-center">
+					<div class="flits-credit-box flits-earn-credit-box">
+						<p class="flits-credit-title">{{ credit_currentCreditsText | strip }}</p>
+						<p class="flits-credit-value flits-current-credit-value">{{ value }}</p>
+					</div>			
+				</div>
+			</div>
+		</div>
+		<div class="flits-credit-box flits-history-credit-box flits-d-none">
+			<div class="flits-store-credit-table-div flits-d-none" id="flits-store-credit-log-list">
+				<p class="flits-h5 flits-credit-activity-title flits-mb-0">{{ credits_activity_text | strip }}</p>
+				<ul class="flits-credit-log-list flits-credit-log-header">
+					<li class="flits-credit-log-item flits-credit-log-title flits-credit-log-item-template">
+						<div class="flits-row flits-credit-log-details">
+							<div class="flits-col-md-3 flits-credit-right-border">
+								<div>
+								<div class="flits-credit-icon flits-earn-credit-icon-round flits-d-none">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+								</div>
+								<div class="flits-credit-icon flits-spent-credit-icon-round flits-d-none">
+									<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="10"></circle><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+								</div>
+								<p class="flits-credit-value">{{ credits_creditsText | strip }} </p>
+								</div>
+								<div class="flits-credit-dropdown">
+									<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>
+								</div>
+							</div>
+							<div class="flits-col-md-6 flits-credit-right-border flits-text-center">
+								<p class="flits-credit-comment">{{ credits_reasonForCreditsText | strip }} </p>
+							</div>
+							<div class="flits-col-md-3">
+							<p class="flits-credit-date">{{ credits_timeText | strip }} </p>
+							</div>
+						</div>
+						<div class="flits-credit-details">
+							<div class="flits-row flits-credit-details-row-template">
+							<div class="flits-col-md-3">
+								<p class="flits-product-tag-credit"></p>
+							</div>
+							<div class="flits-col-md-6 flits-text-center">
+								<a class="flits-product-title flits-text-nowrap" target="_blank"></a>
+							</div>
+							<div class="flits-col-md-3">
+								<div class="flits-product-tag-svg">
+									<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg>
+								</div>
+								<a class="flits-product-tag" target="_blank"></a>
+							</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+				<ul class="flits-credit-log-list list flits-store-credit-log-list">
+				</ul>
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:credit_noHistoryYetText,text_2:credit_marketingLineText, class:'flits-d-none flits-store-credit-empty flits-p-relative' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-store-credit-loader' %}
+	</div>
+
+{%- when 'module_howToManageCredit' -%}
+	<div class="flits-tab-box flits-how-to-manage-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_howToManageCreditText %}
+	</div>
+{%- when 'module_howToManageCredit_content' -%}
+	<div class="flits-tab-box-body">
+		<div class="flits-how-to-manage-container flits-d-none">
+			<ul class="flits-nav flits-nav-pils" id="flits-pills-tab">
+				<li class="flits-nav-item flits-d-none">
+					<a class="flits-nav-pil-link" data-href="flits_earning_rules">{{ howToEarn_earningText | strip }}</a>
+				</li>
+				<li class="flits-nav-item flits-d-none">
+					<a class="flits-nav-pil-link" data-href="flits_spent_rules">{{ howToEarn_spentText | strip }}</a>
+				</li>
+				<li class="flits-nav-item flits-d-none">
+					<a class="flits-nav-pil-link" data-href="flits_from_admin_rules">{{ howToEarn_fromAdminText | strip }}</a>
+				</li>
+			</ul>
+			<div class="flits-tab-content" id="flits-pills-tabContent">
+				<div class="flits-tab-pane" data-id="flits_earning_rules"></div>
+				<div class="flits-tab-pane" data-id="flits_spent_rules"></div>
+				<div class="flits-tab-pane" data-id="flits_from_admin_rules"></div>
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_rulesCard', attr:'id="flits-rule-card-clone"', class:'flits-d-none' %}
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-how-to-manage-loader' %}
+		{% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:howToEarn_noRulesFoundText,class:'flits-d-none flits-how-to-manage-empty' %}
+	</div>
+	
+{%- when 'module_referFriend' -%}
+	<div class="flits-tab-box flits-refer-credit-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_referFriendText %}
+	</div>
+{%- when 'module_referFriend_content' -%}
+	<div class="flits-tab-box-body">
+		<div class="flits-refer-friend-content flits-d-none">
+			<div class="flits-credit-box flits-how-it-work-box flits-mb-15">
+				<p class="flits-h3 flits-credit-title flits-text-center flits-mb-15 flits-text-bold flits-text-center">{{ refer_referProgramHowItWorkTitleText | strip }}</p>
+				<div class="flits-row">
+					<div class="flits-col-12 flits-col-xs-12 flits-col-md-4 flits-col-lg-4 flits-text-center flits-mb-5">
+						<img class="flits-icon-size-25" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4MCA0ODAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4MCA0ODA7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cmVjdCB4PSIxMzYiIHk9IjQ4IiBzdHlsZT0iZmlsbDojRkZCRTAwOyIgd2lkdGg9IjIwOCIgaGVpZ2h0PSIzNTIiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0RFREZFMzsiIGQ9Ik0xMjAsMTc2SDI0Yy04LjgzNywwLTE2LTcuMTYzLTE2LTE2VjY0YzAtOC44MzcsNy4xNjMtMTYsMTYtMTZoOTZjOC44MzcsMCwxNiw3LjE2MywxNiwxNnY5NiAgQzEzNiwxNjguODM3LDEyOC44MzcsMTc2LDEyMCwxNzZ6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiMzRjcwOEQ7IiBkPSJNMjg4LDIyNGgtOTZjLTguODM3LDAtMTYtNy4xNjMtMTYtMTZ2LTk2YzAtOC44MzcsNy4xNjMtMTYsMTYtMTZoOTZjOC44MzcsMCwxNiw3LjE2MywxNiwxNnY5NiAgQzMwNCwyMTYuODM3LDI5Ni44MzcsMjI0LDI4OCwyMjR6Ii8+CjxwYXRoIHN0eWxlPSJmaWxsOiMyRjlCRDc7IiBkPSJNNDAsOTEuMmwyLjc5MSwxLjg4MWM5LjAxNCw2LjA3NiwxOS42MDYsOS4zMTksMzAuNDQsOS4zMTloMFY5NGMwLTcuNzMyLDYuMTk5LTE0LDEzLjg0Ni0xNGgwICBjNy42NDcsMCwxMy44NDYsNi4yNjgsMTMuODQ2LDE0TDExMiwxMDIuNGwtMTEuMDc3LDExLjJ2MGMwLDEyLjM3MS05LjkxOSwyMi40LTIyLjE1NCwyMi40SDQwbDExLjA3Ny0xMS4ybDAsMCAgQzQzLjk4NCwxMTcuNjI5LDQwLDEwNy45MDIsNDAsOTcuNzYxVjkxLjJ6Ii8+CjxnPgoJPHBhdGggc3R5bGU9ImZpbGw6I0RFREZFMzsiIGQ9Ik0yNjQsMTM2di0xNmgtMjRjLTQuNDIyLDAtOCwzLjU4Mi04LDh2MjRoLTE2djE2aDE2djMyaDE2di0zMmgxNnYtMTZoLTE2di0xNkgyNjR6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojREVERkUzOyIgZD0iTTQwOCwxMDRjLTE3LjY3MywwLTMyLTE0LjMyNy0zMi0zMmgtMzJ2NDhjMCw4LjgzNiw3LjE2NCwxNiwxNiwxNmg5NmM4LjgzNiwwLDE2LTcuMTY0LDE2LTE2VjcyICAgaC0zMkM0NDAsODkuNjczLDQyNS42NzMsMTA0LDQwOCwxMDR6Ii8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6I0U3MzQzQTsiIGQ9Ik00NTYsOGgtOTZjLTguODM2LDAtMTYsNy4xNjMtMTYsMTZ2NDhoMzJjMC0xNy42NzMsMTQuMzI3LTMyLDMyLTMyczMyLDE0LjMyNywzMiwzMmgzMlYyNCAgQzQ3MiwxNS4xNjMsNDY0LjgzNiw4LDQ1Niw4eiIvPgo8Zz4KCTxjaXJjbGUgc3R5bGU9ImZpbGw6I0U3RjZGRTsiIGN4PSI0MDgiIGN5PSI3MiIgcj0iMzIiLz4KCTxyZWN0IHg9IjIzMiIgeT0iMzI4IiBzdHlsZT0iZmlsbDojRTdGNkZFOyIgd2lkdGg9IjE2IiBoZWlnaHQ9IjE2Ii8+CjwvZz4KPHBhdGggc3R5bGU9ImZpbGw6I0ZGQjM5ODsiIGQ9Ik0xNjgsNDQwYzIyLjA5MSwwLDQwLTE3LjkwOSw0MC00MHYtOGMwLTM1LjM0Ni0yOC42NTQtNjQtNjQtNjRoMjRjMjIuMDkxLDAsNDAtMTcuOTA5LDQwLTQwaC04MCAgYy04LjgzNiwwLTE2LDcuMTYzLTE2LDE2djE3NmgxMjh2LTQwSDE2OHoiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0ZFOTQ2RjsiIGQ9Ik0yMDgsNDAwYzAsMjIuMDkxLTE3LjkwOSw0MC00MCw0MGg3MnY0MGg0OHYtNDBoMTZ2LTQwSDIwOHoiLz4KPGc+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZCMzk4OyIgZD0iTTM2OCwzMjBoLTUyYy0xMS4wNDYsMC0yMC04Ljk1NC0yMC0yMHYwYzAtMTEuMDQ2LDguOTU0LTIwLDIwLTIwaDUyYzExLjA0NiwwLDIwLDguOTU0LDIwLDIwdjAgICBDMzg4LDMxMS4wNDYsMzc5LjA0NiwzMjAsMzY4LDMyMHoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiNGRkIzOTg7IiBkPSJNMzY4LDM2MGgtNTJjLTExLjA0NiwwLTIwLTguOTU0LTIwLTIwdjBjMC0xMS4wNDYsOC45NTQtMjAsMjAtMjBoNTJjMTEuMDQ2LDAsMjAsOC45NTQsMjAsMjB2MCAgIEMzODgsMzUxLjA0NiwzNzkuMDQ2LDM2MCwzNjgsMzYweiIvPgoJPHBhdGggc3R5bGU9ImZpbGw6I0ZGQjM5ODsiIGQ9Ik0zNTYsNDAwaC01MmMtMTEuMDQ2LDAtMjAtOC45NTQtMjAtMjB2MGMwLTExLjA0Niw4Ljk1NC0yMCwyMC0yMGg1MmMxMS4wNDYsMCwyMCw4Ljk1NCwyMCwyMHYwICAgQzM3NiwzOTEuMDQ2LDM2Ny4wNDYsNDAwLDM1Niw0MDB6Ii8+Cgk8cGF0aCBzdHlsZT0iZmlsbDojRkZCMzk4OyIgZD0iTTMzMiw0NDBoLTUyYy0xMS4wNDYsMC0yMC04Ljk1NC0yMC0yMHYwYzAtMTEuMDQ2LDguOTU0LTIwLDIwLTIwaDUyYzExLjA0NiwwLDIwLDguOTU0LDIwLDIwdjAgICBDMzUyLDQzMS4wNDYsMzQzLjA0Niw0NDAsMzMyLDQ0MHoiLz4KPC9nPgo8cmVjdCB4PSIxNjAiIHk9IjQwIiB3aWR0aD0iMTYwIiBoZWlnaHQ9IjE2Ii8+CjxwYXRoIGQ9Ik0zOTYsMzAwYzAtMTUuNDM4LTEyLjU2My0yOC0yOC0yOGgtMTZWMTYwaC0xNnYxMTJoLTIwYy0xNS40MzgsMC0yOCwxMi41NjMtMjgsMjhjMCw3LjgzOCwzLjI1OCwxNC45MTIsOC40NjYsMjAgIGMtNS4yMDgsNS4wODgtOC40NjYsMTIuMTYyLTguNDY2LDIwYzAsNS4zOTMsMS42MDUsMTAuMzksNC4yNTksMTQuNjY4QzI4Mi42ODksMzU5LjEyNSwyNzYsMzY4Ljc2OCwyNzYsMzgwICBjMCw0LjMxMSwxLjA2MSw4LjM0OSwyLjgwOSwxMkgyMTZjMC0yNC40NjEtMTIuMjU4LTQ2LjEwOS0zMC45NTMtNTkuMTI1QzIwMy4xMjUsMzI1Ljk4NCwyMTYsMzA4LjQ2OSwyMTYsMjg4YzAtNC40MTgtMy41NzgtOC04LTggIGgtNjR2LTgwaC0xNnY4MGMtMTMuMjM0LDAtMjQsMTAuNzY2LTI0LDI0djE3NmgxNlYzMDRjMC00LjQxLDMuNTg2LTgsOC04aDcwLjk4NGMtMy41NTUsMTMuNzg1LTE2LjEwMiwyNC0zMC45ODQsMjRoLTI0ICBjLTQuNDIyLDAtOCwzLjU4Mi04LDhzMy41NzgsOCw4LDhjMzAuODc1LDAsNTYsMjUuMTIxLDU2LDU2djhjMCw0LjQxOCwzLjU3OCw4LDgsOGg0Ni44MDljLTEuNzQ4LDMuNjUxLTIuODA5LDcuNjg5LTIuODA5LDEyICBjMCwxNS40MzgsMTIuNTYzLDI4LDI4LDI4djMyaDE2di0zMmgzMmg0YzE1LjQzOCwwLDI4LTEyLjU2MywyOC0yOGMwLTQuMzU3LTEuMDg3LTguNDMzLTIuODcxLTEyLjExNCAgQzM3Mi4wMzQsNDA3LjI3OCwzODQsMzk1LjA1MSwzODQsMzgwYzAtNS4zOTMtMS42MDUtMTAuMzktNC4yNTktMTQuNjY4QzM4OS4zMTEsMzYwLjg3NSwzOTYsMzUxLjIzMiwzOTYsMzQwICBjMC03LjgzOC0zLjI1OC0xNC45MTItOC40NjYtMjBDMzkyLjc0MiwzMTQuOTEyLDM5NiwzMDcuODM4LDM5NiwzMDB6IE0zMzIsNDMyaC00aC00MGgtOGMtNi42MTcsMC0xMi01LjM4My0xMi0xMnM1LjM4My0xMiwxMi0xMiAgaDI0aDI4YzYuNjE3LDAsMTIsNS4zODMsMTIsMTJTMzM4LjYxNyw0MzIsMzMyLDQzMnogTTM1NiwzOTJoLTI0aC0yOGMtNi42MTcsMC0xMi01LjM4My0xMi0xMnM1LjM4My0xMiwxMi0xMmgxMmg0MCAgYzYuNjE3LDAsMTIsNS4zODMsMTIsMTJTMzYyLjYxNywzOTIsMzU2LDM5MnogTTM4MCwzNDBjMCw2LjYxNy01LjM4MywxMi0xMiwxMmgtMTJoLTQwYy02LjYxNywwLTEyLTUuMzgzLTEyLTEyczUuMzgzLTEyLDEyLTEyaDUyICBDMzc0LjYxNywzMjgsMzgwLDMzMy4zODMsMzgwLDM0MHogTTMxNiwzMTJjLTYuNjE3LDAtMTItNS4zODMtMTItMTJzNS4zODMtMTIsMTItMTJoNTJjNi42MTcsMCwxMiw1LjM4MywxMiwxMnMtNS4zODMsMTItMTIsMTJIMzE2ICB6Ii8+CjxwYXRoIGQ9Ik0xMDguNTA4LDg5LjcxMUMxMDYuNTE2LDc5LjYyNSw5Ny42NjQsNzIsODcuMDc4LDcyYy0xMS45NDUsMC0yMS42ODgsOS43MTEtMjEuODQ0LDIxLjcwNyAgYy02LjM5MS0xLjExNy0xMi41LTMuNTctMTcuOTY5LTcuMjU0bC0yLjc4OS0xLjg4M2MtMi40NDUtMS42NTItNS42MTctMS44MzItOC4yMzQtMC40MzRDMzMuNjMzLDg1LjUyMywzMiw4OC4yNDIsMzIsOTEuMTk5djYuNTYzICBjMCw5LjY0MSwyLjkwNiwxOC44MzYsOC4yOTcsMjYuNTU5bC01Ljk4NCw2LjA1NWMtMi4yNzMsMi4yOTMtMi45MzgsNS43MjctMS42OTUsOC43MDdDMzMuODU5LDE0Mi4wNTksMzYuNzczLDE0NCw0MCwxNDRoMzguNzY2ICBjMTUuNDYxLDAsMjguMjQyLTExLjc4NSwyOS45NjEtMjYuOTFsOC45NjEtOS4wNjZjMS42MTctMS42MzcsMi40NTMtMy44OTUsMi4yODktNi4xOTVjLTAuMTY0LTIuMjk3LTEuMzA1LTQuNDE0LTMuMTQxLTUuODA1ICBMMTA4LjUwOCw4OS43MTF6IE05NS4yMzQsMTA3Ljk3N2MtMS40ODQsMS40OTYtMi4zMTMsMy41Mi0yLjMxMyw1LjYyNWMwLDcuOTM4LTYuMzUyLDE0LjM5OC0xNC4xNTYsMTQuMzk4SDU4LjQxNCAgYzEuMjY2LTIuOTE0LDAuNzE5LTYuNDMtMS42NDgtOC44MjRjLTMuNzM0LTMuNzgxLTYuNDA2LTguNTM5LTcuNzU4LTEzLjY2OGM3LjYzMywzLjIxOSwxNS44MzYsNC44OTEsMjQuMjI3LDQuODkxICBjNC40MjIsMCw4LTMuNTgyLDgtOFY5NGMwLTMuMzA5LDIuNjI1LTYsNS44NDQtNnM1Ljg0NCwyLjY5MSw1Ljg0NCw2YzAsMi41MDQsMS4xNzIsNC44NjMsMy4xNjQsNi4zNzVsMy44MTMsMi44ODdMOTUuMjM0LDEwNy45Nzd6ICAiLz4KPHBhdGggZD0iTTIzMiwxMjh2MjRoLTE2djE2aDE2djMyaDE2di0zMmgxNnYtMTZoLTE2di0xNmgxNnYtMTZoLTI0QzIzNS41NzgsMTIwLDIzMiwxMjMuNTgyLDIzMiwxMjh6Ii8+CjxwYXRoIGQ9Ik0zMTIsMjA4di05NmMwLTEzLjIzNC0xMC43NjYtMjQtMjQtMjRoLTk2Yy0xMy4yMzQsMC0yNCwxMC43NjYtMjQsMjR2OTZjMCwxMy4yMzQsMTAuNzY2LDI0LDI0LDI0aDk2ICBDMzAxLjIzNCwyMzIsMzEyLDIyMS4yMzQsMzEyLDIwOHogTTE4NCwyMDh2LTk2YzAtNC40MSwzLjU4Ni04LDgtOGg5NmM0LjQxNCwwLDgsMy41OSw4LDh2OTZjMCw0LjQxLTMuNTg2LDgtOCw4aC05NiAgQzE4Ny41ODYsMjE2LDE4NCwyMTIuNDEsMTg0LDIwOHoiLz4KPHBhdGggZD0iTTE0NCwxNjBWNjRjMC0xMy4yMzQtMTAuNzY2LTI0LTI0LTI0SDI0QzEwLjc2Niw0MCwwLDUwLjc2NiwwLDY0djk2YzAsMTMuMjM0LDEwLjc2NiwyNCwyNCwyNGg5NiAgQzEzMy4yMzQsMTg0LDE0NCwxNzMuMjM0LDE0NCwxNjB6IE0xNiwxNjBWNjRjMC00LjQxLDMuNTg2LTgsOC04aDk2YzQuNDE0LDAsOCwzLjU5LDgsOHY5NmMwLDQuNDEtMy41ODYsOC04LDhIMjQgIEMxOS41ODYsMTY4LDE2LDE2NC40MSwxNiwxNjB6Ii8+CjxwYXRoIGQ9Ik00NTYsMGgtOTZjLTEzLjIzNCwwLTI0LDEwLjc2Ni0yNCwyNHY5NmMwLDEzLjIzNCwxMC43NjYsMjQsMjQsMjRoOTZjMTMuMjM0LDAsMjQtMTAuNzY2LDI0LTI0VjI0ICBDNDgwLDEwLjc2Niw0NjkuMjM0LDAsNDU2LDB6IE0zNjAsMTZoOTZjNC40MTQsMCw4LDMuNTksOCw4djQwaC0xNi44MDlDNDQzLjQ3NCw0NS43NjYsNDI3LjMxNSwzMiw0MDgsMzJzLTM1LjQ3NCwxMy43NjYtMzkuMTkxLDMyICBIMzUyVjI0QzM1MiwxOS41OSwzNTUuNTg2LDE2LDM2MCwxNnogTTQzMiw3MmMwLDEzLjIzNC0xMC43NjYsMjQtMjQsMjRzLTI0LTEwLjc2Ni0yNC0yNHMxMC43NjYtMjQsMjQtMjRTNDMyLDU4Ljc2Niw0MzIsNzJ6ICAgTTQ1NiwxMjhoLTk2Yy00LjQxNCwwLTgtMy41OS04LThWODBoMTYuODA5YzMuNzE3LDE4LjIzNCwxOS44NzYsMzIsMzkuMTkxLDMyczM1LjQ3NC0xMy43NjYsMzkuMTkxLTMySDQ2NHY0MCAgQzQ2NCwxMjQuNDEsNDYwLjQxNCwxMjgsNDU2LDEyOHoiLz4KPHJlY3QgeD0iMjMyIiB5PSIzMjgiIHdpZHRoPSIxNiIgaGVpZ2h0PSIxNiIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+						<p> {{ refer_referProgramHowItWorkStep1Text | strip }} </p>
+					</div>
+					<div class="flits-col-12 flits-col-xs-12 flits-col-md-4 flits-col-lg-4 flits-text-center flits-mb-5">
+						<img class="flits-icon-size-25" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iQ2FwYV8xIiB4PSIwcHgiIHk9IjBweCIgdmlld0JveD0iMCAwIDQ4MCA0ODAiIHN0eWxlPSJlbmFibGUtYmFja2dyb3VuZDpuZXcgMCAwIDQ4MCA0ODA7IiB4bWw6c3BhY2U9InByZXNlcnZlIiB3aWR0aD0iNTEycHgiIGhlaWdodD0iNTEycHgiPgo8cG9seWdvbiBzdHlsZT0iZmlsbDojRkZGRkZGOyIgcG9pbnRzPSIzNDQsMCAxMzYsMCAxMzYsMTg0IDgwLDE4NCAyNDAsMjgwIDQwMCwxODQgMzQ0LDE4NCAiLz4KPHBhdGggc3R5bGU9ImZpbGw6I0JDQkNCQzsiIGQ9Ik00NDAsMTA0aC05NnY4MHYtNDhoOTZ2MjA4SDQwVjEzNmg5NnYtMzJINDBjLTE3LjY3MiwwLTMyLDE0LjMyOC0zMiwzMnYyMjQgIGMwLDE3LjY3MiwxNC4zMjgsMzIsMzIsMzJoMTQ0aDExMmgxNDRjMTcuNjcyLDAsMzItMTQuMzI4LDMyLTMyVjEzNkM0NzIsMTE4LjMyOCw0NTcuNjcyLDEwNCw0NDAsMTA0eiIvPgo8cGF0aCBzdHlsZT0iZmlsbDojMDZCMEM3OyIgZD0iTTQwLDM0NGg0MDBWMTM2aC05NnY0OGg1NmwtMTYwLDk2TDgwLDE4NGg1NnYtNDhINDBWMzQ0eiBNMzkyLDI3MnYyNGgyNGgtMjR2MjR2LTI0aC0yNGgyNFYyNzJ6Ii8+CjxnPgoJPHBhdGggc3R5bGU9ImZpbGw6I0JDQkNCQzsiIGQ9Ik04LDQ0MGMwLDI2LjUxMiwyMS40ODgsMzIsNDgsMzJoMzY4YzI2LjUxMiwwLDQ4LTUuNDg4LDQ4LTMySDMyMEgxNjBIOHoiLz4KCTxwb2x5Z29uIHN0eWxlPSJmaWxsOiNCQ0JDQkM7IiBwb2ludHM9IjE2MCw0NDAgMzIwLDQ0MCAyOTYsMzkyIDE4NCwzOTIgICIvPgo8L2c+CjxwYXRoIHN0eWxlPSJmaWxsOiNGRkZGRkY7IiBkPSJNMjg4LDgwbC00MC0yNGMtOCwyNC01NiwyNC01NiwyNGMwLDI2LjUxMiwzMS4wMzIsNDgsNDgsNDhTMjg4LDEwNi41MTIsMjg4LDgweiIvPgo8Zz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMwNkIwQzc7IiBkPSJNMjQ4LDU2bDQwLDI0YzAtMjYuNTEyLTgtNTYtNDgtNTZzLTQ4LDI5LjQ4OC00OCw1NkMxOTIsODAsMjQwLDgwLDI0OCw1NnoiLz4KCTxwYXRoIHN0eWxlPSJmaWxsOiMwNkIwQzc7IiBkPSJNMTc2LDE5MnYtMzJjMC0xNy42NzIsMTQuMzI4LTMyLDMyLTMyaDY0YzE3LjY3MiwwLDMyLDE0LjMyOCwzMiwzMnYzMkgxNzZ6Ii8+CjwvZz4KPHBhdGggZD0iTTQ0MCw5NmgtODhWMGgtMTZ2MTA0djMydjQ4YzAsNC40MjQsMy41NzYsOCw4LDhoMjcuMTJMMjQwLDI3MC42NzJMMTA4Ljg4LDE5MkgxMzZjNC40MjQsMCw4LTMuNTc2LDgtOHYtNDh2LTMyVjBoLTE2djk2ICBINDBjLTIyLjA1NiwwLTQwLDE3Ljk0NC00MCw0MHYyMjRjMCwyMi4wNTYsMTcuOTQ0LDQwLDQwLDQwaDEzMS4wNTZsLTE2LDMySDhjLTQuNDI0LDAtOCwzLjU3Ni04LDhjMCw0MCw0Mi4xNTIsNDAsNTYsNDBoMzY4ICBjMTMuODQ4LDAsNTYsMCw1Ni00MGMwLTQuNDI0LTMuNTc2LTgtOC04SDMyNC45NDRsLTE2LTMySDQ0MGMyMi4wNTYsMCw0MC0xNy45NDQsNDAtNDBWMTM2QzQ4MCwxMTMuOTQ0LDQ2Mi4wNTYsOTYsNDQwLDk2eiAgIE0xMjgsMTc2SDgwYy0zLjU5MiwwLTYuNzUyLDIuNC03LjcxMiw1Ljg2NHMwLjUwNCw3LjE0NCwzLjU5Miw4Ljk5MmwxNjAsOTZjMS4yNzIsMC43NiwyLjY5NiwxLjE0NCw0LjEyLDEuMTQ0ICBjMS40MjQsMCwyLjg0OC0wLjM4NCw0LjEyLTEuMTQ0bDE2MC05NmMzLjA4OC0xLjg0OCw0LjU1Mi01LjUyOCwzLjU5Mi04Ljk5MkM0MDYuNzUyLDE3OC40LDQwMy41OTIsMTc2LDQwMCwxNzZoLTQ4di0zMmg4MHYxOTJINDggIFYxNDRoODBWMTc2eiBNNDI0LDQ2NEg1NmMtMjYuNTg0LDAtMzYuMjQtNi4xNTItMzkuMDMyLTE2SDE2MGgxNjBoMTQzLjAzMkM0NjAuMjQsNDU3Ljg0OCw0NTAuNTg0LDQ2NCw0MjQsNDY0eiBNMzA3LjA1Niw0MzIgIEgxNzIuOTQ0bDE2LTMyaDEwMi4xMTJMMzA3LjA1Niw0MzJ6IE00NjQsMzYwYzAsMTMuMjMyLTEwLjc2OCwyNC0yNCwyNEgyOTZIMTg0SDQwYy0xMy4yMzIsMC0yNC0xMC43NjgtMjQtMjRWMTM2ICBjMC0xMy4yMzIsMTAuNzY4LTI0LDI0LTI0aDg4djE2SDQwYy00LjQyNCwwLTgsMy41NzYtOCw4djIwOGMwLDQuNDI0LDMuNTc2LDgsOCw4aDQwMGM0LjQyNCwwLDgtMy41NzYsOC04VjEzNmMwLTQuNDI0LTMuNTc2LTgtOC04ICBoLTg4di0xNmg4OGMxMy4yMzIsMCwyNCwxMC43NjgsMjQsMjRWMzYweiIvPgo8cGF0aCBkPSJNMTY4LDE2Mi40MjRWMTkyaDE2di0yOS41NzZjMC04Ljg1Niw0LjQtMTcuMDgsMTEuNzY4LTIxLjk4NGM0LjM1Mi0yLjkxMiw5LjQxNi00LjQ0LDE0LjY1Ni00LjQ0aDU5LjE2ICBjNS4yMzIsMCwxMC4zMDQsMS41MjgsMTQuNjU2LDQuNDRjNy4zNiw0LjkwNCwxMS43NiwxMy4xMiwxMS43NiwyMS45ODRWMTkyaDE2di0yOS41NzZjMC0xNC4yMTYtNy4wNjQtMjcuNDE2LTE4Ljg4OC0zNS4yOTYgIGMtNS40OTYtMy42NzItMTEuNzEyLTUuOTItMTguMi02LjczNkMyODYuNzc2LDExMC4xMTIsMjk2LDk1LjcxMiwyOTYsODBjMC01Mi44OTYtMzAuNDU2LTY0LTU2LTY0cy01NiwxMS4xMDQtNTYsNjQgIGMwLDE1LjcxMiw5LjIyNCwzMC4xMTIsMjEuMDk2LDQwLjM5MmMtNi40ODgsMC44MTYtMTIuNzEyLDMuMDY0LTE4LjIsNi43MzZDMTc1LjA2NCwxMzUuMDA4LDE2OCwxNDguMiwxNjgsMTYyLjQyNHogICBNMjAxLjExMiw4Ny41ODRjMTMuNjk2LTEuMTI4LDM4LjQyNC01LjI3Miw0OS45Mi0yMC40NGwyOC41OTIsMTcuMTZDMjc2LjQxNiwxMDMuODk2LDI1Mi4yOCwxMjAsMjQwLDEyMCAgQzIyOC40MDgsMTIwLDIwNi4yNzIsMTA1LjY2NCwyMDEuMTEyLDg3LjU4NHogTTI0MCwzMmMyMi43MDQsMCwzNS4xNzYsMTAuNzM2LDM4Ljc3NiwzMy4xMzZMMjUyLjEyLDQ5LjE0NCAgYy0yLjA4LTEuMjQ4LTQuNjE2LTEuNDg4LTYuODg4LTAuNjRjLTIuMjgsMC44MzItNC4wNDgsMi42NzItNC44MTYsNC45NjhjLTQuMDQ4LDEyLjE0NC0yNS45MDQsMTYuNzM2LTM5Ljk2OCwxOC4wNzIgIEMyMDIuNTg0LDQ0LjcyLDIxNS4yMzIsMzIsMjQwLDMyeiIvPgo8cG9seWdvbiBwb2ludHM9IjM4NCwzMjAgNDAwLDMyMCA0MDAsMzA0IDQxNiwzMDQgNDE2LDI4OCA0MDAsMjg4IDQwMCwyNzIgMzg0LDI3MiAzODQsMjg4IDM2OCwyODggMzY4LDMwNCAzODQsMzA0ICIvPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8Zz4KPC9nPgo8L3N2Zz4K" />
+						<p> {{ refer_referProgramHowItWorkStep2Text | strip }} </p>
+					</div>
+					<div class="flits-col-12 flits-col-xs-12 flits-col-md-4 flits-col-lg-4 flits-text-center flits-mb-5">
+						<img class="flits-icon-size-25" src="data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIj8+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiBoZWlnaHQ9IjUxMnB4IiB2aWV3Qm94PSIwIC0xMiA0OTYgNDk2IiB3aWR0aD0iNTEycHgiPjxwYXRoIGQ9Im04MCA0NDh2MTZoLTgwdi0yMTZoODB6bTAgMCIgZmlsbD0iIzY1NmQ3OCIvPjxwYXRoIGQ9Im0zMDQgMzIwIDE1NC41NTg1OTQtMjMuNTExNzE5YzEuNzYxNzE4LS4zMjAzMTIgMy42MDE1NjItLjQ4ODI4MSA1LjQ0MTQwNi0uNDg4MjgxIDE3LjY3OTY4OCAwIDMyIDE0LjMyMDMxMiAzMiAzMiAwIDExLjgzOTg0NC02LjM5ODQzOCAyMi4xNjc5NjktMTYgMjcuNjg3NWwtMjE2IDExNi4zMTI1LTE4NC0yNHYtMTg0aDcybDEyNS41MTk1MzEgMjQuNDg4MjgxYzE1LjAzOTA2MyAyLjU1ODU5NCAyNi40ODA0NjkgMTUuNjc5Njg4IDI2LjQ4MDQ2OSAzMS41MTE3MTl6bTAgMCIgZmlsbD0iI2VhYzZiYiIvPjxwYXRoIGQ9Im00NzkuNzEwOTM4IDMwMC4yODEyNWMtMS4zMzU5MzggMTAuMDE1NjI1LTcuMjg1MTU3IDE4LjU1ODU5NC0xNS43MTA5MzggMjMuNDA2MjVsLTIxMC4zMjgxMjUgMTA5LjE2Nzk2OS0xNzMuNjcxODc1LTIzLjQ5NjA5NHYzOC42NDA2MjVsMTg0IDI0IDIxNi0xMTYuMzEyNWM5LjYwMTU2Mi01LjUxOTUzMSAxNi0xNS44Mzk4NDQgMTYtMjcuNjg3NSAwLTExLjkzNzUtNi42MDE1NjItMjIuMjE0ODQ0LTE2LjI4OTA2Mi0yNy43MTg3NXptMCAwIiBmaWxsPSIjZDNiMWE5Ii8+PHBhdGggZD0ibTQwLjIzMDQ2OSA0NDhjLTQuNDE0MDYzIDAtOC4wMzEyNS0zLjU3NDIxOS04LjAzMTI1LThzMy41MzUxNTYtOCA3Ljk1MzEyNS04aC4wNzgxMjVjNC40MjU3ODEgMCA4IDMuNTc0MjE5IDggOHMtMy41NzQyMTkgOC04IDh6bTAgMCIgZmlsbD0iI2ZmY2U1NCIvPjxwYXRoIGQ9Im0zMTkuNzkyOTY5IDMxNy42MDE1NjItMTUuNzkyOTY5IDIuMzk4NDM4YzAgMTcuNjcxODc1LTE0LjMyODEyNSAzMi0zMiAzMi0uOTAyMzQ0IDAtMS44MDg1OTQtLjA3MDMxMi0yLjY5NTMxMi0uMTQ0NTMxLS4wMTU2MjYtLjAwNzgxMy0uMDIzNDM4LS4wMTU2MjUtLjAzOTA2My0uMDE1NjI1bC0xMDAuNjQwNjI1LTcuODI0MjE5Yy00LjM3ODkwNi0uMjgxMjUtOC4yNSAyLjk2MDkzNy04LjYwMTU2MiA3LjM1OTM3NS0uMzM1OTM4IDQuNDEwMTU2IDIuOTUzMTI0IDguMjUgNy4zNTE1NjIgOC41OTM3NWw5OS44ODI4MTIgNy43NTc4MTJ2LjAzNTE1N2MxLjU3NDIxOS4xNjAxNTYgMy4xNzU3ODIuMjM4MjgxIDQuNzQyMTg4LjIzODI4MSAyNi40NzI2NTYgMCA0OC0yMS41MjczNDQgNDgtNDggMC0uODI0MjE5LS4xNjc5NjktMS41OTM3NS0uMjA3MDMxLTIuMzk4NDM4em0wIDAiIGZpbGw9IiNkM2IxYTkiLz48cGF0aCBkPSJtMzkyIDEwMGMwIDQyLjQ4MDQ2OS0yNi41NTg1OTQgNzguODc4OTA2LTY0IDkzLjI4MTI1LTExLjE5OTIxOSA0LjMyMDMxMi0yMy4yODEyNSA2LjcxODc1LTM2IDYuNzE4NzVzLTI0LjgwMDc4MS0yLjM5ODQzOC0zNi02LjcxODc1Yy0zNy40NDE0MDYtMTQuNDAyMzQ0LTY0LTUwLjgwODU5NC02NC05My4yODEyNSAwLTU1LjE5OTIxOSA0NC44MDA3ODEtMTAwIDEwMC0xMDBzMTAwIDQ0LjgwMDc4MSAxMDAgMTAwem0wIDAiIGZpbGw9IiNmZmNlNTQiLz48cGF0aCBkPSJtMzI4IDE5My4yODEyNWMtMTEuMTk5MjE5IDQuMzIwMzEyLTIzLjI4MTI1IDYuNzE4NzUtMzYgNi43MTg3NXMtMjQuODAwNzgxLTIuMzk4NDM4LTM2LTYuNzE4NzVjLTM3LjQ0MTQwNi0xNC40MDIzNDQtNjQtNTAuODA4NTk0LTY0LTkzLjI4MTI1djMyYzAgNDIuNDgwNDY5IDI2LjU1ODU5NCA3OC44Nzg5MDYgNjQgOTMuMjgxMjUgMTEuMTk5MjE5IDQuMzIwMzEyIDIzLjI4MTI1IDYuNzE4NzUgMzYgNi43MTg3NXMyNC44MDA3ODEtMi4zOTg0MzggMzYtNi43MTg3NWMzNy40NDE0MDYtMTQuNDAyMzQ0IDY0LTUwLjgwODU5NCA2NC05My4yODEyNXYtMzJjMCA0Mi40ODA0NjktMjYuNTU4NTk0IDc4Ljg3ODkwNi02NCA5My4yODEyNXptMCAwIiBmaWxsPSIjZjZiYjQyIi8+PGcgZmlsbD0iI2VkYWIzNyI+PHBhdGggZD0ibTI0OCAxODkuNzUzOTA2djMyYzIuNjA5Mzc1IDEuMjc3MzQ0IDUuMjY1NjI1IDIuNDc2NTYzIDggMy41MjczNDQgMi42MTcxODggMS4wMDc4MTIgNS4yODkwNjIgMS44ODY3MTkgOCAyLjY4NzV2LTMyYy0yLjcxMDkzOC0uODAwNzgxLTUuMzgyODEyLTEuNjc5Njg4LTgtMi42ODc1LTIuNzM0Mzc1LTEuMDU4NTk0LTUuMzkwNjI1LTIuMjUtOC0zLjUyNzM0NHptMCAwIi8+PHBhdGggZD0ibTMyMCAxOTUuOTY4NzV2MzJjMi43MTA5MzgtLjgwMDc4MSA1LjM4MjgxMi0xLjY3OTY4OCA4LTIuNjg3NSAyLjczNDM3NS0xLjA1ODU5NCA1LjM5MDYyNS0yLjI1IDgtMy41MjczNDR2LTMyYy0yLjYwOTM3NSAxLjI3NzM0NC01LjI2NTYyNSAyLjQ3NjU2My04IDMuNTI3MzQ0LTIuNjE3MTg4IDEuMDA3ODEyLTUuMjg5MDYyIDEuODg2NzE5LTggMi42ODc1em0wIDAiLz48cGF0aCBkPSJtMzIwIDEyOGgtOHYtODBjMC0uMTgzNTk0LS4wOTc2NTYtLjM1MTU2Mi0uMTEzMjgxLS41MzUxNTYtLjAzMTI1LS41MjczNDQtLjE2Nzk2OS0xLjAzMTI1LS4zMTI1LTEuNTU0Njg4LS4xNDg0MzgtLjUyNzM0NC0uMjg1MTU3LTEuMDMxMjUtLjUzNTE1Ny0xLjUxMTcxOC0uMDg1OTM3LS4xNjc5NjktLjA4NTkzNy0uMzQzNzUtLjE3NTc4MS0uNTAzOTA3LS4xNjc5NjktLjI2OTUzMS0uNDI5Njg3LS40Mzc1LS42MjUtLjY4NzUtLjMzNTkzNy0uNDM3NS0uNjc5Njg3LS44Mzk4NDMtMS4wOTM3NS0xLjE5OTIxOS0uNDEwMTU2LS4zNDM3NS0uODI0MjE5LS42MDE1NjItMS4yNzM0MzctLjg1NTQ2OC0uNDI5Njg4LS4yNDIxODgtLjg0NzY1Ni0uNDY0ODQ0LTEuMzM1OTM4LS42MjUtLjUzNTE1Ni0uMTc1NzgyLTEuMDcwMzEyLS4yNjE3MTktMS42NDA2MjUtLjMyODEyNS0uMzA4NTkzLS4wNTQ2ODgtLjU4MjAzMS0uMTk5MjE5LS44OTQ1MzEtLjE5OTIxOS0uMTgzNTk0IDAtLjM0Mzc1LjA5NzY1Ni0uNTE5NTMxLjEwNTQ2OS0uNTM1MTU3LjAzOTA2Mi0xLjA0Njg3NS4xNjc5NjktMS41NzgxMjUuMzIwMzEyLS41MTk1MzIuMTQ4NDM4LTEuMDMxMjUuMjg1MTU3LTEuNTAzOTA2LjUzNTE1Ny0uMTY3OTY5LjA4NTkzNy0uMzQzNzUuMDg1OTM3LS41MDM5MDcuMTc1NzgxbC00MCAyNGMtMy43ODkwNjIgMi4yNjk1MzEtNS4wMTU2MjUgNy4xODM1OTMtMi43NDIxODcgMTAuOTc2NTYyIDEuNTAzOTA2IDIuNTAzOTA3IDQuMTUyMzQ0IDMuODc4OTA3IDYuODYzMjgxIDMuODc4OTA3IDEuMzk4NDM3IDAgMi44MjQyMTktLjM2NzE4OCA0LjExMzI4MS0xLjE0NDUzMmwzLjg3MTA5NC0yLjMyMDMxMnY1MS40NzI2NTZoLThjLTQuNDI1NzgxIDAtOCAzLjU3NDIxOS04IDhzMy41NzQyMTkgOCA4IDhoNTZjNC40MjU3ODEgMCA4LTMuNTc0MjE5IDgtOHMtMy41NzQyMTktOC04LTh6bS0zMi02MS4wNzAzMTIgOC00LjgwMDc4MnY2NS44NzEwOTRoLTh6bTAgMCIvPjwvZz48L3N2Zz4K" />
+						<p> {{ refer_referProgramHowItWorkStep3Text | strip }} </p>
+					</div>
+				</div>
+			</div>
+			<div class="flits-refer-link-container flits-d-none">
+				{% render 'flits_capture_code' with 'component',template:'comp_referFriendNew' %}
+			</div>
+			<div class="flits-credit-box flits-refer-friend-box">
+				<div class="flits-refer-credit-table-div flits-d-none">
+					<p class="flits-h5 flits-credit-activity-title">{{ refer_creditsActivityText | strip }}</p>
+					<p class="flits-h5 flits-credit-activity-title flits-mb-0">{{ refer_earnedCreditsText | strip }}: <span id="flits-refer-program-total-credits"></span></p>
+					<ul class="flits-credit-log-list flits-credit-log-header">
+						<li class="flits-credit-log-item flits-credit-log-title flits-refer-credit-log-item-template">
+							<div class="flits-row flits-credit-log-details">
+								<div class="flits-col-md-3 flits-credit-right-border">
+									<p class="flits-referral-customer-name flits-text-nowrap">{{ refer_referralCustomerNameText | strip }} </p>
+								</div>
+								<div class="flits-col-md-3 flits-credit-right-border">
+									<p class="flits-referral-customer-email flits-text-nowrap">{{ refer_referralCustomerEmailText | strip }} </p>
+								</div>
+								<div class="flits-col-md-3 flits-credit-right-border">
+									<div>
+									<div class="flits-credit-icon flits-earn-credit-icon-round flits-d-none">
+										<svg viewBox="0 0 24 24" width="24" height="24" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round" class="css-i6dzq1"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg>
+									</div>
+									<p class="flits-referral-customer-credit">{{ refer_creditsText | strip }} </p>
+									</div>
+								</div>
+								<div class="flits-col-md-3">
+								<p class="flits-referral-customer-credit-date">{{ refer_timeText | strip }} </p>
+								</div>
+							</div>
+						</li>
+					</ul>
+					<ul class="flits-credit-log-list flits-refer-credit-log-list">
+					</ul>
+				</div>
+				{% render 'flits_capture_code' with 'component',template:'comp_empty_section',text_1:refer_noHistoryYetText,text_2:refer_marketingLineText, class:'flits-d-none flits-refer-credit-empty flits-p-relative' %}
+			</div>
+		</div>
+		{% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-refer-credit-loader' %}
+	</div>
+
+{%- when 'module_changePassword' -%}
+	<div class="flits-tab-box flits-change-password-div" id="{{ id }}">
+		{% render 'flits_capture_code' with 'component',template:'comp_tabsContainerHeader',text:navigation_changePasswordText %}
+	</div>
+{%- when 'module_changePassword_content' -%}
+	<div class="flits-tab-box-body">
+		<form action="/update_password" id="flits-form-change-password" method="post" autocomplete="off">
+			<div class="flits-row">
+				<div class="flits-col-md-6 flits-mb-15">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'password',
+						label:updatePassword_newPasswordText,
+						name:'password',
+						placeholder:updatePassword_newPasswordPlaceholderText,
+						attr:'minlength="6" maxlength="40" autocomplete="new-password"'
+					%}
+					<small class="flits-hint flits-password-hint">{{ updatePassword_passwordHintMessageText | strip }}</small>
+				</div>
+			</div>
+			<div class="flits-row">
+				<div class="flits-col-md-6">
+					{% render 'flits_capture_code' with 'component',template:'comp_flitsLabelInput',
+						type:'password',
+						label:updatePassword_confirmNewPasswordText,
+						name:'password_confirmation',
+						placeholder:updatePassword_confirmPasswordPlaceholderText,
+						attr:'minlength="6" maxlength="40" autocomplete="new-password"'
+					%}
+				<small class="flits-hint flits-confirm-password-hint">{{ updatePassword_passwordHintMessageText | strip }}</small>
+				</div>
+			</div>
+			{% render 'flits_capture_code' with 'component',template:'comp_button',
+				type:'button',
+				text:updatePassword_updatePasswordButtonText,
+				class:'flits-primary-btn flits-change-pass-button flits-mt-15 flits-ml-0'
+			%}
+		</form>
+	</div>
+{%- endcase -%}

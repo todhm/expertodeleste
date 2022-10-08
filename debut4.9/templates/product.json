@@ -1,0 +1,161 @@
+{
+  "sections": {
+    "main": {
+      "type": "product-template",
+      "settings": {
+        "show_product_vendor": false,
+        "show_product_type": false,
+        "show_product_sku": false,
+        "show_product_tags": false,
+        "show_sharing_icons": false,
+        "show_product_collections": false,
+        "product_title_large": false,
+        "enable_image_zoom_on_icon_click": false,
+        "image_display_type": "image_zoom",
+        "enable_fading_effect": false,
+        "enable_video_looping": true,
+        "media_layout": "thumbnails",
+        "image_size": "medium",
+        "enable_arrows": true,
+        "thumbnails_position": "bottom_center",
+        "quantity_enabled": true,
+        "product_selector": "select",
+        "show_product_description": true,
+        "enable_split_description": false,
+        "description_full": false,
+        "dbtfy_product_description_position": "separate_section_v2",
+        "description_style": "section-border",
+        "text_alignment": "text-center",
+        "text_alignment_mobile": "small--text-center"
+      }
+    },
+    "upsell-bundles": {
+      "type": "dbtfy-upsell-bundles",
+      "settings": {
+        "dbtfy_upsell_bundles_title": "Complete this set",
+        "dbtfy_upsell_bundles_subtitle": "",
+        "dbtfy_upsell_bundles_total": "Total price:",
+        "dbtfy_upsell_bundles_cart": "Add selected items",
+        "dbtfy_upsell_bundles_icons": "library_add_check",
+        "dbtfy_upsell_bundles_current": "This item:",
+        "section_style": "section-border",
+        "dbtfy_upsell_bundles_reviews": false,
+        "show_automatic_bundles": false,
+        "dbtfy_upsell_bundles_limit": "2",
+        "dbtfy_upsell_bundles_position": "button",
+        "dbtfy_upsell_bundles_discount_code": "Hello",
+        "dbtfy_upsell_bundles_discount_amount": "10",
+        "dbtfy_upsell_bundles_discount_type": "%"
+      }
+    },
+    "review-widget": {
+      "type": "product-review-widget",
+      "settings": {
+      }
+    },
+    "additional-product-recommendations": {
+      "type": "additional-product-recommendations",
+      "settings": {
+      }
+    },
+    "164976437481e41ca1": {
+      "type": "hero",
+      "blocks": {
+        "01630a3e-3799-4cd2-9871-6406dadee243": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/bigmeeting.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "",
+            "video": "",
+            "heading_text": "",
+            "text": "<p><em><strong>Make a reservation with our dining set expert to get a help you need<\/strong><\/em><\/p>",
+            "text_position": "align-center",
+            "text_position_mobile": "align-center",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "poppins_n4",
+            "button_label": "Book now",
+            "button_link": "shopify:\/\/products\/booking-event",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "01630a3e-3799-4cd2-9871-6406dadee243"
+      ],
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "section_height": "small",
+        "section_height_mobile": "small",
+        "arrows": false,
+        "dots": false,
+        "autoplay": false,
+        "autoplayspeed": 10
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "disabled": true,
+      "settings": {
+        "show_product_recommendations": true,
+        "title": "Expert Recommendations",
+        "subtitle": "",
+        "section_style": "section-border",
+        "rows": "2",
+        "desktop_grid": "4",
+        "mobile_grid": "2",
+        "slider_related_products": true,
+        "arrows": true,
+        "dots": true,
+        "autoplay": false,
+        "autoplayspeed": 5
+      }
+    },
+    "related-products": {
+      "type": "related-products",
+      "disabled": true,
+      "settings": {
+        "show_related_products": false,
+        "related_collection": true,
+        "same_vendor": false,
+        "same_type": false,
+        "never_empty": true,
+        "title": "You may also like",
+        "subtitle": "",
+        "section_style": "section-border",
+        "rows": "1",
+        "desktop_grid": "4",
+        "mobile_grid": "2",
+        "slider_related_products": true,
+        "arrows": true,
+        "dots": true,
+        "autoplay": false,
+        "autoplayspeed": 5
+      }
+    },
+    "back-to-collection": {
+      "type": "product-back-to-collection",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "main",
+    "upsell-bundles",
+    "review-widget",
+    "additional-product-recommendations",
+    "164976437481e41ca1",
+    "product-recommendations",
+    "related-products",
+    "back-to-collection"
+  ]
+}

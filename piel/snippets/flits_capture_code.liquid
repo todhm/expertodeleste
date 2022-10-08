@@ -1,0 +1,156 @@
+
+{% comment %} PLEASE DON'T MAKE CHANGES IN THIS FILE IT'S AFFECT THE CODE IF YOU NEED ANY HELP PLEASE CONTACT TO FLITS TEAM support@getflits.com {% endcomment %}
+{% case flits_capture_code %}
+
+{% comment %}
+  <!-- ******** -->
+  <!-- Used to render main entry point in theme.liquid  -->
+  <!-- ********-->
+{% endcomment %}
+{%- when 'load_snippet' -%}
+  {%- liquid 
+    case template
+      when 'flits_snippet'
+        capture snippet_code
+            render 'flits_snippet'
+        endcapture
+      unless snippet_code contains 'Liquid error:'
+        echo snippet_code
+      endunless
+    endcase
+  -%}
+{% comment %}
+<!-- ******** -->
+<!-- For translation and default value -->
+<!-- ******** -->
+{% endcomment %}
+{% when 'translation' %}
+  {%- capture custom_capture_code -%}
+    {{- template | t -}}
+  {%- endcapture -%}
+  {% if custom_capture_code contains 'translation missing:' %}
+    {{- default_template -}}
+  {% else %}
+    {{- custom_capture_code -}}
+  {% endif %}
+  
+{% comment %}
+<!-- ******** -->
+<!-- For account module -->
+<!-- ******** -->
+{% endcomment %}
+{% when 'module' %}
+  {% if loadFromMainFile %}
+    {%- render 'flits_main_code' with template id:id -%} 
+  {% else %}
+    {%- capture custom_capture_code -%}
+      {%- render 'flits_custom_code'  with template id:id -%}
+    {%- endcapture -%}
+    {%- assign custom_capture_code = custom_capture_code | strip -%}
+    {%- if custom_capture_code.size > 0 or custom_capture_code contains 'custom_code' -%}
+      {{- custom_capture_code -}}
+    {%- else -%}
+      {%- render 'flits_main_code' with template id:id -%} 
+    {%- endif -%}
+  {%- endif -%}
+
+  
+{% comment %}
+<!-- ******** -->
+<!-- For html component -->
+<!-- ******** -->
+{% endcomment %}
+{% when 'component' %}
+  {% if loadFromMainFile %}
+    {%- render 'flits_main_component' with template,
+      id:id,
+      type:type,
+      value:value,
+      name:name,
+      min:min,
+      max:max,
+      for:for,
+      inputIcon: inputIcon,
+      options:options,
+      label:label,
+      class:class,
+      attr:attr,
+      href:href,
+      text:text,
+      text_1:text_1,
+      text_2:text_2,
+      input_value:input_value,
+      input_min:input_min,
+      order_text:order_text,
+      placeholder:placeholder
+      svg_img:svg_img,
+      loading_msg:loading_msg,
+      badge:badge,
+      product:product,
+      order:order
+    -%}
+  {%- else -%}
+    {%- capture custom_capture_code -%}
+      {%- render 'flits_custom_component' with template,
+          id:id,
+          type:type,
+          name:name,
+          min:min,
+          max:max,
+          for:for,
+          inputIcon: inputIcon,
+          value:value,
+          options:options,
+          label:label,
+          class:class,
+          attr:attr,
+          href:href,
+          text:text,
+          text_1:text_1,
+          text_2:text_2 ,
+          input_value:input_value,
+          input_min:input_min,
+          order_text:order_text,
+          placeholder:placeholder
+          svg_img:svg_img,
+          loading_msg:loading_msg,
+          badge:badge,
+          product:product,
+          order:order
+      -%}
+    {%- endcapture -%}
+    {%- assign custom_capture_code = custom_capture_code | strip -%}
+    {%- if custom_capture_code.size > 0 or custom_capture_code contains 'custom_code' -%}
+      {{- custom_capture_code -}}
+    {%- else -%}
+      {%- render 'flits_main_component' with template,
+        id:id,
+        type:type,
+        value:value,
+        name:name,
+        min:min,
+        max:max,
+        for:for,
+        inputIcon: inputIcon,
+        options:options,
+        label:label,
+        class:class,
+        attr:attr,
+        href:href,
+        text:text,
+        text_1:text_1,
+        text_2:text_2,
+        input_value:input_value,
+        input_min:input_min,
+        order_text:order_text,
+        placeholder:placeholder
+        svg_img:svg_img,
+        loading_msg:loading_msg,
+        badge:badge,
+        product:product,
+        order:order
+      -%}
+    {% endif %}
+  {% endif %}
+  
+{% endcase %}

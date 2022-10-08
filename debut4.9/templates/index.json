@@ -1,0 +1,217 @@
+{
+  "sections": {
+    "1648803027f3e48e67": {
+      "type": "hero",
+      "blocks": {
+        "6561f08f-a79f-4113-8766-c38d60e442ef": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/banner2.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/Mobile_Banner.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "",
+            "video": "",
+            "heading_text": "BEST DINING SET DECISION",
+            "text": "<p>Choose the dining set that can change your lifestyle with dining set experts.<\/p>",
+            "text_position": "align-top",
+            "text_position_mobile": "align-top",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "sans-serif",
+            "button_label": "Shop now",
+            "button_link": "shopify:\/\/collections\/all",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "6561f08f-a79f-4113-8766-c38d60e442ef"
+      ],
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "section_height": "large",
+        "section_height_mobile": "large",
+        "arrows": true,
+        "dots": true,
+        "autoplay": false,
+        "autoplayspeed": 8
+      }
+    },
+    "1648812007076ddee4": {
+      "type": "featured-collections",
+      "blocks": {
+        "1648812007809dedbf-1": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "classics"
+          }
+        },
+        "baf83787-87ee-4204-a8d4-544f74135522": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "outdoor"
+          }
+        },
+        "1648812007809dedbf-0": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "modern"
+          }
+        },
+        "a2009b57-7c24-4507-810b-b951068d671a": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "simple"
+          }
+        },
+        "192ed6e8-7106-483a-a216-362a20bb9461": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "modern-big"
+          }
+        }
+      },
+      "block_order": [
+        "1648812007809dedbf-1",
+        "baf83787-87ee-4204-a8d4-544f74135522",
+        "1648812007809dedbf-0",
+        "a2009b57-7c24-4507-810b-b951068d671a",
+        "192ed6e8-7106-483a-a216-362a20bb9461"
+      ],
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "full_width": false,
+        "title": "FIND YOUR BEST FIT",
+        "subtitle": "",
+        "section_style": "section-blank",
+        "section_height": "medium",
+        "show_view_all": false,
+        "button_label": "View all",
+        "button_link": "shopify:\/\/collections",
+        "button_style": "btn-outline-primary",
+        "slider_featured_collections": true,
+        "arrows": true,
+        "dots": true
+      }
+    },
+    "1651806535aa8dbbef": {
+      "type": "featured-collections",
+      "blocks": {
+        "165180653588134e71-0": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "modern-bright"
+          }
+        },
+        "165180653588134e71-1": {
+          "type": "collection",
+          "settings": {
+            "title": "",
+            "collection": "modern-dark"
+          }
+        }
+      },
+      "block_order": [
+        "165180653588134e71-0",
+        "165180653588134e71-1"
+      ],
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "full_width": false,
+        "title": "Choose your mood",
+        "subtitle": "",
+        "section_style": "section-blank",
+        "section_height": "medium",
+        "show_view_all": false,
+        "button_label": "View all",
+        "button_link": "shopify:\/\/collections",
+        "button_style": "btn-outline-primary",
+        "slider_featured_collections": false,
+        "arrows": false,
+        "dots": false
+      }
+    },
+    "1649985627bda2c0d0": {
+      "type": "hero",
+      "blocks": {
+        "96596cf2-0f2e-4d58-8ac2-2ca789a5db8d": {
+          "type": "slide",
+          "settings": {
+            "title": "",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/bigmeeting.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "",
+            "video": "",
+            "heading_text": "Make a reservation",
+            "text": "<p><em><strong>Our dining set expert will help you<\/strong><\/em><\/p>",
+            "text_position": "align-bottom",
+            "text_position_mobile": "align-bottom",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "abril_fatface_n4",
+            "button_label": "Book now",
+            "button_link": "\/products\/booking-event",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "shopify:\/\/collections\/all",
+            "button_style_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "96596cf2-0f2e-4d58-8ac2-2ca789a5db8d"
+      ],
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "section_height": "small",
+        "section_height_mobile": "medium",
+        "arrows": false,
+        "dots": false,
+        "autoplay": false,
+        "autoplayspeed": 8
+      }
+    },
+    "1648738421d2628947": {
+      "type": "featured-blog",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "title": "Smooth Dining Blog",
+        "subtitle": "",
+        "section_style": "section-blank",
+        "blog": "news",
+        "rows": "1",
+        "grid": "3",
+        "show_view_all": true,
+        "button_style": "btn-outline-primary"
+      }
+    }
+  },
+  "order": [
+    "1648803027f3e48e67",
+    "1648812007076ddee4",
+    "1651806535aa8dbbef",
+    "1649985627bda2c0d0",
+    "1648738421d2628947"
+  ]
+}

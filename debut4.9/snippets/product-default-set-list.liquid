@@ -1,0 +1,14 @@
+{% assign defaultSetList = product.metafields.my_fields.defaultsetlist.value %} 
+{%- if defaultSetList.size > 0 -%}
+<div class="bundle-set">
+    <p class="default-set-label">Default Set Includes</p>
+    <ul class="nonestyle-ul"> 
+        {%for setinfo in defaultSetList%}
+            <li class="default-set-option-item">
+                <img src={{setinfo.thumbnailImage}} alt={{setinfo.productName}} class="mainLazy"> 
+                <p><b class="selection-qty-118188">{{setinfo.defaultCount}}</b>x {{setinfo.productName}}</p>
+            </li> 
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}

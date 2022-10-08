@@ -1,0 +1,29 @@
+
+<div class="rte product-tabs-{{product.id}}">
+    <div class="product-metafields-tab">
+        <div class="product-specification-wrapper">
+            <ul class="product-specification-ul">
+                {% assign mustinfo_dict_list = product.metafields.my_fields.mustinfo.value %} 
+                {% for mustinfodict in mustinfo_dict_list %}
+                <li class="product-specification-list">
+                    <span class="product-specification-key">{{mustinfodict.key}}:</span>
+                    {%- if mustinfodict.valueList.size == 1 -%}
+                        {%for value in mustinfodict.valueList%}
+                            {{value}}
+                        {% endfor%}
+                    {% else %}
+                        <br>
+                        {%for value in mustinfodict.valueList%}
+                            {{value}}
+                            <br>
+                        {% endfor%}
+                    {% endif %}
+                    
+                </li>
+                {% endfor %}
+            </ul>
+
+        </div>
+    </div>
+</div>
+

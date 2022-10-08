@@ -1,0 +1,64 @@
+{% extends 'admin/model/edit.html' %}
+
+{% block tail %}
+    {{ super() }}
+    {{ ckeditor.load() }}
+    <script>
+        CKEDITOR.config.allowedContent = true;
+        CKEDITOR.config.removeFormatAttributes = '';
+        const targetNode = document.getElementById('templatePairList');
+        const config = { attributes: true, childList: true, subtree: true };
+
+        // Callback function to execute when mutations are observed
+        const callback = function(mutationsList, observer) {
+            // Use traditional 'for loops' for IE 11
+            for(const mutation of mutationsList) {
+                if (mutation.type === 'childList' && mutation.addedNodes && typeof mutation.addedNodes[0] === 'object') {
+                    const nodeId = mutation.addedNodes[0].id;
+                    console.log(nodeId);
+                    if(nodeId&&nodeId.startsWith("templatePairList")){
+                        const targetNodeId = `${nodeId}-image`
+                        document.getElementById(targetNodeId).classList.remove("ckeditor");
+                        CKEDITOR.replace(targetNodeId, {
+                            language: "",
+                            height: 0,
+                            width: 0,
+                            codeSnippet_theme: "monokai_sublime",
+                            imageUploadUrl: "/upload",
+                            filebrowserUploadUrl: "/upload",
+                            filebrowserBrowseUrl: "/upload",
+                            extraPlugins: "filebrowser,filebrowser,filebrowser",    
+                        });
+                    }
+                    else if(nodeId&&nodeId.startsWith("cke_")){
+                        const ckeditornode = mutation.addedNodes[0].previousSibling;
+                        if(ckeditornode&& ckeditornode.id && ckeditornode.classList.contains("ckeditor")){
+                            const targetNodeId = ckeditornode.id;
+                            CKEDITOR.instances[targetNodeId].destroy();
+                            CKEDITOR.replace(targetNodeId, {
+                                language: "",
+                                height: 0,
+                                width: 0,
+                                codeSnippet_theme: "monokai_sublime",
+                                imageUploadUrl: "/upload",
+                                filebrowserUploadUrl: "/upload",
+                                filebrowserBrowseUrl: "/upload",
+                                extraPlugins: "filebrowser,filebrowser,filebrowser",    
+                            });
+                            ckeditornode.classList.remove("ckeditor");
+                            console.log("deleted");
+                        }
+                    }
+                }
+            }
+        };
+
+        // Create an observer instance linked to the callback function
+        const observer = new MutationObserver(callback);
+
+        // Start observing the target node for configured mutations
+        observer.observe(targetNode, config);
+
+
+    </script>
+{% endblock %}

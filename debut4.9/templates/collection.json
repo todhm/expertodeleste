@@ -1,0 +1,67 @@
+{
+  "sections": {
+    "collection-image": {
+      "type": "collection-image",
+      "settings": {
+      }
+    },
+    "breadcrumbs": {
+      "type": "breadcrumbs",
+      "settings": {
+      }
+    },
+    "1654173125d568671a": {
+      "type": "collection-featured-product",
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": true,
+        "featured_product": "",
+        "section_style": "section-blank",
+        "show_product_vendor": false,
+        "show_product_type": true,
+        "show_product_sku": false,
+        "product_title_large": false,
+        "show_product_tags": false,
+        "show_sharing_icons": false,
+        "show_product_collections": false,
+        "show_full_details": true,
+        "enable_fading_effect": true,
+        "enable_image_zoom_on_icon_click": false,
+        "image_display_type": "image_zoom",
+        "enable_video_looping": false,
+        "media_layout": "thumbnails",
+        "image_size": "medium",
+        "enable_arrows": true,
+        "thumbnails_position": "bottom_center",
+        "quantity_enabled": false,
+        "product_selector": "select",
+        "show_product_description": false,
+        "description_full": false,
+        "dbtfy_product_description_position": "separate_section",
+        "description_style": "section-border",
+        "text_alignment": "text-center",
+        "text_alignment_mobile": "small--text-center"
+      }
+    },
+    "main": {
+      "type": "collection-template",
+      "settings": {
+        "collection_tags_enable": true,
+        "collection_tags_count": true,
+        "collection_multiple_tags_filtering_enable": false,
+        "collection_sort_enable": true,
+        "tag_selector": "select",
+        "collection_layout": "grid",
+        "rows": "4",
+        "desktop_grid": "2",
+        "mobile_grid": "2"
+      }
+    }
+  },
+  "order": [
+    "collection-image",
+    "breadcrumbs",
+    "1654173125d568671a",
+    "main"
+  ]
+}

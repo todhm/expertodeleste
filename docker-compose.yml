@@ -1,0 +1,21 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:4-xenial
+    container_name: mongo-db
+    ports:
+      - "27017:27017"
+    volumes:
+      - ./mongodb-volume:/data/db
+  apihelper:
+    image: apihelper
+    build:
+      context: ./apihelper/
+    working_dir: /usr/src/app
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./apihelper:/usr/src/app
+    command: flask run -h 0.0.0.0 -p 8000
+    env_file:
+      - ./envfiles/.fedex.env

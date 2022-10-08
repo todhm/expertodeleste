@@ -1,0 +1,25 @@
+{
+  "accountSettings": {
+    "template": 1,
+    "isCustomized": false,
+    "colorSettings": {
+      "navigationBGColor": "rgb(0, 0, 0)",
+      "navigationTextColor": "rgb(255, 255, 255)",
+      "navigationBorderColor": "rgb(0, 0, 0)",
+      "contentBGColor": "rgb(255, 255, 255, 0)",
+      "contentTextColor": "rgb(0, 0, 0)",
+      "primaryButtonBGColor": "rgb(244, 67, 54)",
+      "primaryButtonTextColor": "rgb(255, 255, 255)",
+      "secondaryButtonBGColor": "rgb(244, 67, 54)",
+      "secondaryButtonTextColor": "rgb(244, 67, 54)",
+      "badgeBGColor": "rgb(244, 67, 54)",
+      "badgeTextColor": "rgb(255, 255, 255)",
+      "linkColor": "rgb(244, 67, 54)"
+    },
+    "isAccountPageInJSON": false,
+    "sections": [
+
+    ],
+    "codeVersion": "2.1.2"
+  }
+}

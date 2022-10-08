@@ -1,0 +1,609 @@
+{
+  "current": {
+    "hero_header_mobile": false,
+    "search_show_articles": false,
+    "search_show_pages": false,
+    "icon": "material-icons-outlined",
+    "enable_product_accent_background": true,
+    "hide_collection_title": true,
+    "collection_grid_card": true,
+    "collection_grid_products_count": false,
+    "collection_grid_animation": false,
+    "show_collection_grid_button": false,
+    "show_author": false,
+    "show_comments": false,
+    "word_count": 4,
+    "show_locale_selector": false,
+    "show_currency_selector": false,
+    "show_hero": false,
+    "section_height": "xlarge",
+    "color_announcement_bg": "#212529",
+    "color_default": "#FFFFFF",
+    "color_primary": "#3b444e",
+    "color_secondary": "#007ca9",
+    "color_input": "#f1f1f1",
+    "color_drawer_bg": "#FFFFFF",
+    "color_drawer_default": "#E5E5E5",
+    "color_drawer_border": "#007ca9",
+    "color_drawer_text": "#262aa9",
+    "color_drawer_primary": "#444444",
+    "color_drawer_button_text": "#ffffff",
+    "color_drawer_secondary": "#212529",
+    "color_drawer_input": "#f4f1ef",
+    "color_drawer_overlay": "#ffffff",
+    "color_footer_bg": "#212529",
+    "color_footer_default": "#000000",
+    "color_footer_border": "#000000",
+    "color_footer_primary": "#007ca9",
+    "color_footer_button_text": "#000000",
+    "color_footer_secondary": "#0c5d7b",
+    "color_footer_input": "#000000",
+    "color_overlay": "#000000",
+    "opacity_overlay": 39,
+    "favicon": "shopify:\/\/shop_images\/Smooth_Dining_Favcon.png",
+    "review_app": "judge_me",
+    "header_family": "serif",
+    "header_font_size": 32,
+    "header_font_size_big": 50,
+    "dbtfy_cart_goal": false,
+    "dbtfy_cart_savings": false,
+    "dbtfy_cart_reminder": false,
+    "dbtfy_cart_upsell": false,
+    "dbtfy_quantity_breaks": false,
+    "dbtfy_upsell_bundles": false,
+    "dbtfy_addtocart_animation": true,
+    "dbtfy_cart_discount": true,
+    "dbtfy_cart_favicon": false,
+    "dbtfy_customizable_products": false,
+    "dbtfy_delivery_time": false,
+    "dbtfy_discount_saved": true,
+    "dbtfy_product_bullet_points": false,
+    "dbtfy_sales_countdown": true,
+    "dbtfy_back_in_stock": false,
+    "dbtfy_instagram_feed": false,
+    "dbtfy_newsletter_popup": false,
+    "dbtfy_order_feedback": false,
+    "dbtfy_social_discount": false,
+    "dbtfy_wish_list": true,
+    "dbtfy_automatic_geolocation": false,
+    "dbtfy_collection_addtocart": false,
+    "dbtfy_color_swatches": false,
+    "dbtfy_custom_currencies": false,
+    "dbtfy_mega_menu": true,
+    "dbtfy_menu_bar": false,
+    "dbtfy_order_tracking": false,
+    "dbtfy_pricing_table": false,
+    "dbtfy_product_image_crop": false,
+    "dbtfy_product_swatches": false,
+    "dbtfy_product_tabs": true,
+    "dbtfy_quick_compare": false,
+    "dbtfy_recently_viewed": false,
+    "dbtfy_size_chart": false,
+    "dbtfy_smart_search": true,
+    "dbtfy_cookie_box": false,
+    "dbtfy_shop_protect": false,
+    "dbtfy_cookie_box_inverted": true,
+    "dbtfy_cookie_box_eu_only": true,
+    "dbtfy_menu_bar_link_list": "",
+    "dbtfy_product_image_crop_ratio": "1:1",
+    "dbtfy_product_image_crop_position": "bottom center",
+    "dbtfy_quick_compare_button_position": "right",
+    "dbtfy_shop_protect_image": false,
+    "dbtfy_shop_protect_drag": false,
+    "dbtfy_shop_protect_text_product": false,
+    "dbtfy_shop_protect_text_article": false,
+    "dbtfy_shop_protect_collection": false,
+    "dbtfy_wish_list_bubble": false,
+    "sections": {
+      "dbtfy-bullet-points": {
+        "type": "dbtfy-bullet-points",
+        "settings": {
+          "dbtfy_bullet_points_position": "under-product-price",
+          "dbtfy_bullet_points_alignment": "left",
+          "dbtfy_bullet_points_display_type": "inline"
+        }
+      },
+      "dbtfy-cart-goal": {
+        "type": "dbtfy-cart-goal",
+        "settings": {
+          "dbtfy_cart_goal_before_text": "You're",
+          "dbtfy_cart_goal_amount": "70",
+          "dbtfy_cart_goal_after_text": "away from FREE shipping!",
+          "dbtfy_cart_goal_reached_text": "You are eligible for FREE shipping!",
+          "dbtfy_cart_goal_icons": "local_shipping"
+        }
+      },
+      "dbtfy-cart-upsell": {
+        "type": "dbtfy-cart-upsell",
+        "settings": {
+          "dbtfy_cart_upsell_button_style": "btn--primary"
+        }
+      },
+      "dbtfy-color-swatches": {
+        "type": "dbtfy-color-swatches",
+        "settings": {
+        }
+      },
+      "dbtfy-customizable-products": {
+        "type": "dbtfy-customizable-products",
+        "settings": {
+        }
+      },
+      "dbtfy-delivery-time": {
+        "type": "dbtfy-delivery-time",
+        "settings": {
+          "dbtfy_delivery_time_position": "under-addtocart-button"
+        }
+      },
+      "dbtfy-product-tabs": {
+        "type": "dbtfy-product-tabs",
+        "settings": {
+          "dbtfy_product_tabs_display_type": "vertical"
+        }
+      },
+      "dbtfy-product-swatches": {
+        "type": "dbtfy-product-swatches",
+        "settings": {
+          "dbtfy_product_swatches_show_in_grid": true
+        }
+      },
+      "dbtfy-quantity-breaks": {
+        "type": "dbtfy-quantity-breaks",
+        "settings": {
+          "dbtfy_quantity_breaks_single_text": "Buy _COUNT_: _PRICE_ _SAVED_AMOUNT_",
+          "dbtfy_quantity_breaks_price_type": "total_price",
+          "dbtfy_quantity_breaks_more_discount_text_before": "Add",
+          "dbtfy_quantity_breaks_more_discount_text_after": "more item to unlock",
+          "dbtfy_quantity_breaks_more_discount_text_after_percentage": "off",
+          "dbtfy_quantity_breaks_highest_discount_text": "Highest discount applied!"
+        }
+      },
+      "dbtfy-sales-countdown": {
+        "type": "dbtfy-sales-countdown",
+        "blocks": {
+          "be9481da-f9f0-4f02-8818-f1c085d64c28": {
+            "type": "countdown",
+            "settings": {
+              "title": "OPENING THANKS 10%",
+              "dbtfy_sales_countdown_date_1": "06\/04\/2022",
+              "dbtfy_sales_countdown_time_hours_1": 23,
+              "dbtfy_sales_countdown_time_mins_1": 59,
+              "when_timer_id_over_action_1": "message",
+              "timer_message_1": "",
+              "dbtfy_sales_countdown_product_grid_1": true,
+              "visibility_1": "collection",
+              "dbtfy_sales_countdown_collection_1": "over-1000",
+              "dbtfy_sales_countdown_type_1": "",
+              "dbtfy_sales_countdown_tag_1": "",
+              "dbtfy_sales_countdown_product_1": "",
+              "dbtfy_sales_countdown_date_2": "",
+              "dbtfy_sales_countdown_time_hours_2": 0,
+              "dbtfy_sales_countdown_time_mins_2": 0,
+              "when_timer_id_over_action_2": "hide",
+              "timer_message_2": "",
+              "dbtfy_sales_countdown_product_grid_2": true,
+              "visibility_2": "all",
+              "dbtfy_sales_countdown_collection_2": "",
+              "dbtfy_sales_countdown_type_2": "",
+              "dbtfy_sales_countdown_tag_2": "",
+              "dbtfy_sales_countdown_product_2": "",
+              "dbtfy_sales_countdown_date_3": "",
+              "dbtfy_sales_countdown_time_hours_3": 0,
+              "dbtfy_sales_countdown_time_mins_3": 0,
+              "when_timer_id_over_action_3": "hide",
+              "timer_message_3": "",
+              "dbtfy_sales_countdown_product_grid_3": true,
+              "visibility_3": "all",
+              "dbtfy_sales_countdown_collection_3": "",
+              "dbtfy_sales_countdown_type_3": "",
+              "dbtfy_sales_countdown_tag_3": "",
+              "dbtfy_sales_countdown_product_3": "",
+              "dbtfy_sales_countdown_date_4": "",
+              "dbtfy_sales_countdown_time_hours_4": 0,
+              "dbtfy_sales_countdown_time_mins_4": 0,
+              "when_timer_id_over_action_4": "hide",
+              "timer_message_4": "",
+              "dbtfy_sales_countdown_product_grid_4": true,
+              "visibility_4": "all",
+              "dbtfy_sales_countdown_collection_4": "",
+              "dbtfy_sales_countdown_type_4": "",
+              "dbtfy_sales_countdown_tag_4": "",
+              "dbtfy_sales_countdown_product_4": "",
+              "dbtfy_sales_countdown_date_5": "",
+              "dbtfy_sales_countdown_time_hours_5": 0,
+              "dbtfy_sales_countdown_time_mins_5": 0,
+              "when_timer_id_over_action_5": "hide",
+              "timer_message_5": "",
+              "dbtfy_sales_countdown_product_grid_5": true,
+              "visibility_5": "all",
+              "dbtfy_sales_countdown_collection_5": "",
+              "dbtfy_sales_countdown_type_5": "",
+              "dbtfy_sales_countdown_tag_5": "",
+              "dbtfy_sales_countdown_product_5": "",
+              "dbtfy_sales_countdown_date_6": "",
+              "dbtfy_sales_countdown_time_hours_6": 0,
+              "dbtfy_sales_countdown_time_mins_6": 0,
+              "when_timer_id_over_action_6": "hide",
+              "timer_message_6": "",
+              "dbtfy_sales_countdown_product_grid_6": true,
+              "visibility_6": "all",
+              "dbtfy_sales_countdown_collection_6": "",
+              "dbtfy_sales_countdown_type_6": "",
+              "dbtfy_sales_countdown_tag_6": "",
+              "dbtfy_sales_countdown_product_6": "",
+              "dbtfy_sales_countdown_date_7": "",
+              "dbtfy_sales_countdown_time_hours_7": 0,
+              "dbtfy_sales_countdown_time_mins_7": 0,
+              "when_timer_id_over_action_7": "hide",
+              "timer_message_7": "",
+              "dbtfy_sales_countdown_product_grid_7": true,
+              "visibility_7": "all",
+              "dbtfy_sales_countdown_collection_7": "",
+              "dbtfy_sales_countdown_type_7": "",
+              "dbtfy_sales_countdown_tag_7": "",
+              "dbtfy_sales_countdown_product_7": "",
+              "dbtfy_sales_countdown_date_8": "",
+              "dbtfy_sales_countdown_time_hours_8": 0,
+              "dbtfy_sales_countdown_time_mins_8": 0,
+              "when_timer_id_over_action_8": "hide",
+              "timer_message_8": "",
+              "dbtfy_sales_countdown_product_grid_8": true,
+              "visibility_8": "all",
+              "dbtfy_sales_countdown_collection_8": "",
+              "dbtfy_sales_countdown_type_8": "",
+              "dbtfy_sales_countdown_tag_8": "",
+              "dbtfy_sales_countdown_product_8": "",
+              "dbtfy_sales_countdown_date_9": "",
+              "dbtfy_sales_countdown_time_hours_9": 0,
+              "dbtfy_sales_countdown_time_mins_9": 0,
+              "when_timer_id_over_action_9": "hide",
+              "timer_message_9": "",
+              "dbtfy_sales_countdown_product_grid_9": true,
+              "visibility_9": "all",
+              "dbtfy_sales_countdown_collection_9": "",
+              "dbtfy_sales_countdown_type_9": "",
+              "dbtfy_sales_countdown_tag_9": "",
+              "dbtfy_sales_countdown_product_9": "",
+              "dbtfy_sales_countdown_date_10": "",
+              "dbtfy_sales_countdown_time_hours_10": 0,
+              "dbtfy_sales_countdown_time_mins_10": 0,
+              "when_timer_id_over_action_10": "hide",
+              "timer_message_10": "",
+              "dbtfy_sales_countdown_product_grid_10": true,
+              "visibility_10": "all",
+              "dbtfy_sales_countdown_collection_10": "",
+              "dbtfy_sales_countdown_type_10": "",
+              "dbtfy_sales_countdown_tag_10": "",
+              "dbtfy_sales_countdown_product_10": ""
+            }
+          }
+        },
+        "block_order": [
+          "be9481da-f9f0-4f02-8818-f1c085d64c28"
+        ],
+        "settings": {
+          "dbtfy_sales_countdown_icons": "local_fire_department",
+          "dbtfy_sales_countdown_prefix": "10% off coupon \"OPEN THANKS\"  expire in",
+          "dbtfy_sales_countdown_suffix": "",
+          "dbtfy_sales_countdown_d": "d",
+          "dbtfy_sales_countdown_h": "h",
+          "dbtfy_sales_countdown_m": "m",
+          "dbtfy_sales_countdown_s": "s"
+        }
+      },
+      "dbtfy-size-chart": {
+        "type": "dbtfy-size-chart",
+        "blocks": {
+          "ac131bc0-5859-48d8-bc5a-5420af63e4b1": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "dbtfy_size_chart_popup_title": "Size guide",
+              "dbtfy_size_chart_abovetext": "<p>Hello<\/p>",
+              "dbtfy_size_chart_html": "<table>\n<thead><tr>\n<td>Mens<\/td>\n<td>Small<\/td>\n<td>Medium<\/td>\n<td>Large<\/td>\n<td>X-Large<\/td>\n<td>XX-Large<\/td>\n<\/tr><\/thead>\n<tbody>\n<tr>\n<td>Neck<\/td>\n<td>14-14.5<\/td>\n<td>15-15.5<\/td>\n<td>16-16.5<\/td>\n<td>17-17.5<\/td>\n<td>18-18.5<\/td>\n<\/tr>\n<tr>\n<td>Chest<\/td>\n<td>35-37<\/td>\n<td>38-40<\/td>\n<td>41-43<\/td>\n<td>44-46<\/td>\n<td>47-49<\/td>\n<\/tr>\n<tr>\n<td>Sleeve<\/td>\n<td>32-33<\/td>\n<td>33-34<\/td>\n<td>34-35<\/td>\n<td>35-36<\/td>\n<td>36-36.5<\/td>\n<\/tr>\n<tr>\n<td>Waist<\/td>\n<td>29-31<\/td>\n<td>32-34<\/td>\n<td>35-37<\/td>\n<td>38-40<\/td>\n<td>41-43<\/td>\n<\/tr>\n<\/tbody>\n<\/table>",
+              "dbtfy_size_chart_undertext": "",
+              "visibility": "all",
+              "dbtfy_size_chart_collection": "",
+              "dbtfy_size_chart_type": "",
+              "dbtfy_size_chart_tag": "",
+              "dbtfy_size_chart_product": ""
+            }
+          }
+        },
+        "block_order": [
+          "ac131bc0-5859-48d8-bc5a-5420af63e4b1"
+        ],
+        "settings": {
+          "dbtfy_size_chart_icon": "straighten",
+          "dbtfy_size_chart_title": "Size chart",
+          "dbtfy_size_chart_width": "large"
+        }
+      },
+      "dbtfy-upsell-popup": {
+        "type": "dbtfy-upsell-popup",
+        "settings": {
+          "dbtfy_upsell_popup_width": "",
+          "dbtfy_upsell_popup_description": "See product details",
+          "dbtfy_upsell_popup_cart": "No thanks",
+          "dbtfy_upsell_popup_checkout": "Go to checkout →",
+          "text_alignment": "text-center",
+          "dbtfy_upsell_popup_range": 75
+        }
+      },
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "settings": {
+          "drawer_link_toggle": true,
+          "email": true,
+          "phone": true,
+          "show_social_medias": true,
+          "hide_menu_icon": true,
+          "title": "Menu",
+          "drawer_top_link_list": "main-menu",
+          "drawer_bottom_link_list": "footer"
+        }
+      },
+      "announcement": {
+        "type": "announcement",
+        "blocks": {
+          "announcement-0": {
+            "type": "message",
+            "settings": {
+              "title": "",
+              "announcement_text": "<p>10% off Until this Weekends With CODE: <strong>WEEKEND THANKS<\/strong><\/p>"
+            }
+          }
+        },
+        "block_order": [
+          "announcement-0"
+        ],
+        "settings": {
+          "show_announcement": false,
+          "small_announcement_text": false,
+          "show_social": true,
+          "email": true,
+          "phone": true,
+          "left_message": "",
+          "right_message": "",
+          "announcement_autoplayspeed": 5
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+          "main_menu_link_list": "main-menu",
+          "navigation_type": "left",
+          "logo_link": true,
+          "default_logo": "shopify:\/\/shop_images\/Smooth_Dining_logo_800px_by_300px.png",
+          "inverted_logo": "shopify:\/\/shop_images\/inverted_logo.png",
+          "default_logo_svg": "fulltransparent.svg",
+          "inverted_logo_svg": "invertedlogo.svg",
+          "mobile_logo_svg": "fulltransparent.svg",
+          "logo_width": 200,
+          "logo_mobile_width": 100
+        }
+      },
+      "dbtfy-instagram-feed": {
+        "type": "dbtfy-instagram-feed",
+        "settings": {
+          "dbtfy_instagram_feed_icon": false,
+          "dbtfy_instagram_feed_access_token": "",
+          "dbtfy_instagram_feed_full_width": false,
+          "title": "From our Instagram",
+          "subtitle": "",
+          "dbtfy_instagram_feed_section_style": "section-border",
+          "dbtfy_instagram_feed_rows": "1",
+          "dbtfy_instagram_feed_desktop_grid": "6",
+          "dbtfy_instagram_feed_mobile_grid": "3"
+        }
+      },
+      "guarantee": {
+        "type": "guarantee",
+        "blocks": {
+          "guarantee-1": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/Smooth_Dining_Pre-FooterWhy_Buy_Images_250px_by_250px_075ae74c-4375-4a66-b6f3-6bc576fd1d7d.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "Experts Recommendatoin",
+              "text": "",
+              "button_style": "",
+              "button_label": "Learn More",
+              "button_link": "shopify:\/\/pages\/buyers-guide"
+            }
+          },
+          "guarantee-2": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/1_ddc4a811-896f-471a-8a0d-26dbf2cc7e03.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "Top Customer Service",
+              "text": "",
+              "button_style": "",
+              "button_label": "Learn More",
+              "button_link": "shopify:\/\/pages\/terms-of-service"
+            }
+          },
+          "a1bebf97-3b89-4665-a334-27b4a69dcac3": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/Smooth_Dining_Pre-FooterWhy_Buy_Images_250px_by_250px.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "Price Match Guarantee",
+              "text": "",
+              "button_style": "",
+              "button_label": "Learn More",
+              "button_link": "shopify:\/\/pages\/price-match-guarantee"
+            }
+          },
+          "ebeb685b-ed18-49ff-b0a5-08aa6a0b1f0c": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "image": "shopify:\/\/shop_images\/3_8abd44c6-5a14-46b0-8d60-197e7cff4465.jpg",
+              "guarantee_icon": "loyalty",
+              "heading_text": "Easy To Search",
+              "text": "",
+              "button_style": "",
+              "button_label": "Find Your Product",
+              "button_link": "shopify:\/\/collections"
+            }
+          }
+        },
+        "block_order": [
+          "guarantee-1",
+          "guarantee-2",
+          "a1bebf97-3b89-4665-a334-27b4a69dcac3",
+          "ebeb685b-ed18-49ff-b0a5-08aa6a0b1f0c"
+        ],
+        "settings": {
+          "show_guarantee": true,
+          "guarantee_size": "xl",
+          "section_style": "section-border"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "footer-0": {
+            "type": "text",
+            "settings": {
+              "title": "",
+              "column_width": 2,
+              "svg": "",
+              "img_url": "",
+              "logo_width": 150,
+              "heading_text": "About Us",
+              "subtitle": "",
+              "text": "<p>Best place to choose your dining set with dining set experts. <\/p>",
+              "email": true,
+              "phone": true,
+              "show_social_media": false
+            }
+          },
+          "footer-1": {
+            "type": "link_list",
+            "settings": {
+              "title": "",
+              "column_width": 1,
+              "heading_text": "Quick Links",
+              "subtitle": "",
+              "footer_link_list": "footer"
+            }
+          },
+          "footer-2": {
+            "type": "newsletter",
+            "settings": {
+              "title": "",
+              "column_width": 2,
+              "heading_text": "Subscribe to our newsletter",
+              "subtitle": "A short sentence describing what someone will receive by subscribing",
+              "customer_tag": "newsletter"
+            }
+          }
+        },
+        "block_order": [
+          "footer-0",
+          "footer-1",
+          "footer-2"
+        ],
+        "settings": {
+          "show_social_media": false,
+          "social_media_position_desktop": "right",
+          "social_title": "Follow-us on social media!",
+          "show_payment_icons": true,
+          "show_shopify_footer": false,
+          "show_debutify_footer": false,
+          "custom_credential": ""
+        }
+      },
+      "dbtfy-collection-filters": {
+        "type": "dbtfy-collection-filters",
+        "blocks": {
+          "ae7b7e23-5108-45ed-b42b-c555eae2a11e": {
+            "type": "filter_group",
+            "settings": {
+              "title": "",
+              "heading_text": "Dining Table Type",
+              "tags": "Classics,Modern,Breakfast Nook,Outdoor,Simple"
+            }
+          },
+          "d6baf9e1-6441-4dc8-bc72-0fe4f62796f5": {
+            "type": "filter_group",
+            "settings": {
+              "title": "",
+              "heading_text": "Size",
+              "tags": "Big,Medium,Small"
+            }
+          },
+          "4c3ab069-a0a9-44a8-a883-3a8848690cb5": {
+            "type": "filter_group",
+            "settings": {
+              "title": "",
+              "heading_text": "Best Product",
+              "tags": "Best Sellers,Top Rated"
+            }
+          },
+          "8ea2543b-e5db-4a27-8b74-5118c1fd22e7": {
+            "type": "filter_group",
+            "settings": {
+              "title": "",
+              "heading_text": "Price",
+              "tags": "Over 1000,500~1000,Under 500"
+            }
+          },
+          "cb929bbb-7953-4caf-a7b4-17934a865023": {
+            "type": "filter_group",
+            "settings": {
+              "title": "",
+              "heading_text": "Color",
+              "tags": "Bright,Dark"
+            }
+          },
+          "eba40110-1bd3-4669-8de0-00f4d9541094": {
+            "type": "filter_group",
+            "settings": {
+              "title": "Seat No",
+              "heading_text": "Number of Seats",
+              "tags": "2 Seats,4 Seats,5 Seats,6 Seats,8 Seats,10 Seats,12 Seats"
+            }
+          }
+        },
+        "block_order": [
+          "ae7b7e23-5108-45ed-b42b-c555eae2a11e",
+          "d6baf9e1-6441-4dc8-bc72-0fe4f62796f5",
+          "4c3ab069-a0a9-44a8-a883-3a8848690cb5",
+          "8ea2543b-e5db-4a27-8b74-5118c1fd22e7",
+          "cb929bbb-7953-4caf-a7b4-17934a865023",
+          "eba40110-1bd3-4669-8de0-00f4d9541094"
+        ],
+        "settings": {
+          "clear_label": "Clear",
+          "clear_all_label": "Clear All",
+          "hide_unavailable_options": false,
+          "visibility_tags_count": "none"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ],
+    "blocks": {
+      "855628211100114053": {
+        "type": "shopify:\/\/apps\/klaviyo-email-marketing-sms\/blocks\/klaviyo-onsite-embed\/2632fe16-c075-4321-a88b-50b567f42507",
+        "disabled": true,
+        "settings": {
+        }
+      },
+      "14060646107696862457": {
+        "type": "shopify:\/\/apps\/judge-me-product-reviews\/blocks\/judgeme_core\/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+        "disabled": true,
+        "settings": {
+        }
+      }
+    }
+  }
+}

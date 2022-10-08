@@ -1,0 +1,315 @@
+<style>
+.featured__product {
+  overflow: hidden;
+  z-index: 1;
+  position: relative;
+  margin-bottom: 60px;
+  background: #80808017; 
+}
+@media (max-width: 416px) {
+  .featured__product {
+    margin-bottom: 30px; 
+  }
+}
+.featured__product .product-single {
+  display: flex;
+  align-items: center;
+  margin-top: 60px;
+  margin-bottom: 100px; 
+}
+.featured__product .product-single li,
+.featured__product .product-single p {
+  font-size: 1.125rem; 
+}
+@media (max-width: 416px) {
+  .featured__product .product-single li,
+  .featured__product .product-single p {
+    font-size: 1rem; 
+  } 
+}
+.featured__product .product__single--price-info {
+  display: flex;
+  flex-direction: column; 
+}
+@media (max-width: 560px) {
+  .featured__product .product__single--price-info {
+    flex-direction: column-reverse; 
+  } 
+}
+@media (max-width: 560px) {
+  .featured__product .product__single--price-info .price-container {
+    margin-bottom: 30px; 
+  } 
+}
+.featured__product .product__single--inner {
+  max-width: 480px;
+  padding-right: 20px; 
+}
+@media (max-width: 896px) {
+  .featured__product .product__single--inner {
+    max-width: 100%;
+    padding-right: 0px; 
+  } 
+}
+.featured__product .product__single--inner h2 {
+  margin-bottom: 15px; 
+}
+.featured__product .classic--top {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white; 
+}
+.featured__product .classic--bottom {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background: white; 
+}
+.featured__product .oprah {
+  display: flex;
+  position: relative;
+  z-index: 2; 
+}
+@media (max-width: 768px) {
+  .featured__product .oprah {
+    flex-direction: column; 
+  } 
+}
+.featured__product .oprah .col-1 {
+  width: 55%; 
+}
+@media (max-width: 768px) {
+  .featured__product .oprah .col-1 {
+    width: 100%; 
+  } 
+}
+.featured__product .oprah .col-2 {
+  width: 45%;
+  display: flex;
+  align-items: center;
+  justify-content: center; 
+}
+@media (max-width: 768px) {
+  .featured__product .oprah .col-2 {
+    width: 100%; 
+  } 
+}
+.featured__product .blob-bg {
+  position: absolute;
+  bottom: -80px;
+  right: -150px;
+  /* border: 1px solid red; */
+  width: 70%; 
+}
+@media (max-width: 416px) {
+  .featured__product .blob-bg {
+    bottom: 0; 
+  } 
+}
+
+.featured__quote {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px; 
+}
+@media (max-width: 896px) {
+  .featured__quote {
+    padding: 25px; 
+  } 
+}
+.featured__quote span {
+  font-size: 1.25rem; 
+}
+@media (max-width: 416px) {
+  .featured__quote span {
+    font-size: 1rem; 
+  } 
+}
+.featured__quote .quote-marks {
+  max-width: 38px;
+  margin: 15px 0; 
+}
+.featured__quote p {
+  font-size: 1.875rem;
+  margin-bottom: 15px; 
+}
+@media (max-width: 1024px) {
+  .featured__quote p {
+    font-size: 1.25rem; 
+  } 
+}
+.featured__quote .featured__quote--photo {
+  width: 150px;
+  height: 150pxpx;
+  width: 150pxpx;
+  border-radius: 50%;
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  overflow: hidden; 
+}
+@media (max-width: 768px) {
+  .featured__quote .featured__quote--photo {
+    height: 100pxpx;
+    width: 100pxpx;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    overflow: hidden; 
+  } 
+}
+
+.featured_product-description {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  margin-bottom: 25px;
+  margin-top: 20px; 
+  font: inherit;
+  vertical-align: baseline
+}
+.featured_product-description p {
+  margin-bottom: 25px; 
+}
+@media (max-width: 560px) {
+  .featured_product-description {
+    margin-top: 0px; 
+  } 
+}
+
+.featured_product-description {
+  margin-bottom: 25px;
+  margin-top: 20px; 
+}
+.featured_product-description p {
+  margin-bottom: 25px; 
+}
+@media (max-width: 560px) {
+  .featured_product-description {
+    margin-top: 0px; 
+  } 
+}
+.product-description-title{
+  font-weight: bold;
+}
+.product__features-section {
+  position: relative;
+  overflow-x: hidden; 
+}
+.product__features-section .cs-container {
+  position: relative;
+  z-index: 2; 
+}
+.product__features-section .feature-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 2fr);
+  grid-gap: 60px;
+  margin-bottom: 30px;
+  margin-top: 30px; 
+}
+@media (max-width: 768px) {
+    .product__features-section .feature-grid--item {
+      display: flex; 
+    } 
+}
+@media (max-width: 1024px) {
+  .product__features-section .feature-grid {
+    max-width: 100%; 
+  }
+}
+@media (max-width: 768px) {
+  .product__features-section .feature-grid {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 20px; 
+  }
+}
+@media (max-width: 768px) {
+  .product__features-section .feature-grid--item {
+    display: flex; 
+  } 
+}
+.product__features-section .feature-grid--item img {
+  width: 61px;
+  height: 61px;
+  margin-bottom: 10px; 
+}
+@media (max-width: 768px) {
+    .product__features-section .feature-grid--item img {
+      margin-right: 20px;
+      margin-bottom: 0px; 
+  } 
+}
+.txtArea li{
+  font-size: 1rem;
+  line-height: 1.2em;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+.txtArea ul li {
+  padding-bottom: 15px;
+  background: url("https://s3.ap-northeast-2.amazonaws.com/sellertrans/shopifyimages/AY176.jpg") no-repeat left 5px;
+  background-size: 18px;
+  padding-left: 30px;
+  display: block; 
+  line-height: 2.0rem;
+}
+.txtArea ul{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  text-rendering: optimizeLegibility;
+}
+
+</style>
+<div class="featured__product">
+  <div class="featured_product-description txtArea">
+    <div class="module">
+      <p>If you’re one of the 3 out of 4 of us that aren’t drinking enough water, it’s time to upgrade to a Drop Bottle. Our eco-friendly, fruit infuser water bottles don’t only act as a visual reminder to drink more water, they also make your water work harder for you with the added health benefits of fruit infusion. Be it more energy, better concentration, clearer skin, culling cravings or beating the bloat — It’s time to invest in yourself.</p>
+    </div>
+    <ul>
+    <li>Eco-Friendly reusable bottle</li>
+    <li>Durable Borosilicate glass tube</li>
+    <li>Wide Mouth for adding Fruits &amp; Herbs&nbsp;</li>
+    <li>Stainless steel strainer to create your favourite detox waters</li>
+    </ul>
+  </div>
+</div>
+<section class="product__features-section">
+  <div class="feature-grid">
+      <div class="feature-grid--item">
+        <img src="https://cdn.shopify.com/s/files/1/0816/7567/t/9/assets/heart-icon.svg?v=10021535932957916247" alt="Drop Bottle">
+        <div>
+        <h4 class="product-description-title">Looks Good, Does Better</h4>
+        <p>You’re not only helping reduce single use plastic, you’re also providing clean drinking water to someone in need. Every Drop counts.</p>
+        </div>
+      </div>
+      <div class="feature-grid--item">
+        <img src="https://cdn.shopify.com/s/files/1/0816/7567/t/9/assets/fruit-icon.svg?v=13940763651827144417" alt="Drop Bottle">
+          <div>
+        <h4 class="product-description-title">Drink Your Vitamins</h4>
+        <p>Water, with benefits. Our stainless steel strainer and wide mouth make our bottle perfect for infusing fruit, herbs and even tea into your water.</p>
+          </div>
+      </div>
+      <div class="feature-grid--item">
+        <img src="https://cdn.shopify.com/s/files/1/0816/7567/t/9/assets/shield-icon.svg?v=18301231786059488669" alt="Drop Bottle">
+          <div>
+        <h4 class="product-description-title">Glass, To Last</h4>
+        <p>We know plastic bottles are bad for our health and the environment, that's why our bottle is made from reinforced, temperature resistant borosilicate glass.</p>
+        </div>
+      </div>
+      <div class="feature-grid--item">
+        <img src="https://cdn.shopify.com/s/files/1/0816/7567/t/9/assets/raindrop-icon.svg?v=15189044207570832278" alt="Drop Bottle">
+          <div>
+        <h4 class="product-description-title">Hydration, On Hand</h4>
+        <p>Our 650 mL / 22oz bottle has a stylish travel handle so you can take it with you wherever life takes you.</p>
+        </div>
+      </div>
+    </div>
+</section>

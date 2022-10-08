@@ -1,0 +1,14 @@
+{%- if settings.show_hero and collection.image -%}
+  <div class="hero-container hero-collection hero-first"
+     data-section-type="hero-section">
+  <div class="hero hero--{{ settings.section_height }} hero-mobile-{{ settings.section_height_mobile }} media-wrapper align-center text-center overlay">
+    <div class="hero-image media bgset lazyload"
+    {%- render 'lazysizes', img: collection.image, img_type: 'background' -%}>
+    </div>
+  </div>
+</div>
+{%- else if collection.image == blank -%}
+<div class="hero-container hero-collection hero-first"
+     data-section-type="hero-section">
+</div>
+{%- endif -%}

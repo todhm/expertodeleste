@@ -1,0 +1,40 @@
+    .bagsFeaturesGrid{
+        margin:0 auto;
+        padding:30px 5%;
+        background:#07090D
+    }
+    .bagsFeaturesGrid__gridWrapper{
+        max-width:1150px;margin:0 auto
+    }
+    .bagsFeaturesGrid__title{
+        font-family:'Lato', sans-serif;-webkit-font-smoothing:antialiased;text-align:center;font-weight:bold;text-transform:uppercase;letter-spacing:2px;font-size:16px;padding:0 0 25px;margin:0 auto;color:#fff
+    }
+    .bagsFeaturesGrid__feature{
+        background:inherit;display:grid;grid-template-rows:auto;align-items:center;
+        padding:5px 0
+    }
+    .bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:center;padding:15px 0 20px;grid-row:2}
+    .bagsFeaturesGrid__feature--text a{color:inherit}
+    .bagsFeaturesGrid__feature--text h1{font-family:'Lato', sans-serif;font-size:16px;font-weight:bold;letter-spacing:2px;line-height:28px;text-transform:uppercase;color:#fff}
+    .bagsFeaturesGrid__feature--text p{font-family:"lato", sans-serif;font-size:15px;line-height:27px;letter-spacing:1.8px;color:#eee}
+    .bagsFeaturesGrid__feature--image{position:relative;width:100%;min-height:62vw;display:flex;align-items: center;}
+    @media (min-width: 811px){.bagsFeaturesGrid__feature--image{min-height:28vw}}
+    @media (min-width: 1460px){
+        .bagsFeaturesGrid__feature--image{min-height:409px}
+    }
+    .bagsFeaturesGrid__feature--image img{width:100%;display:block}
+    .bagsFeaturesGrid__feature--image--logo{position:absolute;bottom:3.5%;right:8%;width:15vw}
+    .bagsFeaturesGrid__feature--image--logo img{width:100%}.bagsFeaturesGrid__feature--text--logo{width:100px;padding-top:30px}
+    .bagsFeaturesGrid__feature--text--logo img{width:100%}
+    @media (min-width: 811px){
+        .bagsFeaturesGrid{padding:75px 10%}
+        .bagsFeaturesGrid__title{font-size:20px;padding:0 0 60px}
+        .bagsFeaturesGrid__feature{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:auto;padding:30px 0}
+        .bagsFeaturesGrid__feature--image--logo{width:7vw}
+        .bagsFeaturesGrid__feature .left{padding-right:15%}
+        .bagsFeaturesGrid__feature .right{padding-left:15%}
+        .bagsFeaturesGrid__feature--text{-webkit-font-smoothing:antialiased;text-align:left;padding:0;grid-row:auto}
+        .bagsFeaturesGrid__feature--text h1{font-size:18px}
+        .bagsFeaturesGrid__feature--text p{font-size:20px;line-height:34px}
+    }
+.description-feature-list{text-align:left;}

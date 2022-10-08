@@ -1,0 +1,41 @@
+*.py[co]
+*.pyc
+*.DS_*
+
+# Packages
+*.egg
+*.egg-info
+dist
+eggs
+parts
+bin
+var
+sdist
+develop-eggs
+.installed.cfg
+__pycache__
+.pytest_cache
+.serverless
+.requirements.zip
+proxy_auth_plugin.zip
+
+#pycharm 
+*.xml
+*.iml
+
+# Installer logs
+pip-log.txt
+
+# Unit test / coverage reports
+.coverage
+.tox
+envfiles
+chromedriver
+venv
+practice_notebook
+chromeprofile
+.vscode
+node_modules
+googlemerchant.csv
+datacollections/*.gif
+datacollections/*.key

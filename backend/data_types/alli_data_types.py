@@ -1,0 +1,2 @@
+KOREA_COUNTRY_CODE: str = "KR"
+US_COUNTRY_CODE: str = "US"

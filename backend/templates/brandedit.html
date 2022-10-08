@@ -1,0 +1,12 @@
+{% extends 'admin/model/edit.html' %}
+
+{% block tail %}
+    {{ super() }}
+    {{ ckeditor.load() }}
+    {{ ckeditor.config(name='brandDescription') }}
+    {{ ckeditor.config(name='warranty') }}
+    <script>
+        CKEDITOR.config.allowedContent = true;
+        CKEDITOR.config.removeFormatAttributes = '';
+    </script>
+{% endblock %}

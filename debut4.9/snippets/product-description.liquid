@@ -1,0 +1,106 @@
+<div class="product-description-area">
+    <div class="product-tabs-{{product.id}}">
+      <meta charset="utf-8">
+      <div class="product-single__content-text">
+        <div class="product-description-area" id="product-description-area">
+          <div class="product-description-inner mobileHidden">
+            <div class="product-description-selection">
+              <template v-for="(option, i) in productListing" :key="i">
+                <div class="product-description-selection-option" :class="{ 'active' : i === currentIndex}" @click="clickNumber(i)">
+                    ${option}
+                </div>
+              </template>       
+            </div>
+            <div class="product-description-selected" v-if="currentIndex === 0">
+              {% render 'product-description-tab' %}
+            </div>
+            <div class="product-description-selected" v-if="currentIndex === 1">
+              {% render 'product-description-brand-tab' %}
+            </div>
+            <div class="product-description-selected" v-if="currentIndex === 2">
+              {% render 'product-specification-tab' %}
+            </div>
+            <div class="product-description-selected" v-if="currentIndex === 3">
+              {% render 'warranty-tab' %}
+            </div>
+          </div>
+          <div class="product-description-inner desktopHidden">
+            <div class="product-description-selection-mobile">
+              <template v-for="(option, i) in mobileProductListing" :key="i">
+                <div class="product-description-selection-option-mobile" :class="{ 'active' : option.show}" @click="clickMobileTab(i)">
+                  <span class="mobile-option-name">${option.name}</span>
+                  <span class="material-icons-outlined" v-if="option.show === true">
+                    expand_less
+                  </span>
+                  <span class="material-icons-outlined" v-if="option.show === false">
+                    expand_more
+                  </span>
+                </div>
+                <div class="description-wrapper-mobile" v-if="i === 0 & option.show">
+                  {% render 'product-description-tab' %}
+                </div>
+                <div class="description-wrapper-mobile" v-if="i === 1 & option.show">
+                  {% render 'product-description-brand-tab' %}
+                </div>
+                <div class="description-wrapper-mobile" v-if="i === 2 & option.show">
+                  {% render 'product-specification-tab' %}
+                </div>
+                <div class="description-wrapper-mobile" v-if="i === 3 & option.show">
+                  {% render 'warranty-tab' %}
+                </div>
+              </template>       
+            </div>
+          </div>
+    </div>
+      </div>  
+    </div>
+  </div>
+  <hr>
+  <script defer="defer">
+    $(document).ready(function(){
+      if (document.querySelector('#product-description-area')) {  
+      const descriptionForm = Vue.createApp({
+        delimiters: ['${', '}'],
+        data() {
+          return {
+            fetchList: false,
+            productListing: [
+              "Description", 
+              "Brand",
+              "Specs", 
+              "Warranty & Return Policy"
+            ],
+            mobileProductListing: descriptionListingState.mobileProductListing
+          }
+        },
+        computed: {
+            currentIndex() {
+                return descriptionListingState.index
+            },
+        },
+        methods: {
+          clickListing(event) {
+            event.preventDefault()
+            toggleDescriptionButton.clickListing();
+          },
+          clickNumber(number) {
+            event.preventDefault()
+            toggleDescriptionButton.changeIndex(number);
+            toggleDescriptionButton.clickListing();
+          },
+          clickMobileTab(number){
+            event.preventDefault()
+            descriptionListingState.mobileProductListing = descriptionListingState.mobileProductListing.map((option,idx)=>{
+              if(idx === number && option.show === false){
+                option.show = true; 
+              }else{
+                option.show = false; 
+              }
+              return option;
+            })
+          }
+        },
+      }).mount('#product-description-area') 
+    }})
+    
+  </script>

@@ -1,0 +1,13 @@
+
+
+<script type="text/javascript">
+  if(window.location.search.indexOf('selector_mode') > -1){
+    var head = document.getElementsByTagName('head')[0];
+    var script = document.createElement('script');
+    window.rails_env = window.baDiscount.settings.global.env;
+    window.selector_mode = true;
+    script.src = ('https:' == document.location.protocol ? 'https://' : 'http://') + 'boosterapps.com/apps/discounted-upsells/selector.js?v=2';
+    script.type = 'text/javascript';
+    head.appendChild(script);
+  }
+</script>

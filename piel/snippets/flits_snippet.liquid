@@ -1,0 +1,203 @@
+
+{% comment %} PLEASE DON'T MAKE CHANGES IN THIS FILE IT'S AFFECT THE CODE IF YOU NEED ANY HELP PLEASE CONTACT TO FLITS TEAM support@getflits.com {% endcomment %}
+
+{% if shop.metafields.Flits.IS_WISHLIST_PAID == 1 and shop.metafields.Flits.IS_WISHLIST_ENABLE == 1 %}
+  {%- comment -%} WISHLIST PRODUCT PAGE BUTTON {%- endcomment -%}
+  {%- render 'flits_capture_code' with 'component',template:'comp_wishlistProdcutButton', class:'flits-template' -%}
+
+  {%- comment -%} WISHLIST COLLECTION PAGE BUTTON {%- endcomment -%}
+  {%- render 'flits_capture_code' with 'component',template:'comp_wishlistCollectionButton',class:'flits-template' -%}
+{% endif %}
+
+{% if shop.metafields.Flits.IS_STORE_CREDIT_PAID == 1 and shop.metafields.Flits.is_store_credit_enable == 1 %}
+  {%- comment -%} STORE CREDIT CART PAGE DROPDOWN RENDER {%- endcomment -%}
+  {%- render 'flits_capture_code' with 'component',template:'comp_storeCreditCartDropdown', class:'flits-template' -%}
+
+  {% if shop.metafields.Flits.IS_REFER_PROGRAM_ON == 1 %}
+    {%- comment -%} REFER FRIEND MODAL {%- endcomment -%}
+    {%- render 'flits_capture_code' with 'component',template:'comp_referFriendModal' -%}
+  {% endif %}
+{% endif %}
+
+{% if shop.metafields.Flits.IS_SOCIAL_LOGIN_PAID == 1 and shop.metafields.Flits.IS_SOCIAL_LOGIN_ENABLE == 1 %}
+  {%- comment -%} SOCIAL LOGIN RENDER {%- endcomment -%}
+  {% render 'flits_capture_code' with 'component',template:'comp_flitsSocialLoginLoader' %}
+
+  {%- comment -%} SOCIAL LOGIN BUTTON RENDER {%- endcomment -%}
+  {%- render 'flits_capture_code' with 'component',template:'comp_socialLoginButton' -%}
+{% endif %}
+
+{% if template contains 'customers/account' %}
+    
+  {% render 'flits_capture_code' with 'component',template:'contact_us_form' %}
+  <div style="display: none">
+    {% render 'flits_capture_code' with 'component',template:'comp_productCard' %}  
+    {% render 'flits_capture_code' with 'component',template:'comp_topOrderCard', class: 'flits-top-order-card-template' %}
+    {% render 'flits_capture_code' with 'component',template:'comp_menuItem' class:'flits-menu-item-template'%}
+    {% render 'flits_capture_code' with 'component',template:'comp_flitsLoader', class:'flits-loader-template' %} 
+    {% render 'flits_capture_code' with 'component',template:'comp_accountBody_card', class:'flits-body-card-template' %}
+    {% render 'flits_capture_code' with 'component',template:'comp_order_card_skeleton' class: 'flits-skeleton-order-template' %}
+    {% render 'flits_capture_code' with 'component',template:'comp_productSkeletonCard', class:"flits-skeleton-product-card-template" %}
+    <div class="flits-orders-temp">
+        <div class="flits-orders"></div>
+    </div>
+  </div>
+
+{% endif %}
+
+{% if customer %}
+  {% assign flitsSecretKey = shop.metafields.Flits.SHOP_ID | append: shop.metafields.Flits.SHOP_TOKEN | append: shop.metafields.Flits.APP_PROXY | append: customer.id %}
+  {% assign flitsSecureCustomerHash = customer.id | plus: shop.metafields.Flits.SHOP_ID | hmac_sha256: flitsSecretKey %}
+{% endif %}
+<script>
+  window.flitsObjects&&void 0!==window.flitsObjects||(window.flitsObjects={});
+  window.flitsObjects.global = {
+    customerHash: '{{ flitsSecureCustomerHash }}',
+    shop_name: '{{ shop.name }}',
+    token: '{{ shop.metafields.Flits.SHOP_TOKEN }}',
+    base_url: '/apps/{{ shop.metafields.Flits.APP_PROXY }}/api/{{ shop.metafields.Flits.APP_ID }}/{{ shop.metafields.Flits.SHOP_ID }}',
+    proxy_name: '{{ shop.metafields.Flits.APP_PROXY }}',
+    app_id: {{ shop.metafields.Flits.APP_ID }},
+    shop_id: {{ shop.metafields.Flits.SHOP_ID }},
+    shop_token: '{{ shop.metafields.Flits.SHOP_TOKEN }}',
+    chandle: 'flits_products_handle',
+    recent_handle: "flits_recently_products",
+    cemail: "flits_customer_email",
+    customJsURL:"{{ 'flits_custom.js' | asset_url }}",
+    shop_currency: '{{ shop.currency }}',
+    shopCountryName: '{{ shop.address.country }}',
+    defualtCountry: 'US',
+    money_format: '{{ shop.money_format | escape }}',
+    money_format_replace: { moneyReplaceRegex:/((\,00)|(\.00))$/g, replaceTo: ''},
+    Metafields: {{ shop.metafields.Flits | json }},
+    locals: {},
+    fromCache: true,
+    cacheTime: 5
+  };
+  {%- assign flits_multilanguage = 'flits' | t | replace:'&quot;','"' | replace:'=&gt;',':' | json -%}
+  {%- unless flits_multilanguage contains 'translation missing:' -%}
+  window.flitsObjects.global.locals = JSON.parse({{ flits_multilanguage }});
+  {%- endunless -%}
+  window.flitsObjects.accountPage = {};
+  window.flitsObjects.StoreCreditCartPage = {
+    isCodeAutomatic: {% if shop.metafields.Flits.is_cart_code_automatic %} {{ shop.metafields.Flits.is_cart_code_automatic }} {% else %} 1 {% endif %}
+  };
+  window.flitsObjects.allCssJs = {
+    flitsCss:{
+      name:"flitsCss",
+      url:"{{- 'flits.css' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"GENERAL",
+      loadBasedOnMetafields:[],
+    },
+    accountCss:{
+      name:"accountCss",
+      url:"{{- 'flits_account.css' | asset_url -}}",
+      requestPageType:["customers/account"],
+      relatedTo:"ACCOUNT",
+      loadBasedOnMetafields:[],
+    },
+    customCss:{
+      name:"customCss",
+      url:"{{- 'flits_custom.css' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"CUSTOM",
+      loadBasedOnMetafields:[],
+    },
+    libphoneNumberJs:{
+      name:"libphoneNumberJs",
+      url:"https://unpkg.com/libphonenumber-js@1.9.10/bundle/libphonenumber-max.js",
+      requestPageType:["customers/account"],
+      relatedTo:"PHONE NUMBER",
+      loadBasedOnMetafields:[],
+    },
+    tooltipPopperJs:{
+      name:"tooltipPopperJs",
+      url:"https://unpkg.com/@popperjs/core@2.5.3/dist/umd/popper.min.js",
+      requestPageType:["collection","product", "customers/account"],
+      relatedTo:"TOOLTIP",
+      loadBasedOnMetafields:[],
+    },
+    tooltipTippyJs:{
+      name:"tooltipTippyJs",
+      url:"https://unpkg.com/tippy.js@6.2.7/dist/tippy-bundle.umd.min.js",
+      requestPageType:["collection","product", "customers/account"],
+      relatedTo:"TOOLTIP",
+      loadBasedOnMetafields:[],
+    },
+    customJs:{
+      name:"customJs",
+      url:"{{- 'flits_custom.js' | asset_url -}}",
+      requestPageType:["all"],
+      relatedTo:"CUSTOM",
+      loadBasedOnMetafields:[],
+      status:1,
+    },
+    accountJs:{
+      name:"accountJs",
+      url:"{{- 'flits_account.js' | asset_url -}}",
+      requestPageType:["customers/account"],
+      relatedTo:"ACCOUNT",
+      loadBasedOnMetafields:[],
+    },
+    wishlistJs:{
+      name:"wishlistJs",
+      url:"{{- 'flits_wishlist.js' | asset_url -}}",
+      requestPageType:["collection","product"],
+      relatedTo:"WISHLIST",
+      loadBasedOnMetafields:["IS_WISHLIST_PAID","IS_WISHLIST_ENABLE"],
+    },
+    socialLoginJs:{
+      name:"socialLoginJs",
+      url:"{{- 'flits_social_login.js' | asset_url -}}",
+      requestPageType:["customers/login","customers/register"],
+      relatedTo:"SOCIAL_LOGIN",
+      loadBasedOnMetafields:["IS_SOCIAL_LOGIN_PAID","IS_SOCIAL_LOGIN_ENABLE"],
+    },
+    cartJs:{
+      name:"cartJs",
+      url:"{{- 'flits_cart.js' | asset_url -}}",
+      requestPageType:["cart"],
+      relatedTo:"STORE_CREDIT",
+      loadBasedOnMetafields:["IS_STORE_CREDIT_PAID","is_store_credit_enable", ["CREDIT_DISPLAY_ON","==","cart"], ["customer_id",'!=','-1']],
+    },
+    referFriendJs:{
+      name:"referFriendJs",
+      url:"{{- 'flits_refer_friend.js' | asset_url -}}",
+      requestPageType:["customers/register"],
+      relatedTo:"STORE_CREDIT",
+      loadBasedOnMetafields:["IS_STORE_CREDIT_PAID","is_store_credit_enable","IS_REFER_PROGRAM_ON"],
+    }
+  };
+  window.flitsObjects.storeData = {
+    request:{
+      host:"{{- request.host -}}",
+      page_type: "{{- request.page_type -}}",
+      path:"{{- request.path -}}",
+    },
+    template:{
+      directory: "{{- template.directory -}}",
+      name: "{{- template.name -}}",
+      suffix: "{{- template.suffix -}}",
+    },
+    theme:{
+      id:"{{- theme.id -}}",
+      name:"{{- theme.name -}}",
+    },
+    jsonSettingsPath:"{{ 'flits_template_settings.json' | asset_url }}",
+    product:{{ product | json }},
+    cart: {{ cart | json }},
+    shop_currency: '{{ shop.currency }}',
+    money_format: '{{ shop.money_format | escape }}',
+    customer_id: '{{ customer.id }}',
+    customer_email: '{{ customer.email }}',
+    customer_accepts_marketing: '{{ customer.accepts_marketing }}',
+    customer_orders_count: '{{ customer.orders_count }}'
+  };
+  window.flitsObjects.global.Metafields.customer_id = {% if customer %} "{{- customer.id -}}" {% else %} -1 {% endif %};
+  window.flitsObjects.storeData.customer_id = {% if customer %} "{{- customer.id -}}" {% else %} -1 {% endif %};
+</script>
+
+<script defer src="{{ 'flits.js' | asset_url }}" ></script>
+<script defer src="{{ 'flits_custom.js' | asset_url }}"></script>
+{% render 'flits_custom_snippet' %}

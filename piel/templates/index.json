@@ -1,0 +1,232 @@
+{
+  "sections": {
+    "1656500564021c41f2": {
+      "type": "featured-content",
+      "settings": {
+        "show_on_desktop": false,
+        "show_on_mobile": true,
+        "title": "¿Cuál es tu tipo de piel?",
+        "text": "",
+        "section_style": "section-blank",
+        "text_size": "large",
+        "text_alignment": "text-center",
+        "button_style": "btn--primary",
+        "button_label": "",
+        "button_link": ""
+      }
+    },
+    "1656411738d878534f": {
+      "type": "hero",
+      "blocks": {
+        "f4181388-8ebe-4cff-a87d-8c68c17de8f7": {
+          "type": "slide",
+          "settings": {
+            "title": "GRASA",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/2_bafdb6b3-f707-4bdf-8679-0f6918fba081.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/2_bafdb6b3-f707-4bdf-8679-0f6918fba081.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "shopify:\/\/collections\/grasa",
+            "video": "",
+            "heading_text": "GRASA",
+            "mobile_button_space": "400",
+            "text": "<p><strong>Si tu piel se vuelve grasa 2 o 3 minutos después de lavarte la cara, llamamos que tienes piel grasa. Es importante hidratar la piel para lograr un buen equilibrio entre el aceite y el agua.<\/strong><\/p>",
+            "text_position": "align-center",
+            "text_position_mobile": "align-center",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "poppins_n4",
+            "button_label": "Buscar solución",
+            "button_link": "shopify:\/\/collections\/grasa",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": ""
+          }
+        },
+        "dfe12ca6-b83e-4e2d-8be4-c03c3032ebf2": {
+          "type": "slide",
+          "settings": {
+            "title": "SECA",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/1_ca8fcf0b-4d2c-4a8f-a192-cd48ddd5a742.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/1_ca8fcf0b-4d2c-4a8f-a192-cd48ddd5a742.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "shopify:\/\/collections\/seca",
+            "video": "",
+            "heading_text": "SECA",
+            "mobile_button_space": "480",
+            "text": "<p><strong>Para aquellos que tienen la piel seca sufren de piel muerta y enrojecimiento de la cara en el clima frío. Hemos preparado el mejor solución para usted.<\/strong><\/p>",
+            "text_position": "align-bottom",
+            "text_position_mobile": "align-top",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "poppins_n4",
+            "button_label": "Buscar ahora",
+            "button_link": "shopify:\/\/collections\/seca",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": ""
+          }
+        },
+        "662f21dc-359f-46ef-9fae-9e89d5d57aca": {
+          "type": "slide",
+          "settings": {
+            "title": "SENSIBLE",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/4_3976ad48-2160-4846-aca5-2c2bf4798408.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/4_3976ad48-2160-4846-aca5-2c2bf4798408.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "",
+            "video": "",
+            "heading_text": "SENSIBLE",
+            "mobile_button_space": "400",
+            "text": "<p><strong>Para aquellos que tienen piel sensible, deben usar una cantidad mínima de productos para el cuidado de la piel para evitar efectos secundarios. Elija el mejor producto para el cuidado de la piel para usted con nuestros expertos.<\/strong><\/p>",
+            "text_position": "align-center",
+            "text_position_mobile": "align-center",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "poppins_n4",
+            "button_label": "Elegir ahora",
+            "button_link": "shopify:\/\/collections\/sensible",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": ""
+          }
+        },
+        "cfdd24ba-603e-48c0-af26-34ba732c2cbd": {
+          "type": "slide",
+          "settings": {
+            "title": "NEUTRA",
+            "overlay": true,
+            "image": "shopify:\/\/shop_images\/3_471cd6ba-6b31-491b-9f83-56cfd81ac4e9.jpg",
+            "image_mobile": "shopify:\/\/shop_images\/3_471cd6ba-6b31-491b-9f83-56cfd81ac4e9.jpg",
+            "image_position": "center center",
+            "image_position_mobile": "center center",
+            "slide_link": "",
+            "video": "",
+            "heading_text": "NEUTRA",
+            "mobile_button_space": "400",
+            "text": "<p><strong>Si tu piel tiene un gran equilibrio de aceite y agua, significa que tienes una piel neutra. En este caso puedes enfocarte en mantener tu piel y en el anti-envejecimiento. Descubre nuestros mejores productos antiedad.<\/strong><\/p>",
+            "text_position": "align-center",
+            "text_position_mobile": "align-center",
+            "text_alignment": "text-center",
+            "text_alignment_mobile": "text-center",
+            "enable_custom_fonts": false,
+            "slideshow_family": "poppins_n4",
+            "button_label": "Comprar ahora",
+            "button_link": "shopify:\/\/collections\/neutral",
+            "button_style": "btn--primary",
+            "button_label_2": "",
+            "button_link_2": "",
+            "button_style_2": ""
+          }
+        }
+      },
+      "block_order": [
+        "f4181388-8ebe-4cff-a87d-8c68c17de8f7",
+        "dfe12ca6-b83e-4e2d-8be4-c03c3032ebf2",
+        "662f21dc-359f-46ef-9fae-9e89d5d57aca",
+        "cfdd24ba-603e-48c0-af26-34ba732c2cbd"
+      ],
+      "settings": {
+        "show_on_desktop": false,
+        "show_on_mobile": true,
+        "section_height": "xlarge",
+        "section_height_mobile": "xlarge",
+        "arrows": true,
+        "dots": true,
+        "autoplay": false,
+        "autoplayspeed": 3
+      }
+    },
+    "1655462530b231f359": {
+      "type": "featured-columns",
+      "blocks": {
+        "165546253027af16d8-1": {
+          "type": "text_block",
+          "settings": {
+            "title": "GRASA",
+            "image": "shopify:\/\/shop_images\/2_bafdb6b3-f707-4bdf-8679-0f6918fba081.jpg",
+            "image_link": "shopify:\/\/collections\/grasa",
+            "icon": "",
+            "heading_text": "GRASA",
+            "text": "<p><strong>Si tu piel se vuelve grasa 2 o 3 minutos después de lavarte la cara, llamamos que tienes piel grasa. Es importante hidratar la piel para lograr un buen equilibrio entre el aceite y el agua.<\/strong><\/p>",
+            "button_style": "btn--primary",
+            "button_label": "Buscar Ahora",
+            "button_link": "shopify:\/\/collections\/grasa"
+          }
+        },
+        "165546253027af16d8-2": {
+          "type": "text_block",
+          "settings": {
+            "title": "SECA",
+            "image": "shopify:\/\/shop_images\/1_ca8fcf0b-4d2c-4a8f-a192-cd48ddd5a742.jpg",
+            "image_link": "shopify:\/\/collections\/seca",
+            "icon": "",
+            "heading_text": "SECA",
+            "text": "<p><strong>Para aquellos que tienen la piel seca sufren de piel muerta y enrojecimiento de la cara en el clima frío. Hemos preparado el mejor solución para usted.<\/strong><\/p><p><\/p><p><\/p>",
+            "button_style": "btn--primary",
+            "button_label": "Buscar solución",
+            "button_link": "shopify:\/\/collections\/seca"
+          }
+        },
+        "9381bf3b-2677-4025-956e-469d31053fcf": {
+          "type": "text_block",
+          "settings": {
+            "title": "SENSIBLE",
+            "image": "shopify:\/\/shop_images\/4_3976ad48-2160-4846-aca5-2c2bf4798408.jpg",
+            "image_link": "shopify:\/\/collections\/sensible",
+            "icon": "",
+            "heading_text": "SENSIBLE",
+            "text": "<p><strong>Para aquellos que tienen piel sensible, deben usar una cantidad mínima de productos para el cuidado de la piel para evitar efectos secundarios. Elija el mejor producto para el cuidado de la piel para usted con nuestros expertos.<\/strong><\/p>",
+            "button_style": "btn--primary",
+            "button_label": "Elegir ahora",
+            "button_link": "shopify:\/\/collections\/sensible"
+          }
+        },
+        "a39301b4-b2d6-4c1c-97b9-7edcfc79f2e5": {
+          "type": "text_block",
+          "settings": {
+            "title": "NEUTRA",
+            "image": "shopify:\/\/shop_images\/3_471cd6ba-6b31-491b-9f83-56cfd81ac4e9.jpg",
+            "image_link": "shopify:\/\/collections\/neutral",
+            "icon": "",
+            "heading_text": "NEUTRA",
+            "text": "<p><strong>Si tu piel tiene un gran equilibrio de aceite y agua, significa que tienes una piel neutra. En este caso puedes enfocarte en mantener tu piel y en el anti-envejecimiento. Descubre nuestros mejores productos antiedad.<\/strong><\/p>",
+            "button_style": "btn--primary",
+            "button_label": "Comprar ahora",
+            "button_link": "shopify:\/\/collections\/neutral"
+          }
+        }
+      },
+      "block_order": [
+        "165546253027af16d8-1",
+        "165546253027af16d8-2",
+        "9381bf3b-2677-4025-956e-469d31053fcf",
+        "a39301b4-b2d6-4c1c-97b9-7edcfc79f2e5"
+      ],
+      "settings": {
+        "show_on_desktop": true,
+        "show_on_mobile": false,
+        "title": "¿Cuál es su tipo de piel?",
+        "subtitle": "",
+        "section_style": "section-blank",
+        "text_align": "text-center"
+      }
+    }
+  },
+  "order": [
+    "1656500564021c41f2",
+    "1656411738d878534f",
+    "1655462530b231f359"
+  ]
+}
